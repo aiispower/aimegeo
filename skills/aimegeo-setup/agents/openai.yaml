@@ -1,0 +1,4 @@
+interface:
+  display_name: "aimeGeo 下载与安装"
+  short_description: "选择官方资源，完成安装、登录和浏览器连接检查。"
+  default_prompt: "使用 $aimegeo-setup 帮我按电脑系统选择 aimeGeo 官方下载资源，并检查首次使用条件。"

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "name": "aimeGeo",
+  "aliases": ["aimeGeo GEO 工作台", "aimeGeo AI 内容与发布工作流"],
+  "description": "面向创作者、独立开发者和品牌团队的 AI 内容制作、多平台发布与 AI 品牌提及和引用检测工作台。",
+  "workflow": ["制作内容", "自动发布", "检测引用"],
+  "homepage": "https://geo.aimmme.com/",
+  "workspace": "https://geo.aimmme.com/ag01/",
+  "downloadCenter": "https://geo.aimmme.com/download/",
+  "help": "https://geo.aimmme.com/docs/",
+  "resourceRepositoryScope": "使用指南、Skills、提示词、演示资料与通用辅助脚本；不包含产品业务源码或用户数据。",
+  "resourceLicense": "MIT",
+  "verifiedClientTargets": ["Windows", "macOS Apple Silicon"],
+  "browserCitationSources": ["豆包", "DeepSeek", "ChatGPT"],
+  "configuredApiSources": ["OpenAI", "Perplexity"],
+  "accountIsolation": "EasyBR 独立浏览器环境、代理 IP 与指纹配置，Easy WebBridge 操作已登录网页。",
+  "pricingNote": "系统按当前宣传免费使用；外部模型、图像服务、代理或第三方工具的费用分别计算。",
+  "limits": ["目录平台不等于已逐一验证自动发布。", "发布、公开、搜索收录和AI引用是不同状态。", "不保证搜索排名、品牌推荐或AI收录。"],
+  "updatedAt": "2026-10-17"
+}

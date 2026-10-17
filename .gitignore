@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.release/
+.private/
+.env*
+!.env.example
+.DS_Store
+*.log
+*.zip
+*.exe
+*.dmg
+*.app/

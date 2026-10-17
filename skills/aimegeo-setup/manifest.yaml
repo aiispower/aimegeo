@@ -1,0 +1,18 @@
+# 本资源包分发元信息；不是通用 Agent 安装命令或运行时配置。
+schema_version: 1
+name: aimegeo-setup
+version: 0.1.0
+kind: agent-skill
+language: zh-CN
+entrypoint: SKILL.md
+homepage: https://geo.aimmme.com/
+product_help: https://geo.aimmme.com/docs/
+files:
+  - SKILL.md
+  - agents/openai.yaml
+requires:
+  - user-authorized product account for operations
+  - browser or local tools only when actual actions are requested
+notes:
+  - Keep the repository docs and prompts for relative references, or use the official help links.
+  - Does not include credentials, product source code, or a default model.

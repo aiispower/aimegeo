@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-17",
+  "product": "aimeGeo",
+  "homepage": "https://geo.aimmme.com/",
+  "workspace": "https://geo.aimmme.com/ag01/",
+  "downloadCenter": "https://geo.aimmme.com/download/",
+  "help": "https://geo.aimmme.com/docs/",
+  "downloads": [
+    {
+      "id": "macos-arm64",
+      "label": "macOS Apple Silicon",
+      "filename": "aimegeomac.zip",
+      "sources": {
+        "official": "https://11.haory.cn/x/x30/aimegeo/aimegeomac.zip",
+        "overseas": "https://down.ebrower.com/down/aimegeo/aimegeomac.zip"
+      },
+      "sha256": null,
+      "version": null
+    },
+    {
+      "id": "windows-x64",
+      "label": "Windows",
+      "filename": "aimegeo.zip",
+      "sources": {
+        "official": "https://11.haory.cn/x/x30/aimegeo/aimegeo.zip",
+        "overseas": "https://down.ebrower.com/down/aimegeo/aimegeo.zip"
+      },
+      "sha256": null,
+      "version": null
+    }
+  ],
+  "verificationNote": "下载入口从官方公开下载中心核对；国内两个ZIP在核对日返回HTTP 200，海外链接在本轮网络未完成连通验证，可从官方下载页切换镜像。固定链接会更新。本资源库不提供未经核对的包内版本或发布方SHA256，也未托管产品安装器。",
+  "related": {
+    "easybrDownloadCenter": "https://www.ebrower.com/down.html",
+    "easyWebBridge": "https://github.com/xxjrq/easy-webbridge"
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "aimeGeo 制作内容"
+  short_description: "从网站或项目资料准备有来源的内容、封面与写作任务。"
+  default_prompt: "使用 $aimegeo-content 将我的网站或项目资料整理成 aimeGeo 内容任务和一篇有来源的草稿。"

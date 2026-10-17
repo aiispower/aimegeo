@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="{{LANG}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <meta name="theme-color" content="#102b3a">
+  <link rel="canonical" href="{{CANONICAL}}">
+  {{ALTERNATES}}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="aimeGeo 使用资源">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:url" content="{{CANONICAL}}">
+  <meta property="og:image" content="{{SOCIALIMAGE}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="{{BASE}}assets/aimegeo-logo.png" type="image/png">
+  <link rel="stylesheet" href="{{BASE}}style.css">
+  {{JSONLD}}
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳至正文</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="{{BASE}}" aria-label="aimeGeo 使用资源首页">
+        <img src="{{BASE}}assets/aimegeo-logo.png" width="36" height="36" alt="">
+        <span>aimeGeo <small>使用资源</small></span>
+      </a>
+      <nav aria-label="主导航">
+        <a href="{{BASE}}docs/getting-started/">开始使用</a>
+        <a href="{{BASE}}docs/installation/">下载安装</a>
+        <a href="{{BASE}}prompts/setup/">提示词</a>
+        <a href="{{BASE}}skills/aimegeo-setup/">Skills</a>
+        <a href="{{BASE}}en/" lang="en">English</a>
+        <a class="nav-external" href="https://geo.aimmme.com/">产品官网 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content" class="page-content" tabindex="-1">{{BODY}}</main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><a class="footer-brand" href="{{BASE}}">aimeGeo</a><p>把内容制作、发布与 AI 引用检测，接成一条工作流。</p></div>
+      <nav aria-label="官方资源">
+        <a href="https://geo.aimmme.com/">官网</a>
+        <a href="https://geo.aimmme.com/download/">官方下载</a>
+        <a href="https://geo.aimmme.com/ag01/">控制台</a>
+        <a href="https://geo.aimmme.com/docs/">官方帮助</a>
+      </nav>
+    </div>
+    <p class="scope-note">此资源库提供公开使用文档、提示词与 Skills。产品安装包从官方下载；此资源库不包含产品服务端源码。</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "title": "aimeGeo 使用资源",
+  "siteUrl": "https://xxjrq.github.io/aimegeo/",
+  "repository": "https://github.com/xxjrq/aimegeo",
+  "updatedAt": "2026-10-17",
+  "description": "aimeGeo 的下载安装教程、AI Agent Skills、提示词与真实界面截图，带你从项目资料走到内容制作、多平台发布和 AI 引用检测。",
+  "pages": [
+    { "source": "README.md", "slug": "overview", "title": "aimeGeo 是什么：内容制作、发布与 GEO 引用检测", "description": "了解 aimeGeo 的三步工作流、下载入口、AI 协作方式、开源资源范围与当前能力。" },
+    { "source": "README.en.md", "slug": "en", "lang": "en", "title": "aimeGeo — AI Content, Publishing and GEO Citation Guides", "description": "Official download links, installation help, reusable AI prompts and Agent Skills for the aimeGeo content and citation workflow." },
+    { "source": "docs/installation.md", "slug": "docs/installation", "title": "aimeGeo 下载安装：Windows 与 macOS 使用指南", "description": "选择 aimeGeo 官方客户端资源，区分使用资源包与安装器，完成安装、登录和浏览器连接。" },
+    { "source": "docs/getting-started.md", "slug": "docs/getting-started", "title": "aimeGeo 怎么用：第一次制作、发布与检测引用", "description": "用一个虚构项目完成 aimeGeo 新手流程：整理资料、AI 起稿、添加文章、连接账号与检查结果。" },
+    { "source": "docs/workflow.md", "slug": "docs/workflow", "title": "aimeGeo 工作流：制作内容、自动发布、检测引用", "description": "按步骤使用 aimeGeo，区分发布任务、公开状态、搜索收录和 AI 引用，并了解 EasyBR 的辅助作用。" },
+    { "source": "docs/ai-assistant.md", "slug": "docs/ai-assistant", "title": "用 AI 辅助 aimeGeo：Skills 与提示词使用方法", "description": "将安装、内容制作、发布和引用检测任务交给熟悉的 AI，理解工具权限与可执行步骤。" },
+    { "source": "docs/platforms-and-models.md", "slug": "docs/platforms-and-models", "title": "aimeGeo 支持哪些平台、AI 工具与引用来源", "description": "按实际能力查看 aimeGeo 平台与模型说明，分清可用发布、草稿、内容类型限制和目录展示。" },
+    { "source": "docs/faq.md", "slug": "docs/faq", "title": "aimeGeo 常见问题：系统、费用、连接与 AI 收录", "description": "回答 aimeGeo 的安装系统、免费范围、账号连接、发布结果和 AI 引用检测常见问题。" },
+    { "source": "docs/screenshot-index.md", "slug": "docs/screenshots", "title": "aimeGeo 界面截图：文章、账号、发布与引用列表", "description": "查看 aimeGeo 实际基础列表界面及字段说明，截图不包含真实业务记录或账号信息。" },
+    { "source": "skills/README.md", "slug": "skills", "title": "aimeGeo Agent Skills：安装、制作内容、发布与监测", "description": "选择可复用的 aimeGeo 使用 Skill，查看输入、步骤、完成条件与手动操作方式。" },
+    { "source": "skills/aimegeo-setup/SKILL.md", "slug": "skills/aimegeo-setup", "title": "aimeGeo 安装 Skill：下载、安装与首次连接", "description": "协助 AI 核对系统、选择官方资源并引导 aimeGeo 安装，不读取凭据或自动运行安装器。" },
+    { "source": "skills/aimegeo-content/SKILL.md", "slug": "skills/aimegeo-content", "title": "aimeGeo 内容制作 Skill：从项目资料到文章", "description": "把网站、产品和项目资料交给 AI，制作标题、正文、标签与封面方案，并检查保存内容。" },
+    { "source": "skills/aimegeo-publish-monitor/SKILL.md", "slug": "skills/aimegeo-publish-monitor", "title": "aimeGeo 发布与引用监测 Skill", "description": "检查目标账号和内容条件，执行已授权发布，并记录实际发布结果与 AI 引用观测。" },
+    { "source": "prompts/setup.md", "slug": "prompts/setup", "title": "aimeGeo 安装提示词：直接交给你的 AI", "description": "复制一份独立安装提示词，让 AI 协助选择下载资源、安装客户端与完成连接检查。" },
+    { "source": "prompts/content.md", "slug": "prompts/content", "title": "aimeGeo 内容提示词：网站、产品与项目推广", "description": "使用结构化资料让 AI 制作一篇内容，输出标题、说明、标签、封面建议与正文。" },
+    { "source": "prompts/publish.md", "slug": "prompts/publish", "title": "aimeGeo 图文与视频发布提示词", "description": "向 AI 明确目标账号、来源内容和发布范围，检查实际条件并核对平台结果。" },
+    { "source": "prompts/citations.md", "slug": "prompts/citations", "title": "aimeGeo AI 引用检测提示词", "description": "固定问题与公开目标链接，让 AI 检查品牌提及、具体文章引用和原始回答证据。" },
+    { "source": "examples/project-brief.md", "slug": "examples/project-brief", "title": "aimeGeo 项目资料示例", "description": "一份完全虚构的项目资料样例，帮助准备目标读者、能力事实和内容边界。" },
+    { "source": "examples/content-task.md", "slug": "examples/content-task", "title": "aimeGeo 内容任务示例", "description": "用虚构项目演示如何向 AI 明确一篇内容的目标、结构、素材和交付格式。" },
+    { "source": "examples/citation-questions.md", "slug": "examples/citation-questions", "title": "aimeGeo 引用检测问题示例", "description": "围绕虚构项目编写自然问题，区分品牌提及、来源引用与观测记录。" },
+    { "source": "scripts/README.md", "slug": "tools", "title": "aimeGeo 通用命令：下载、文件校验与提示词", "description": "使用可选的零运行依赖 Node.js 助手列出资源、下载指定 ZIP、验证 SHA-256 和读取提示词。" }
+  ]
+}

@@ -1,0 +1,1105 @@
+# aimeGeo 使用资源
+Updated: 2026-10-17
+Official product: https://geo.aimmme.com/
+Scope: public usage resources; no private product source or account data.
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/overview/
+
+# aimeGeo：AI 内容制作、多平台发布与 GEO 引用检测
+
+[English](README.en.md) · [使用文档](https://xxjrq.github.io/aimegeo/) · [资源包与 Skills 下载](https://github.com/xxjrq/aimegeo/releases/latest) · [Gitee 镜像](https://gitee.com/xxjrq/aimegeo)
+
+[官网](https://geo.aimmme.com/) · [客户端下载](https://geo.aimmme.com/download/) · [正式工作台](https://geo.aimmme.com/ag01/) · [官方帮助](https://geo.aimmme.com/docs/)
+
+**把网站、产品或项目交给熟悉的 AI，串起“制作内容 → 自动发布 → 检测引用”。** aimeGeo 是面向内容创作者、独立开发者和品牌团队的 GEO 内容工作台；它将资料、写作、封面、平台账号、发布记录和 AI 引用观测放在一条可回看的工作流里。
+
+本仓库开源的是 **使用教程、Agent Skills、提示词、演示资料与通用辅助脚本**。产品客户端从官方下载中心获取；本仓库不包含 aimeGeo 服务端、客户端业务源码或用户数据。
+
+![aimeGeo 产品宣传界面：内容制作、自动发布、检测引用三步流程](docs/assets/screenshots/01-promotion.png)
+
+## 第一次使用，从这里开始
+
+| 你要做什么 | 打开这份资料 |
+| --- | --- |
+| 让 AI 帮我下载、安装 | [AI 安装提示词](prompts/setup.md) · [安装指南](docs/installation.md) |
+| 不看代码，先跑通一个项目 | [新手上手指南](docs/getting-started.md) |
+| 了解三个业务阶段 | [完整使用流程](docs/workflow.md) |
+| 给 Codex / Claude Code / WorkBuddy 使用 | [AI 助手指南](docs/ai-assistant.md) · [Skills](skills/README.md) |
+| 看真实界面 | [截图与操作说明](docs/screenshot-index.md) |
+| 核对平台、模型与当前限制 | [平台和模型能力表](docs/platforms-and-models.md) |
+| 连接或操作遇到问题 | [常见问题](docs/faq.md) |
+
+### 直接复制给你的 AI
+
+```text
+请按 aimeGeo 的安装与上手指南协助我。
+先识别我的操作系统，从 https://geo.aimmme.com/download/ 选择对应官方资源；
+帮我完成下载、安装和本人账号连接，再以我提供的网站、产品或项目建立一份内容任务。
+先制作并检查一篇图文，再按我指定的账号和平台处理发布，最后查看 AI 提及与引用。
+不要把产品目录中的所有平台当成已经验证的自动发布能力，也不要上传我的账号配置或客户资料。
+```
+
+在此仓库下载后，也可让 AI 先读取 [skills/aimegeo-setup/SKILL.md](skills/aimegeo-setup/SKILL.md)。**普通用户手动安装客户端不需要 Node.js。**
+
+## 三步完成内容工作流，EasyBR 强力辅助
+
+1. **制作内容**：输入网站、产品或项目，整理事实资料和读者需求；让 AI 生成选题、标题、说明、标签、封面方案和正文。支持把自定义指令复制给熟悉的 AI；自动写作需满足产品当前的运行条件。
+2. **自动发布**：准备图文或视频，选择已连接的平台账号，检查素材与平台要求，再执行任务；在发布记录里分清草稿、已提交、审核中和已公开。
+3. **检测引用**：围绕固定问题和公开内容链接观察 AI 品牌提及与原生引用，留存回答、来源和检测历史。发布完成不等于已经收录。
+
+**EasyBR 环境隔离**是多账号辅助：每个账号可以使用独立浏览器环境，并按需设置代理 IP 与浏览器指纹。Easy WebBridge 连接已登录的真实浏览器，承担页面操作；它与 aimeGeo 客户端分别解决不同问题。
+
+封面方式包括 Image2、豆包 Seedream、Remotion；可按内容选择尺寸和风格。具体可用方式与外部服务配置以当前产品为准。
+
+## 下载什么，安装什么
+
+- **aimeGeo 客户端**：[官方下载中心](https://geo.aimmme.com/download/)，Windows 与 macOS Apple Silicon 分别选择对应 ZIP。
+- **EasyBR（多账号环境隔离，可选）**：[官网下载](https://www.ebrower.com/down.html)；它不替代 aimeGeo 客户端。
+- **Easy WebBridge**：[公开仓库](https://github.com/xxjrq/easy-webbridge)。使用已集成 Bridge 的 EasyBR 环境时，按该版本帮助操作；使用其他浏览器时按 Bridge 官方说明连接。
+- **本仓库资源**：教程、Skills、提示词与演示文件；不含安装器。当前未核实 Intel Mac / Linux 的 aimeGeo 成品包，先查官方下载页。
+
+镜像地址和来源记录见 [resources.json](resources.json)。固定下载地址可能更新，不在本仓库猜测客户端版本或承诺所有镜像永远一致。
+
+## 可选命令：让 AI 检查环境、列下载、校验文件
+
+这些命令只需要 Node.js 20+，没有运行时依赖。它们不登录账号、不读取 Cookie、不自动运行安装器。
+
+```sh
+node scripts/aimegeo.mjs info
+node scripts/aimegeo.mjs downloads
+node scripts/aimegeo.mjs doctor --offline
+node scripts/aimegeo.mjs prompt setup
+```
+
+指定目标和保存位置后下载；已有同名文件不会被覆盖：
+
+```sh
+node scripts/aimegeo.mjs download --target macos-arm64 --source official --output ./downloads/aimegeomac.zip
+node scripts/aimegeo.mjs download --target windows-x64 --source official --output ./downloads/aimegeo.zip
+```
+
+文件校验：
+
+```sh
+node scripts/aimegeo.mjs verify ./downloads/aimegeomac.zip --sha256 REPLACE_WITH_TRUSTED_SHA256
+```
+
+下载命令输出的本地 SHA-256 可用于传输一致性比较；只有与可信发布方提供的值相符，才构成独立校验。命令详情见 [辅助脚本说明](scripts/README.md)。
+
+## 能力说明
+
+- Codex、Claude Code、DeepSeek、豆包、ChatGPT、Gemini、Cursor、Trae、WorkBuddy、Kimi、Qwen Code、ZCode、OpenClaw 是宣传与协作工具目录；图标展示不表示每个工具都有内置自动执行驱动。
+- 具体发布平台与内容类型，按 [能力表](docs/platforms-and-models.md) 和当前安装版本选择。CSDN 为国内平台，GitHub 为海外平台；目录收录不代表已完成逐平台实发验收。
+- 当前网页引用检测覆盖豆包、DeepSeek、ChatGPT；OpenAI / Perplexity 联网 API 需要配置。
+- 系统按当前宣传免费使用；外部模型、图片生成、代理或第三方工具可能另有费用。
+
+## SEO / GEO 友好的开放资料
+
+本项目提供中英文介绍、问题导向教程、明确的能力边界、来源链接、FAQ，以及 [llms.txt](llms.txt) 和 [product.json](product.json)。文档站构建会生成可抓取 HTML、规范链接、结构化数据和站点地图。它们帮助人和 Agent 理解资料，不代表搜索排名、被推荐或引用效果保证。
+
+## 许可与贡献
+
+原创教程、提示词和通用脚本采用 [MIT](LICENSE)；产品软件、商标、官方图标与截图适用范围见 [NOTICE.md](NOTICE.md)。提交建议前请读 [CONTRIBUTING.md](CONTRIBUTING.md)。逐文件公开范围见 [PUBLIC-FILES.md](PUBLIC-FILES.md)。
+
+资料核对日期：2026-10-17。产品页面、客户端下载与功能会更新，以官方说明和实际页面为准。
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/docs/installation/
+
+# aimeGeo 下载与安装：Windows 与 Apple Silicon Mac
+
+从[官方下载中心](https://geo.aimmme.com/download/)选择你的系统，下载后解压并按包内说明安装。手动安装不需要 Node.js，也不需要克隆产品源码。本仓库提供教程、提示词和 Skill，不包含 aimeGeo 产品的完整源码。
+
+## 选择安装包
+
+| 电脑 | 当前已核实资源 | 操作 |
+| --- | --- | --- |
+| Apple 芯片 Mac（arm64） | macOS 正式 ZIP，文件名 `aimegeomac.zip` | 在下载中心选择 macOS |
+| Windows | Windows 正式 ZIP，文件名 `aimegeo.zip` | 在下载中心选择 Windows，并查看页面兼容要求 |
+| Intel Mac | 暂无已核实的兼容包 | 联系官网支持确认；不要把 arm64 包当作 Intel 版本 |
+| Linux | 暂无已核实的安装包 | 使用网页版查看适用功能，需本机自动化的流程先确认支持情况 |
+
+Mac 可在“关于本机”查看芯片；Windows 可在“设置 → 系统 → 系统信息”查看系统与体系结构。不要为匹配示例而下载不适合自己电脑的文件。
+
+## 安装并登录
+
+1. 从官方下载中心下载对应 ZIP，记录页面显示的系统、版本和下载日期。
+2. 解压后阅读包内说明，运行对应安装程序。更新时先正常退出旧版 aimeGeo，再打开新版本，保留已登录的平台浏览器。
+3. 打开客户端，确认加载[正式工作台](https://geo.aimmme.com/ag01/)，使用自己的账号登录。
+4. 如同时使用网页，网页与客户端登录同一个 aimeGeo 账号。
+5. 需要账号同步、自动发布或网页 AI 检测时，保持客户端运行，在目标浏览器中完成 Easy WebBridge 连接。
+
+操作画面见[使用截图索引](screenshot-index.md)。下载来源、包内提示与系统实际弹窗不一致时先核对来源；不要复制网上不明脚本来关闭系统安全机制。
+
+## AI 帮你安装
+
+将[安装提示词](../prompts/setup.md)复制给 Codex、Claude Code 或 WorkBuddy，补充操作系统和芯片型号。Agent 可以帮助选择下载入口、解释安装步骤和检查连接；账号密码、验证码、支付和系统授权由你在官方界面完成。
+
+可选辅助工具需要 Node.js；只打印资源和诊断信息，不会代你运行安装器。先从仓库根目录运行：
+
+```sh
+node scripts/aimegeo.mjs info
+node scripts/aimegeo.mjs downloads
+node scripts/aimegeo.mjs doctor --offline
+```
+
+`--offline` 只检查本地条件，不能证明网络、正式站点或下载文件可用。需要下载时运行：
+
+```sh
+node scripts/aimegeo.mjs download --target macos-arm64 --output /absolute/path/aimegeomac.zip --source official
+# Windows x64 示例；仅在你的系统与下载页面说明匹配时使用
+node scripts/aimegeo.mjs download --target windows-x64 --output /absolute/path/aimegeo.zip --source official
+```
+
+把示例绝对路径换成你可写入的本机路径。脚本若不支持所选来源或资源不可用，返回官方下载中心选择资源，不猜测镜像链接。仅在有可信来源提供的 SHA-256 时校验：
+
+```sh
+node scripts/aimegeo.mjs verify /absolute/path/aimegeomac.zip --sha256 REPLACE_WITH_TRUSTED_SHA256
+```
+
+自行计算一个哈希只能建立本地指纹，不能独立证明文件来自官方。
+
+## 第一次连接浏览器
+
+1. 在你准备发文的平台浏览器中安装并启用 Easy WebBridge：打开[Easy WebBridge 公开仓库](https://github.com/xxjrq/easy-webbridge)，按当前 README 的安装说明操作，不照搬过期命令。安装后的连接检查见[正式帮助](https://geo.aimmme.com/docs/publish-flow/)。
+2. 在该浏览器登录目标平台，确认扩展显示“已连接，可以使用”。
+3. 回到工作台检查顶栏连接状态，必要时重新检测。
+4. 进入[账号授权](https://geo.aimmme.com/ag01/geo/publish/self-accounts)，添加平台，读取并选择正确浏览器环境，执行账号同步。
+5. 对照平台页面核对昵称、用户名、平台 ID 与头像。
+
+扩展在线、客户端运行、网页账号配对是不同条件。连接失败时见[常见问题](faq.md)，成功后继续[第一次使用](getting-started.md)。
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/docs/getting-started/
+
+# aimeGeo 第一次使用：从一个网站到一次 AI 引用检测
+
+准备一个网站、产品或项目，让 AI 帮你整理资料、制作内容、发布并检测引用。第一次建议只做“一份资料、一篇文章、一个账号、一组问题”，便于看清每一步的结果。
+
+## 先准备什么
+
+- 已完成[安装与登录](installation.md)，网页与本机客户端使用同一账号。
+- 一个你有权公开介绍的项目，以及可核对的官网、帮助或资料。
+- 一个你有权使用的发布账号，登录在已连接 Easy WebBridge 的浏览器中。
+- 一组用户真实会问的问题，避免只问“请引用我的网站”。
+
+可从[示例项目资料](../examples/project-brief.md)、[示例内容任务](../examples/content-task.md)和[示例问题集](../examples/citation-questions.md)开始。这些均为虚构教学资料，不能当作产品承诺或真实发布记录。
+
+## 第一步：制作内容
+
+1. 打开[项目与知识资料](https://geo.aimmme.com/ag01/geo/prep/knowledge-base)，整理项目名称、目标人群、推广主题、官网和原始来源。
+2. 将[内容提示词](../prompts/content.md)交给熟悉的 Agent，补齐资料和预期读者；请它先列事实与待确认项，再给选题和草稿。
+3. 请外部 Agent 按提示词生成草稿；打开[文章](https://geo.aimmme.com/ag01/geo/writing/articles)，点击“添加文章”。初次使用不需要先创建站内写作任务。
+4. 填写“文章标题”“文章摘要”“文章分类”，在“正文内容”粘贴 Markdown 草稿；用“添加图片”上传封面与插图，或用“添加链接”补充图片。核对事实、来源和图片后，点击“创建”，重新打开文章确认保存结果。提示词中的标签作为投稿准备材料，按目标平台要求补充。
+5. 在“内容类型”选择图文或视频后再保存。视频需填写真实“视频素材”和“视频说明”。首次建议先完成一篇图文。
+
+站内[写作任务](https://geo.aimmme.com/ag01/geo/writing/tasks)是可选的自动写作入口，需要已可用的本机 Codex 写作环境。没有配置时，继续使用上面的外部 Agent + 添加文章路径；如需启用站内自动写作，查看[官方帮助](https://geo.aimmme.com/docs/)或联系支持，不需要寻找本仓库之外的私有脚本。
+
+封面可按实际已配置的能力选择 Image2、豆包 Seedream 或 Remotion。Remotion 用排版与模板渲染图片，多尺寸和风格由所选模板决定；外部模型的费用、额度和授权另行确认。
+
+## 第二步：自动发布
+
+1. 在[账号授权](https://geo.aimmme.com/ag01/geo/publish/self-accounts)同步目标账号并核对身份。
+2. 在[发布任务](https://geo.aimmme.com/ag01/geo/publish/self-tasks)选择已保存内容和账号。先看[平台能力表](platforms-and-models.md)，选择当前可用且适合该类型的平台。
+3. 检查标题、正文或视频、封面、分类及平台要求。确认你希望发布后再执行；验证码和额外安全验证在平台原生界面完成。
+4. 进入[发布记录](https://geo.aimmme.com/ag01/geo/publish/self-records)，查看回执与公开链接。草稿、上传完成、已提交、审核中和已公开分别记录。
+5. 回执未知时先核对原任务与平台管理页，不重复投稿。百家号当前只保存草稿，需要在平台完成最终发布。
+
+## 第三步：检测引用
+
+1. 内容已公开且链接可访问后，从发布记录进入“查 AI 引用”，或打开[文章 AI 引用检测](https://geo.aimmme.com/ag01/geo/data/article-citations)。
+2. 选择已可用的检测通道，录入目标文章与问题。网页通道需要目标 AI 平台已登录、联网回答可用和正确的浏览器环境。
+3. 查看“回答与证据”：原始回答、采集时间、提及、原生引用与实际来源 URL。
+4. 在[文章 AI 引用检测](https://geo.aimmme.com/ag01/geo/data/article-citations)的“检测记录”查看已保存问题与证据；后续日期点击对应记录的“手动复测”，比较同题结果。
+
+[搜索收录监测](https://geo.aimmme.com/ag01/geo/data/index-monitor)检查的是百度、必应搜索收录，属于独立观测，不等于 AI 引用检测。
+
+没有回答是未采集；回答提到品牌不等于引用了文章；有引用也只说明该次回答命中了该来源。发布与 AI 发现之间可能有延迟，不用立即反复检测代替持续复测。
+
+## 强力辅助：EasyBR 环境隔离
+
+EasyBR 用于管理多个独立浏览器环境，可分别配置代理 IP 和浏览器指纹；Easy WebBridge 在选定环境里操作已登录网页。为不同账号明确绑定环境，发布前再核对身份。隔离配置不能保证平台永远不关联账号，也不应代替平台授权或账号规则。
+
+完成以上步骤后，你应能找到一份保存的内容、一个真实发布状态和一次有证据的检测结果。更多细节见[完整流程](workflow.md)、[AI 使用方法](ai-assistant.md)和[真实截图](screenshot-index.md)。
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/docs/workflow/
+
+# aimeGeo GEO 工作流：制作内容 → 自动发布 → 检测引用
+
+GEO（生成式引擎优化）关注内容能否在 AI 的回答中被发现、提及和引用。aimeGeo 把内容资料、发布账号、平台回执与检测记录连接起来，便于持续改进内容；它不承诺任何平台必收录或排名。
+
+## 一张流程表
+
+| 阶段 | 输入 | 操作 | 可核对的产出 |
+| --- | --- | --- | --- |
+| 制作内容 | 网站、产品、项目、原始资料 | 整理主题、外部 Agent 起稿、添加文章与配图 | 保存的标题、说明、标签、封面、正文或视频 |
+| 自动发布 | 已保存的内容与明确账号 | 同步账号、创建任务、执行并回读 | 草稿/提交/审核/公开状态及平台链接 |
+| 检测引用 | 公开链接、固定问题集 | 采集回答、检查引用、后续同题复测 | 原始回答、时间、目标链接和检测结果 |
+| EasyBR 辅助 | 多账号及登录环境 | 隔离环境、代理 IP 与指纹配置 | 账号与浏览器环境绑定，身份核对记录 |
+
+操作截图见[截图索引](screenshot-index.md)。初次使用可以按[入门教程](getting-started.md)完成一条小流程。
+
+## 制作内容：让资料支持结论
+
+先整理可公开事实，再决定选题。每个结论尽量关联原始来源；无法核验的价格、用户量、合作、认证与性能数据不写成事实。保留项目和推广主题，避免多项目混用资料。
+
+建议文章包含：一句话回答、适用人群、使用步骤、具体示例、限制与常见问题。标题表达一个清楚的问题，正文自然使用项目名和相关术语，不堆砌关键词，也不编造“权威测评”或虚假用户案例。
+
+在文章页面实际查看封面和插图：文字是否正确、是否清晰、是否切边，横竖版是否适合目标平台。AI 模型生图、模板排版与 Remotion 渲染是不同方式；免费系统能力不意味着第三方模型调用无限免费。
+
+新手可直接使用[内容提示词](../prompts/content.md)让外部 Agent 准备草稿，再到文章页点击“添加文章”，填写标题、摘要、分类与 Markdown 正文，添加图片后点击“创建”。无需先建立站内写作任务。站内自动写作是可选能力，尚未配置时查看[官方帮助](https://geo.aimmme.com/docs/)或联系支持；详见[AI 使用方法](ai-assistant.md)。
+
+## 自动发布：用回执判断进度
+
+在内容制作时确定图文或视频；发布任务沿用已保存的类型。视频说明中的链接不自动变成视频素材，缺少真实视频时先补素材。
+
+1. 读取目标账号绑定的环境，确认平台页面确实登录了你要使用的账号。
+2. 逐项检查标题、正文或视频、封面、标签、声明与分类。
+3. 只执行一次投稿，保存任务状态；等待平台审核与回执。
+4. 用平台管理页或公开链接核对结果，再到发布记录检查。
+5. 结果不确定时保留原任务并排查，避免重复发表。
+
+“已处理”不能独立证明内容公开，“上传成功”也不代表平台审核通过。目录图标只是产品识别信息，真实发布范围以[平台能力表](platforms-and-models.md)及客户端版本为准。
+
+## 检测引用：区分三个问题
+
+- **有没有回答？** 采集失败、超时或登录验证不能记作“未收录”。
+- **有没有提及？** 品牌或产品名被提到，只说明回答出现了该名称。
+- **有没有引用？** 检查 AI 原生来源是否指向目标文章或页面，核对 URL，不能只看相似标题。
+
+每次记录问题原文、平台/通道、采集时间、回答、引用 URL 与目标文章版本。比较时保持问题一致，并说明有效回答数量；一次观测不足以证明全网收录率。
+
+建议在公开链接稳定后安排延迟检测与后续复测；没有引用时先检查公开可访问性、事实清晰度、标题与用户问题的关系，再小步修改。不要把频繁重问造成的随机波动当成优化成效。
+
+在“文章 AI 引用检测 → 检测记录”点击“手动复测”继续检查同一记录。“搜索收录监测”查看百度、必应索引情况，与 AI 是否在回答中引用文章分开判断。
+
+## 环境隔离与浏览器自动化
+
+EasyBR 管理独立环境、代理 IP 和指纹；Easy WebBridge 负责连接并操作具体环境中的已登录浏览器。一个扩展“在线”不代表所有账号都已授权。多人、多账号操作时始终按实际环境和平台身份核对，登录发生变化就重新确认。
+
+登录或验证码由账号本人在官方页面处理。发布期间遇到验证、账号不一致、素材缺失或权限错误时，保留状态，先解决具体问题，再按原任务继续。
+
+## 常用入口
+
+| 目的 | 正式工作台 |
+| --- | --- |
+| 项目与知识资料 | [打开](https://geo.aimmme.com/ag01/geo/prep/knowledge-base) |
+| 写作任务 | [打开](https://geo.aimmme.com/ag01/geo/writing/tasks) |
+| 文章 | [打开](https://geo.aimmme.com/ag01/geo/writing/articles) |
+| 账号授权 | [打开](https://geo.aimmme.com/ag01/geo/publish/self-accounts) |
+| 发布任务 | [打开](https://geo.aimmme.com/ag01/geo/publish/self-tasks) |
+| 发布记录 | [打开](https://geo.aimmme.com/ag01/geo/publish/self-records) |
+| 文章 AI 引用检测 | [打开](https://geo.aimmme.com/ag01/geo/data/article-citations) |
+| AI 引用记录与同题复测 | [打开](https://geo.aimmme.com/ag01/geo/data/article-citations) |
+| 百度/必应搜索收录监测（独立能力） | [打开](https://geo.aimmme.com/ag01/geo/data/index-monitor) |
+
+公开帮助：[GEO 工作台](https://geo.aimmme.com/docs/geo-workbench/)、[连接与发布](https://geo.aimmme.com/docs/publish-flow/)。
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/docs/ai-assistant/
+
+# 用 Codex、Claude Code 或 WorkBuddy 辅助使用 aimeGeo
+
+把这个仓库交给熟悉的 AI 助手，可以让它帮你选下载资源、读教程、整理项目资料、生成任务草稿和解释检测结果。助手是否能直接操作本机或浏览器，取决于你实际安装的工具与授权，复制提示词本身不会建立连接。
+
+## 先选一种用法
+
+| 方式 | 适合什么 | 入口 |
+| --- | --- | --- |
+| 直接复制提示词 | 已在使用 Codex、Claude Code 或 WorkBuddy | [安装](../prompts/setup.md)、[制作内容](../prompts/content.md)、[发布](../prompts/publish.md)、[检测引用](../prompts/citations.md) |
+| 加载 Skill | Agent 支持读取本地 Skill | [安装](../skills/aimegeo-setup/SKILL.md)、[内容](../skills/aimegeo-content/SKILL.md)、[发布与监测](../skills/aimegeo-publish-monitor/SKILL.md) |
+| 手动操作 | 希望先看清业务步骤 | [入门教程](getting-started.md) |
+
+复制提示词后替换方括号字段。只有网址也能开始整理资料；资料不够时让 Agent 列缺项，不让它猜测价格、效果和案例。
+
+## 示例：交给 Agent 的第一句话
+
+```text
+请按这个仓库的 docs/installation.md 帮我安装 aimeGeo。
+电脑是 [Windows / Apple Silicon Mac]，芯片是 [型号]。
+先解释将下载的资源及来源，下载到我指定的文件夹。
+不要自动运行安装器；安装后按 docs/getting-started.md 帮我完成第一篇内容。
+```
+
+如果没有克隆仓库，可以先访问[官网](https://geo.aimmme.com/)与[正式帮助](https://geo.aimmme.com/docs/)，把官网或下载页地址交给 Agent。需要本地文件时从本公开仓库获取，不把产品私有源码、服务器配置或凭据发给它。
+
+## Skill 怎么用
+
+三个 Skill 都使用标准目录结构：`SKILL.md` 是执行说明，`manifest.yaml` 是分发元信息，`agents/openai.yaml` 是助手界面提示。它们不指定默认模型，也不安装后台服务。
+
+1. 下载对应 Skill 目录，或获取整个仓库。
+2. 按你所用 Agent 的当前文档，选择“加载本地 Skill”或放入它支持的 Skill 目录；不同产品的安装位置不同，不通用地执行某条系统安装命令。
+3. 也可以直接把 `SKILL.md` 文件交给 Agent，要求它先阅读并按步骤执行。
+4. 分发时保留完整仓库结构；单独复制 Skill 时，按下方依赖表一并提供参考文件，或让 Agent 使用文件内的官方帮助链接。
+
+| Skill | 触发场景 | 参考材料 |
+| --- | --- | --- |
+| `aimegeo-setup` | 下载、安装、首次登录、连接检查 | `docs/installation.md`、`docs/faq.md`、`prompts/setup.md` |
+| `aimegeo-content` | 网站/项目转资料、选题、文章草稿 | `docs/workflow.md`、`docs/platforms-and-models.md`、`prompts/content.md`、`examples/` |
+| `aimegeo-publish-monitor` | 同步账号、发布核验、引用检测 | `docs/workflow.md`、`docs/platforms-and-models.md`、`prompts/publish.md`、`prompts/citations.md` |
+
+## 工具目录与站内自动写作有什么区别
+
+产品展示的协作工具包括 Codex、Claude Code、DeepSeek、豆包、ChatGPT、Gemini、Cursor、Trae、WorkBuddy、Kimi、Qwen Code、ZCode 和 OpenClaw。你可用熟悉的工具准备指令、资料和草稿；具体工具能力以其实际版本为准。
+
+新手优先让外部 Agent 按[内容提示词](../prompts/content.md)生成草稿，再打开[文章](https://geo.aimmme.com/ag01/geo/writing/articles)，点击“添加文章”，填标题、摘要、分类和 Markdown 正文，添加图片后点击“创建”。重新打开已保存文章核对结果。这个流程无需站内自动写作配置。
+
+站内自动写作是可选能力，当前使用已可用的本机 Codex 写作环境；尚未配置时查[官方帮助](https://geo.aimmme.com/docs/)或联系支持，不在公共教程中要求私有配置脚本。13 个协作工具图标不代表同等站内自动执行能力。
+
+## 什么可以交给 AI
+
+AI 可以读公开文档、比较操作系统资源、归纳资料、准备标题与正文、检查缺失字段、解释任务状态，并在已有工具与明确授权下协助操作。
+
+账号密码、验证码、密钥和支付信息留在对应官方界面或安全配置中，不写进提示词、截图和公开 issue。准备发布任务与实际对外投稿分开理解：先核对账号、内容、平台及用户发布意图，再执行对外操作。
+
+AI 的结论附证据：下载用来源与文件；安装用实际启动；发布用平台回执；引用用原始回答和原生来源。缺少证据就写待核验。参见[能力清单](platforms-and-models.md)与[FAQ](faq.md)。
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/docs/platforms-and-models/
+
+# aimeGeo 平台、AI 工具与引用检测能力
+
+本表按 2026-10-17 的产品目录和实现声明整理，帮助你选择第一条可执行流程。具备自动投稿功能不等于每个账号、客户端版本和平台页面都已实测通过；每次真实投稿以任务回执和平台页面为准。
+
+## 国内发布平台
+
+| 平台 | 当前能力说明 |
+| --- | --- |
+| CSDN | 图文自动投稿能力已接入；发布后核验平台链接与正文 |
+| B站 | 图文与视频自动投稿已接入；分别核验素材与客户端支持 |
+| 头条号 | 图文自动投稿能力已接入 |
+| 小红书 | 图文与视频自动投稿已接入；以任务回执为准 |
+| 百家号 | 仅保存草稿，最终发布需到平台手动完成 |
+| 企鹅号 | 图文自动投稿已接入，正式验收待补 |
+| 抖音 | 视频自动投稿已接入；图文发布未验收，不列为已可用图文链路 |
+| 知乎 | 仅目录声明，自动发布尚不可用 |
+| 微博 | 仅目录声明，自动发布尚不可用 |
+| 掘金 | 仅目录声明，自动发布尚不可用 |
+| 博客园 | 仅目录声明，自动发布尚不可用 |
+| 51CTO | 仅目录声明，自动发布尚不可用 |
+| 简书 | 仅目录声明，自动发布尚不可用 |
+| 思否 | 仅目录声明，自动发布尚不可用 |
+| 开源中国 | 仅目录声明，自动发布尚不可用 |
+| 腾讯云开发者社区 | 仅目录声明，自动发布尚不可用 |
+| 阿里云开发者社区 | 仅目录声明，自动发布尚不可用 |
+| 网易 | 保留目录，当前不支持发布 |
+| 搜狐 | 保留目录，当前不支持发布 |
+| 公众号 | 保留目录，当前不支持发布 |
+| Gitee | 账号同步已接入，自动发布尚不可用 |
+
+闲鱼商品发布流程已退役，不属于本教程发布范围。
+
+## 海外平台
+
+| 平台 | 当前能力说明 |
+| --- | --- |
+| GitHub | 已接入 Gist 发文能力；不是普通仓库发布，暂未开放为图文发布选项 |
+| Reddit | 仅目录声明，自动发布尚不可用 |
+| LinkedIn 领英 | 仅目录声明，自动发布尚不可用 |
+| X（Twitter） | 仅目录声明，自动发布尚不可用 |
+| Threads | 仅目录声明，自动发布尚不可用 |
+| Discord | 仅目录声明，自动发布尚不可用 |
+| Facebook | 仅目录声明，自动发布尚不可用 |
+| TikTok | 仅目录声明，自动发布尚不可用 |
+| YouTube | 仅目录声明，自动发布尚不可用 |
+
+平台目录、官方品牌图标、账号同步与自动发布是不同能力。不要用“目录平台数量”计算实际可自动发布平台数量，也不要将国内抖音的自动投稿能力视为 TikTok 支持。
+
+## 图文与视频
+
+内容类型在制作时保存，发布继承它。当前视频任务面向抖音、B站、小红书；需要具备相应能力的本机客户端和真实视频素材。旧客户端不具备视频执行能力时，更新前不能执行，系统不会将其改成图文任务。
+
+## AI Agent 与协作工具
+
+产品协作工具目录列出以下 13 个名称：Codex、Claude Code、DeepSeek、豆包、ChatGPT、Gemini、Cursor、Trae、WorkBuddy、Kimi、Qwen Code、ZCode、OpenClaw。
+
+目录表达“用熟悉的 AI 准备内容与工作指令”。新手可用外部 Agent 起稿，再到文章页“添加文章”保存，步骤见[AI 使用方法](ai-assistant.md)。站内自动写作是可选能力，当前使用已可用的本机 Codex 写作环境；未配置时查官方帮助或联系支持，不妨碍手动保存草稿。其他工具可使用本仓库提示词和 Skill，具体本机操作能力取决于工具配置。这里没有承诺 13 个 Agent 均已完成站内自动接入。
+
+## AI 引用检测
+
+| 通道 | 当前状态 | 需要什么 |
+| --- | --- | --- |
+| 豆包网页 | 可用网页采集通道 | 已登录浏览器、正确环境、联网回答与原生证据 |
+| DeepSeek 网页 | 可用网页采集通道 | 已登录浏览器、正确环境、联网回答与原生证据 |
+| ChatGPT 网页 | 可用网页采集通道 | 已登录浏览器、正确环境、联网回答与原生证据 |
+| OpenAI 联网 API | 需服务端配置 | 对应 API 配置、权限、额度与联网能力 |
+| Perplexity 联网 API | 需服务端配置 | 对应 API 配置、权限与额度 |
+| Kimi 网页 | 待接入 | 当前不可当作可执行检测通道 |
+| Perplexity 网页 | 待接入 | 当前不可当作可执行检测通道 |
+
+宣传目录还展示通义千问、文心一言、纳米 AI、Kimi、智谱清言、腾讯元宝等品牌。展示不等于这些网页检测器已经可执行。选择检测时，以工作台当前可用通道与真实采集结果为准。
+
+网页与 API 是不同入口，同名模型的两类结果也不能混算。一条原生引用只证明某次回答引用了该来源，不能推导出模型训练收录、永久收录或所有用户都能得到同样回答。
+
+## 图片与环境辅助
+
+封面制作介绍包括 Image2、豆包 Seedream、Remotion、多尺寸与多风格。模型调用以实际配置、额度与授权为准；Remotion 用程序和模板渲染图片，不能理解为免费调用所有外部模型。
+
+EasyBR 管理独立浏览器环境、代理 IP 和指纹；Easy WebBridge 操作环境内已登录的真实网页。配置隔离不构成账号不关联或不受平台限制的保证。
+
+本页是能力说明，不是未来路线图。下载和帮助以[官网](https://geo.aimmme.com/)、[下载中心](https://geo.aimmme.com/download/)与[正式帮助](https://geo.aimmme.com/docs/)最新信息为准。
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/docs/faq/
+
+# aimeGeo 常见问题：下载、AI 写作、发布与引用检测
+
+## aimeGeo 是什么？
+
+aimeGeo 是围绕“制作内容 → 自动发布 → 检测引用”的 GEO 工作台。输入网站、产品或项目资料，整理主题并制作内容，连接平台账号，再用真实回答与引用证据追踪 AI 可见性。[完整流程](workflow.md)解释各阶段的输入和结果。
+
+## 这个仓库开源了什么？
+
+本仓库公开使用教程、Agent Skill、可复制提示词、示例资料和辅助资源。它不是 aimeGeo 产品完整源码。使用产品从[官网](https://geo.aimmme.com/)和[下载中心](https://geo.aimmme.com/download/)开始；文件使用许可按仓库许可说明执行。
+
+## 免费使用是不是所有东西都免费？
+
+系统宣传免费使用，但外部 AI 订阅、模型 API、生图额度、代理服务和平台账号等可能有独立费用或限制。先看实际服务方条款与配置。Remotion 模板渲染不代表第三方生图模型可无限免费调用。
+
+## Mac Intel 或 Linux 能安装吗？
+
+当前已核实有 Apple Silicon arm64 Mac 包和 Windows 包。Intel Mac、Linux 暂无已核实的安装包，不提供猜测安装命令。可先查看网页版与官方支持说明；需要本机能力的业务仍要满足相应客户端条件。
+
+## 下载后必须安装 Node.js 吗？
+
+手动下载与安装客户端不需要 Node.js。本仓库可选的 `scripts/aimegeo.mjs` 辅助工具才需要 Node.js。它不会自动运行安装器，首次使用可完全按[手动安装教程](installation.md)操作。
+
+## Easy WebBridge 显示在线，为什么工作台仍未连接？
+
+扩展在线只证明浏览器与桥接服务的连接。检查本机客户端是否运行，网页与客户端是否登录同一个 aimeGeo 账号，以及工作台是否取得该环境授权。返回顶栏重新检测，再在账号授权读取环境。不要复制其他人的 Token，也不要把口令发到 issue。
+
+## EasyBR 和 Easy WebBridge 有什么区别？
+
+EasyBR 管理独立浏览器环境，可为账号配置代理 IP 与指纹。Easy WebBridge 让 Agent 或产品操作选定环境中的真实已登录网页。先选择环境、核对平台身份，再同步或发布；隔离设置不保证平台无法关联账号。
+
+## 所有主流 Agent 都能在站内自动写作吗？
+
+站内自动写作是可选能力，当前需要已可用的本机 Codex 写作环境。目录列出的 Claude Code、WorkBuddy 等工具可使用本仓库提示词准备资料和草稿，但图标不代表同等站内执行支持。新手用外部 Agent 起稿后，到文章页“添加文章”，填好内容并点击“创建”即可；如需启用站内自动写作，查官方帮助或联系支持。操作见[AI 使用方法](ai-assistant.md)，不需要本仓库之外的私有脚本。
+
+## 平台有图标，为什么不能发？
+
+图标表示品牌目录，不代表自动发布已经可用。先查看[能力表](platforms-and-models.md)。CSDN 属于国内平台；GitHub 属于海外平台，当前接入的是 Gist，不能当作普通文章发布入口。
+
+## 百家号为什么只有草稿？
+
+当前百家号仅支持保存草稿。到平台核对并完成最终发布，之后再验证公开链接。保存草稿不计为公开成功。
+
+## 视频能发到哪些平台？
+
+当前视频任务提供抖音、B站、小红书选项，需要支持视频执行的客户端与实际素材。视频类型在制作时保存；发布不从正文链接猜测内容类型。抖音图文尚未验收，不能将视频能力扩大成所有类型都支持。
+
+## 投稿后不知道成功没有，能再点一次吗？
+
+先查发布记录、平台管理页和公开页面，核对原任务。上传、提交、审核和公开是不同状态。结果未知时保留记录并排查，反复点击可能造成重复投稿。平台验证码或安全验证由本人在原生页面处理。
+
+## AI 检测失败是不是没收录？
+
+不是。未登录、验证码、回答超时、未联网或原生引用提取失败，都不能记作“无引用”。先恢复采集，取得完整回答与来源，再判断本次是否提及或引用目标内容。
+
+## 已发布但 AI 没引用，怎么办？
+
+先检查公开链接与正文可访问，核对问题是否贴近用户需求。保留原始回答和问题，在后续日期对同题复测；必要时补充真实事实、清楚步骤和来源。一次未引用不是永久结论，反复立即提问也不能保证引用。
+
+## 搜索收录监测就是 AI 引用检测吗？
+
+不是。[搜索收录监测](https://geo.aimmme.com/ag01/geo/data/index-monitor)检查百度和必应搜索索引；[文章 AI 引用检测](https://geo.aimmme.com/ag01/geo/data/article-citations)保存 AI 回答、原生引用与检测记录，并提供“手动复测”。搜索能找到页面，不代表 AI 回答一定引用它。
+
+## 可以保证 GEO 排名、必收录或全部模型引用吗？
+
+不能。AI 回答受问题、平台、时间、联网与内容来源等因素影响。aimeGeo 用可回查的回答和原生引用帮助观察变化，不承诺必收录、固定排名或永久引用。
+
+## 去哪里找截图或报告问题？
+
+先看[真实使用截图](screenshot-index.md)、[官方帮助](https://geo.aimmme.com/docs/)和相关教程。反馈时提供系统、版本、页面、操作与错误文本；先遮盖账号、个人信息、密钥、私有项目资料和浏览器环境标识。不要上传完整 Cookie 或带登录态的原始网络日志。
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/docs/screenshots/
+
+# aimeGeo 基础界面截图
+
+以下为 2026-10-17 的真实产品网页预览截图，只展示产品介绍、公开下载页和四个基础列表。列表通过正式查询筛成空结果，再裁切到内容区；图中的零统计仅表示当前筛选结果，不是产品业务总量。图片没有真实稿件、账号或环境标识，也未执行保存、同步、发布或检测。
+
+## 产品介绍
+
+介绍“制作内容 → 自动发布 → 检测引用”的整体路径，并说明 EasyBR 浏览器协作。宣传清单与实际可用能力的差别见[平台与模型说明](platforms-and-models.md)。
+
+![aimeGeo 宣传界面与三步工作流](assets/screenshots/01-promotion.png)
+
+## 官方下载中心
+
+按系统选择国内或海外镜像。页面版本信息是截图当时的展示，下载时应重新打开[官方页面](https://geo.aimmme.com/download/)，不要仅依据截图里的旧版本号。
+
+![aimeGeo 官方客户端下载中心](assets/screenshots/02-download-center.png)
+
+## 文章列表
+
+查看文章标题、类型、分类、配图和操作入口。首次使用从“添加文章”开始，具体步骤见[新手指南](getting-started.md)。
+
+![aimeGeo 文章列表，演示查询无匹配记录](assets/screenshots/03-article-list.png)
+
+## 账号授权列表
+
+了解平台、账号身份、浏览器环境与连接操作的位置。实际操作使用本人已登录的目标浏览器，检查账号身份后再继续。
+
+![aimeGeo 账号授权列表，不含真实账号](assets/screenshots/04-account-list.png)
+
+## 发布任务列表
+
+查看任务来源、目标账号、内容类型、状态与操作入口；这张图只展示界面，不表示任何平台已实发成功。
+
+![aimeGeo 发布任务列表，演示查询无匹配任务](assets/screenshots/05-publish-list.png)
+
+## AI 引用监测列表
+
+按产品或项目定位检测对象，查看引用任务、问题和检测记录入口。AI 同题复测在引用检测记录中进行；百度/必应搜索收录是另一项监测。
+
+![aimeGeo AI 引用监测列表，演示查询无匹配对象](assets/screenshots/06-citation-list.png)
+
+真实业务操作请按[使用流程](workflow.md)执行。界面随版本更新，截图用于认识字段与入口，不代替当前安装版本的实际结果。
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/skills/
+
+# aimeGeo Agent Skills
+
+这三个 Skill 是可复用的任务说明，不是产品源码、账号配置或模型驱动。可让熟悉的 AI 先读取对应 `SKILL.md`，也可按 AI 工具自己的说明加入技能目录。没有通用的“一条命令安装到所有 Agent”。
+
+| Skill | 什么时候用 | 主要输出 |
+| --- | --- | --- |
+| [aimegeo-setup](aimegeo-setup/SKILL.md) | 下载、安装、更新、首次连接 | 匹配的官方资源、安装与连接步骤、当前检查结果 |
+| [aimegeo-content](aimegeo-content/SKILL.md) | 从网站、产品或项目制作一篇内容 | 资料摘要、标题、正文、标签、封面建议与保存检查 |
+| [aimegeo-publish-monitor](aimegeo-publish-monitor/SKILL.md) | 发布图文/视频、检查 AI 提及与引用 | 发布条件检查、实际结果摘要、引用观测与复测安排 |
+
+## 直接使用
+
+```text
+请读取本仓库的 skills/aimegeo-setup/SKILL.md，按其中的输入要求和步骤协助我安装并开始使用 aimeGeo。若当前工具无法操作浏览器或本机，请给我对应的手动步骤，并说明哪些动作尚未执行。
+```
+
+每个目录含标准 `SKILL.md`、资源包说明 `manifest.yaml` 和可选 `agents/openai.yaml` 展示元信息，不设置默认模型。若只复制一个 Skill 文件夹，文档相对链接可能不存在；此时使用 Skill 中提供的官方帮助链接，或保留整个资源仓库。更多说明见 [AI 助手指南](../docs/ai-assistant.md)。
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/skills/aimegeo-setup/
+
+
+# aimeGeo 下载与首次使用
+
+## 触发条件
+
+用户要求安装、更新、下载客户端、排查首次连接，或从一个网站/项目开始使用 aimeGeo。只问产品能力时先回答能力，不自动下载。
+
+## 必要输入
+
+操作系统与芯片、下载目录、已有安装状态、具体错误。未知时先指导查看系统信息。登录凭据与验证码由本人在官方界面输入，不收集。
+
+## 公开资源
+
+- 官网：https://geo.aimmme.com/
+- 下载：https://geo.aimmme.com/download/
+- 工作台：https://geo.aimmme.com/ag01/
+- 安装帮助：https://geo.aimmme.com/docs/client-install/
+- Easy WebBridge 安装：https://github.com/xxjrq/easy-webbridge ，按当前 README，不自造安装命令。
+- 安装后的连接帮助：https://geo.aimmme.com/docs/publish-flow/
+- 本包：[安装教程](../../docs/installation.md)、[FAQ](../../docs/faq.md)、[安装提示词](../../prompts/setup.md)。相对文件不存在时使用上述正式帮助，不猜测本机路径。
+
+使用助手与加载 Skill 的步骤见[AI 使用方法](../../docs/ai-assistant.md)。本 Skill 不依赖产品私有源码或仓库外部脚本；缺少浏览器工具时提供手动操作步骤。
+
+## 步骤
+
+1. 确认系统、芯片与用户目标；当前已核实有 Apple Silicon arm64 Mac 和 Windows 包。Intel Mac/Linux 无已核实兼容包时说明限制。
+2. 读取官方当前下载页，选择匹配资源。先说明来源和保存位置，再下载到用户指定目录；不能只凭文件名猜链接。
+3. 报告实际下载结果。仅在有可信来源 SHA-256 时宣称来源校验通过；未知哈希不自造。
+4. 按包内说明引导安装，不自动运行安装器或关闭系统安全机制。手动安装不需要 Node.js；本仓库可选查询/下载脚本需要 Node.js，不负责自动安装。
+5. 更新时正常退出旧 aimeGeo，再开新版，保留平台浏览器。客户端与网页均登录本人同一个账号。
+6. 需要账号同步、发布、网页 AI 检测时，保持客户端运行，在目标浏览器确认 Easy WebBridge 连接；在账号授权读取环境、同步并核对昵称、用户名、平台 ID 与头像。
+7. 给出第一条小任务：整理一份资料、做一篇草稿、选择一个账号、准备一组问题。实际发布须具有用户本次明确的发布意图。
+
+## 失败与恢复
+
+| 现象 | 处理 |
+| --- | --- |
+| 无匹配包或资源不可用 | 回官方下载中心/官方支持，不提供猜测包 |
+| 系统拦截或安装失败 | 核对来源与包内说明，保留错误文本，不绕过安全校验 |
+| 扩展在线但工作台未连 | 检查客户端运行、同账号、环境授权和顶栏检测 |
+| 平台登录/验证码 | 交由本人在原生界面完成，完成后重新核对身份 |
+| 工具无网页/本机权限 | 提供手动步骤，明确未执行的动作 |
+
+## 完成标准
+
+报告系统、官方来源、实际文件位置、是否已安装启动、连接检查结果和仍缺条件。缺证据写待核验，不把下载完成写成安装完成。输出脱敏摘要，不公开账号凭据、本机环境标识或原始日志。
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/skills/aimegeo-content/
+
+
+# aimeGeo 内容制作
+
+## 触发条件
+
+用户要制作 GEO 内容、整理项目资料、准备选题/文章/视频脚本，或改进一篇待发布稿件。不要把“做内容”解释成已经授权对外投稿。
+
+## 必要输入
+
+项目名、官网或资料、读者、主题、目标平台、图文/视频类型、可公开事实、禁公开内容类别。不要要求用户把密钥、客户隐私或未授权素材贴进提示词。
+
+## 参考
+
+[制作流程](../../docs/workflow.md)、[能力表](../../docs/platforms-and-models.md)、[内容提示词](../../prompts/content.md)、[示例资料](../../examples/project-brief.md)、[任务示例](../../examples/content-task.md)。相对资料缺失时读 https://geo.aimmme.com/docs/geo-workbench/ 。
+
+资料：https://geo.aimmme.com/ag01/geo/prep/knowledge-base
+
+写作任务：https://geo.aimmme.com/ag01/geo/writing/tasks
+
+文章：https://geo.aimmme.com/ag01/geo/writing/articles
+
+## 步骤
+
+1. 读取用户授权资料和公开来源，将已确认事实、推断与缺项分别列出；来源不能访问时直接说明。
+2. 明确项目、推广主题与目标读者，给三个具体标题候选，选择一个问题写清楚。
+3. 先回答问题，再写适用场景、步骤、示例、限制与常见问题。链接原始来源，不编造数据、测评或客户案例。
+4. 分别输出标题、说明、标签、正文、封面文字与插图建议。视频另给脚本与真实素材清单，不能假称视频已生成。
+5. 建议 Image2、豆包 Seedream 或 Remotion 时说明实际配置、额度与模板尺寸条件；系统免费不等于外部模型无限免费。
+6. 默认让外部 Agent 生成草稿，再到文章页点击“添加文章”，填写文章标题、摘要、分类与 Markdown 正文，添加图片后选择内容类型并点击“创建”。标签单独作为投稿准备材料。重新打开核对保存结果；没有实际网页工具时给出手动步骤，不假称已保存。
+7. 站内写作任务为可选能力，需要已可用的本机 Codex 写作环境；未配置时继续外部起稿路径，如需启用则查官方帮助或联系支持，不要求私有脚本。目录图标不代表所有 Agent 都可站内自动执行。
+8. 本 Skill 的使用与助手操作步骤见[AI 使用方法](../../docs/ai-assistant.md)，无需产品私有源码或仓库外部脚本。
+
+## 内容验收
+
+- 标题与正文回答同一个读者问题，来源可以回查。
+- 价格、效果、认证、平台能力等结论有依据；未知项不写成承诺。
+- 无关键词堆砌、虚假案例或“必收录/固定排名”保证。
+- 封面、图片实际查看后再评价清晰度和版式；没有图就写建议。
+- 项目资料、正文、封面与图文/视频类型不互相混用。
+
+## 失败与恢复
+
+资料缺失先给问题与大纲；来源冲突并列说明并请用户补证；模型或配图不可用保留草稿并说明未完成环节，不静默换收费服务。发现不可公开内容先移除，不能上传到公开资源包。发布需求另用 `aimegeo-publish-monitor`，先核对账号和用户发布意图。
+
+## 完成标准
+
+交付一份任务摘要、一篇草稿或脚本、字段清单、事实/来源表、图片待办和真实保存状态。不能用“已写好”替代缺项说明，也不声称内容已经发布或被 AI 引用。
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/skills/aimegeo-publish-monitor/
+
+
+# aimeGeo 发布与引用监测
+
+## 触发条件
+
+同步平台账号、准备发布任务、明确授权投稿、核对平台回执，或检测已公开内容的 AI 提及/引用。不将“准备任务”推断为“对外投稿”。
+
+## 必要输入
+
+已保存内容与类型、目标平台和账号、本次允许动作、公开链接（检测时）、问题集、检测通道与已有记录。账号凭据与验证由本人在官方页面处理。
+
+## 入口
+
+- 账号：https://geo.aimmme.com/ag01/geo/publish/self-accounts
+- 任务：https://geo.aimmme.com/ag01/geo/publish/self-tasks
+- 记录：https://geo.aimmme.com/ag01/geo/publish/self-records
+- 引用：https://geo.aimmme.com/ag01/geo/data/article-citations
+- AI 引用记录与手动复测：https://geo.aimmme.com/ag01/geo/data/article-citations
+- 百度/必应搜索收录监测（独立于 AI 引用）：https://geo.aimmme.com/ag01/geo/data/index-monitor
+- [流程](../../docs/workflow.md)、[能力表](../../docs/platforms-and-models.md)、[发布提示词](../../prompts/publish.md)、[检测提示词](../../prompts/citations.md)。文件缺失时用 https://geo.aimmme.com/docs/publish-flow/ 与 https://geo.aimmme.com/docs/geo-workbench/ 。
+
+使用助手与加载 Skill 的步骤见[AI 使用方法](../../docs/ai-assistant.md)。本 Skill 不依赖产品私有源码或仓库外部脚本；缺少浏览器工具时提供手动操作步骤。
+
+## 发布步骤
+
+1. 核对目标平台当前可用能力。仅目录平台不宣称已可自动投稿；百家号仅草稿，抖音图文未验收，GitHub Gist 不是普通文章发布选项。
+2. 确认客户端运行、网页与客户端同账号、Easy WebBridge 连接到正确浏览器环境。EasyBR 的代理 IP/指纹与环境隔离不代替平台身份核对。
+3. 读取已保存的图文/视频类型，核对标题、正文或真实视频、封面、分类、标签和声明。视频需匹配的平台与客户端支持。
+4. 通过账号授权核对昵称、用户名、ID 与头像。账号不一致、登录变化、缺素材或未授权投稿时停在准备阶段。
+5. 用户本次已明确发布且条件齐全时，通过正式任务执行一次。遇到验证码交本人处理，不能绕过验证或冒用环境。
+6. 回读发布记录与平台管理页，分清草稿、上传完成、提交审核和已公开。未知结果先核对原稿，不重复投稿。
+7. 获得公开链接后核对正文、图片或视频。保留真实回执与待处理项，保留用户原有页面与草稿。
+
+## 引用检测步骤
+
+1. 检查目标公开链接可访问，保存一组真实用户问题。品牌认知问题与非品牌需求问题分组。
+2. 选择当前可用通道：豆包、DeepSeek、ChatGPT 网页；OpenAI/Perplexity 联网 API 需额外配置。其他目录模型不自动视为可检测。
+3. 网页通道核对平台登录、联网回答与浏览器环境。记录原始问题、平台/通道、采集时间和目标内容。
+4. 查看完整回答与 AI 原生引用，逐条检查目标 URL。区分未采集、采集失败、有效回答未提及、提及名称、引用目标。
+5. 后续日期在文章 AI 引用检测的“检测记录”点击“手动复测”，保留同样问题与通道，报告有效回答分母和内容版本差异。搜索收录监测只检查百度/必应索引，不用来做 AI 同题复测。发布后不立即反复提问制造提升。
+
+## 失败与恢复
+
+| 情况 | 去向 |
+| --- | --- |
+| 平台仅目录或客户端能力缺失 | 说明不支持的动作，保留准备内容，不换目标冒充成功 |
+| 账号不一致/验证/权限错误 | 回账号授权与原生页面完成核对，再继续原任务 |
+| 投稿结果未知 | 回原任务、平台管理页/公开链接核验，不重复投稿 |
+| 检测超时/无联网/无原始引用 | 保留采集失败，不计为无引用或成功 |
+| 有回答但无目标引用 | 保存本次观测与问题，安排后续同题复测 |
+
+## 完成标准
+
+报告内容、平台、脱敏账号识别、真实任务状态、公开链接（若有），以及检测问题、通道、时间、回答有效性、提及/引用与来源。上传成功不等于公开成功；公开成功不等于 AI 引用；一次引用不代表永久收录。输出中不包含凭据、用户环境标识、私有截图或客户资料。
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/prompts/setup/
+
+# 提示词：帮我下载并用起 aimeGeo
+
+将下面整段复制给支持读网页或本机文件的 Codex、Claude Code、WorkBuddy 等助手，替换方括号字段。只想手动安装时读[安装教程](../docs/installation.md)。
+
+```text
+请帮助我从官方来源下载、安装并开始使用 aimeGeo。
+
+我的系统：[Windows / Apple Silicon Mac / 其他]
+系统版本及芯片：[填写；不知道请先指导我查看]
+下载保存位置：[我指定的绝对路径]
+已有情况：[是否已下载、安装、登录，或目前遇到的错误]
+
+正式入口：
+官网 https://geo.aimmme.com/
+下载中心 https://geo.aimmme.com/download/
+工作台 https://geo.aimmme.com/ag01/
+帮助 https://geo.aimmme.com/docs/
+安装帮助 https://geo.aimmme.com/docs/client-install/
+连接与发布 https://geo.aimmme.com/docs/publish-flow/
+Easy WebBridge 安装 https://github.com/xxjrq/easy-webbridge（按当前 README）
+
+请先确认系统和芯片，再读取官方安装说明，解释选择哪种资源及来源。
+目前已核实有 Apple Silicon arm64 Mac 包和 Windows 包；Intel Mac/Linux
+没有已核实安装包时，不猜测下载链接或提供虚假安装命令。
+
+如有本仓库，阅读 docs/installation.md 和 docs/faq.md。
+手动安装不需要 Node.js。可选辅助脚本只用于查询、下载和诊断，不自动运行安装器。
+下载后报告来源、文件位置与大小；只在有可信来源哈希时宣称校验通过。
+不要修改系统安全设置、自动安装额外依赖或绕过验证码。
+
+按官方界面指导我安装、启动并登录。登录凭据与验证码由我自行输入，
+不要索要、输出或保存密码、Cookie、Token。
+网页和客户端要登录同一个 aimeGeo 账号。需要网页自动化时，保持客户端运行，
+连接目标浏览器的 Easy WebBridge，再在账号授权中读取环境、同步并核对平台身份。
+EasyBR 用于独立浏览器环境与代理 IP/指纹配置，不能以“在线”代替账号核对。
+
+每步只报告实际结果。失败时说明卡在哪、已确认什么、下一步怎么恢复。
+安装完成后给我制作内容→自动发布→检测引用的第一条小任务；
+不要实际投稿，除非我已经明确授权本次内容和目标账号。
+```
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/prompts/content/
+
+# 提示词：把网站、产品或项目变成一篇可用内容
+
+复制以下整段并填写资料。优先用外部 Agent 起稿，再在文章页添加并保存；不要求先配置站内自动写作。示例见[项目资料](../examples/project-brief.md)。
+
+```text
+请帮我为 aimeGeo 准备一份可保存的内容任务和文章草稿。
+
+项目/产品名：[填写]
+官网或公开资料：[URL 或资料文本]
+目标读者：[谁，在什么场景遇到什么问题]
+推广主题：[希望讲清的一个主题]
+目标平台：[填写；不清楚则先建议]
+内容类型：[图文 / 视频]
+语气及字数：[填写]
+必须保留的事实与来源：[填写]
+不能公开的信息：[填写分类，不贴真实密钥或个人隐私]
+
+请先核对公开来源，区分已确认事实、推断和缺项；无法访问的网页如实说明。
+资料不足时先给问题与大纲，不编造价格、认证、用户数量、合作或使用案例。
+不要把本地示例、模板内容当作真实产品能力。
+
+输出顺序：
+1. 项目摘要、目标读者、主题与原始来源。
+2. 三个标题候选及推荐理由。
+3. 一篇完整草稿：开头直接回答读者问题，随后写适用场景、步骤、示例、限制与常见问题。
+4. 说明、标签、封面文字、配图建议和可点击的来源链接。
+5. 事实核对表与仍需我补充的信息。
+
+自然使用产品名及相关术语，不堆砌关键词、不伪装独立测评。
+把“提及”“引用”“公开发布”分别表述，不承诺 GEO 必收录或固定排名。
+如果是视频，输出脚本和真实素材需求，不能用正文链接冒充已制作的视频。
+封面可建议 Image2、豆包 Seedream 或 Remotion，分别说明实际配置、外部费用与模板尺寸条件。
+
+若有本仓库，先读 docs/workflow.md、docs/platforms-and-models.md；
+准备后说明如何进入正式工作台：
+资料 https://geo.aimmme.com/ag01/geo/prep/knowledge-base
+文章 https://geo.aimmme.com/ag01/geo/writing/articles
+
+首条流程：外部 Agent 生成草稿→文章页“添加文章”→填写文章标题、摘要、分类、
+正文内容（Markdown）→添加图片或图片链接→选择内容类型→点击“创建”。
+标签按目标投稿平台准备，不假称文章表单有标签字段。重新打开确认保存结果；
+无实际网页操作能力时给出手动步骤，不假称已保存。
+站内写作任务是可选入口，不是新手前置条件；如需但未配置，查官方帮助或联系支持。
+协作工具图标不表示所有 Agent 都能直接在站内自动执行。
+此任务仅制作内容，不对外投稿。
+```
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/prompts/publish/
+
+# 提示词：核对账号并发布一份内容
+
+复制以下整段并填写。执行前确认你希望对外发布的内容、平台和账号；未写明的发布意图由助手先核对。[平台能力](../docs/platforms-and-models.md)会影响是否能自动完成。
+
+```text
+请协助我在 aimeGeo 发布以下内容，并核对真实结果。
+
+内容来源：[文章/视频名称与可访问位置；不要贴私有密钥]
+内容类型：[已保存的图文 / 视频]
+目标平台：[填写]
+目标账号：[供本人识别的名称，不贴登录凭据]
+本次操作：[只检查与准备 / 明确授权发布这份内容到这个账号]
+发布限制：[时间、封面、分类、标签、声明等]
+
+正式入口：
+账号授权 https://geo.aimmme.com/ag01/geo/publish/self-accounts
+发布任务 https://geo.aimmme.com/ag01/geo/publish/self-tasks
+发布记录 https://geo.aimmme.com/ag01/geo/publish/self-records
+帮助 https://geo.aimmme.com/docs/publish-flow/
+
+先核对当前平台能力和客户端支持。若有本仓库，读 docs/platforms-and-models.md。
+平台有图标不等于可以自动发布。百家号当前只保存草稿；抖音图文未验收，
+视频需匹配的平台、客户端与真实素材；GitHub Gist 不是普通文章发布选项。
+目标仅在目录时说明限制，不临时换账号、换平台或假称已完成。
+
+保持本机客户端运行，网页与客户端同一 aimeGeo 账号。
+用 Easy WebBridge 连接已登录的真实浏览器，在绑定环境核对平台昵称、用户名、ID 和头像。
+EasyBR 的独立环境、代理 IP 和指纹配置不能替代身份核对。
+不要读取、输出或公开 Cookie、密码、Token；验证码由我在官方界面完成。
+
+读取已保存的内容类型，逐项核对标题、正文/视频、封面、图片、标签和声明。
+缺素材、账号不一致、未授权发布时停在准备阶段并说明缺项。
+仅在本次发布已授权且条件齐全时，通过正式发布任务执行一次投稿。
+
+保存并回读真实状态：草稿、上传完成、已提交、审核中、已公开。
+未知状态先查询原任务和平台管理页，不能重试点击投稿制造重复文章。
+获得公开链接后核对页面正文与图片，不能用执行结束代替公开成功。
+结果报告包含内容名称、平台、账号识别名、任务状态、公开链接（若有）、待处理事项。
+保持我的原有浏览器页面；不要把别的账号页面或未发布草稿当成临时对象清理。
+不要把发布成功等同于 AI 引用成功；后续按引用检测提示词继续。
+```
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/prompts/citations/
+
+# 提示词：检测 AI 是否提及或引用我的内容
+
+复制以下整段并填写。问题集示例见[引用检测问题](../examples/citation-questions.md)。
+
+```text
+请协助我用 aimeGeo 检测并解释 AI 提及/引用结果。
+
+产品/项目：[名称]
+目标公开文章或页面：[准确 URL]
+页面是否已公开可访问：[是 / 未知]
+检测问题：[逐条写下真实用户会问的问题]
+希望使用的通道：[豆包网页 / DeepSeek 网页 / ChatGPT 网页 / 已配置 API]
+已有记录：[日期、问题原文、结果摘要；不要贴凭据或个人隐私]
+本次操作：[准备问题集 / 执行一次检测 / 比较已有结果]
+
+正式入口：
+文章 AI 引用检测 https://geo.aimmme.com/ag01/geo/data/article-citations
+AI 引用记录与手动复测 https://geo.aimmme.com/ag01/geo/data/article-citations
+搜索收录监测 https://geo.aimmme.com/ag01/geo/data/index-monitor（百度/必应，独立于 AI 引用）
+帮助 https://geo.aimmme.com/docs/geo-workbench/
+
+先检查目标链接确实可访问，核对文章标题与正文。
+若有本仓库，阅读 docs/platforms-and-models.md 和 docs/workflow.md。
+当前网页采集通道为豆包、DeepSeek、ChatGPT；OpenAI/Perplexity 联网 API
+需要对应配置、权限和额度。目录上展示的其他模型不等于已可执行检测。
+网页检测还需已登录平台、可联网回答与正确 Easy WebBridge 浏览器环境。
+缺配置、登录、安全验证、超时或回答不完整时，如实记录失败，不记成“无引用”。
+
+保持问题原文，用干净的对应会话执行检测，不在问题里强塞“请引用我的文章”。
+核对原始回答、采集时间与 AI 原生引用，逐个检查 URL 是否对应目标来源。
+区分：未采集、采集失败、有效回答未提及、提及名称、引用目标 URL。
+没有原生引用证据时，不把相似标题或品牌名当作文章引用。
+
+输出一张表：问题、平台/通道、时间、采集是否有效、是否提及、是否引用目标、引用 URL、待核验项。
+同题复测在文章 AI 引用检测的“检测记录”中点击对应记录的“手动复测”；
+不要去百度/必应搜索收录页面执行 AI 复测。
+比较历史结果时用相同问题与通道，报告有效回答分母，说明内容版本或时间变化。
+一次结果不能证明模型训练收录、永久收录或所有用户都会得到相同回答。
+内容刚公开时建议后续日期再测；不要立即反复采集制造虚假提升。
+不给必收录、固定排名或保证增长的结论，不把失败记录删成成功。
+```
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/examples/project-brief/
+
+# 示例：把一个虚构项目整理成公开资料
+
+> 教学示例：以下“青叶记”是虚构项目，不代表真实产品、用户或效果。网址使用保留示例域名，不能拿去当真实来源发布。
+
+| 字段 | 示例内容 |
+| --- | --- |
+| 项目名 | 青叶记 |
+| 项目一句话 | 帮助小型读书社群整理公开活动说明与读书笔记的示例工具 |
+| 官网 | `https://example.com/`（占位，不作为事实来源） |
+| 目标读者 | 每周组织一次活动、需要重复整理通知的社群组织者 |
+| 用户问题 | 怎样把活动时间、书目和参与方式写清楚？ |
+| 内容主题 | 一份读书活动通知应包含哪些信息 |
+| 可公开资料 | 实际项目应换成自己的官方功能说明与授权素材 |
+| 不可公开内容 | 参与者电话、群聊、私人笔记、账号凭据 |
+| 语气 | 具体、清楚，先给例子再解释 |
+| 目标产出 | 一篇图文草稿，封面文字“写清一场读书活动” |
+
+## 替换后再用
+
+先换成真实项目与可访问来源。价格、用户数、效率提升和服务范围没有来源时留空；不要让 Agent 补造。将准备好的资料交给[内容提示词](../prompts/content.md)，再按[入门教程](../docs/getting-started.md)保存。
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/examples/content-task/
+
+# 示例：一份图文内容任务
+
+> 本例对应虚构项目“青叶记”，用于学习填写，不代表已生成或已发布任务。
+
+```yaml
+project: 青叶记（教学示例）
+topic: 一份读书活动通知应包含哪些信息
+reader: 小型读书社群的组织者
+content_type: 图文
+working_title: 第一次组织读书活动，通知里要写清哪六件事？
+summary: 用清单和示例说明书目、时间、地点、参与方式、准备事项和联系渠道。
+tags:
+  - 活动通知
+  - 读书社群
+  - 内容模板
+cover_text: 写清一场读书活动
+style: 清楚、具体、避免夸大
+source_requirements:
+  - 替换为真实项目的公开帮助与已授权资料
+  - 不使用群成员个人信息
+publication: 仅准备草稿，尚未授权投稿
+```
+
+## 交给 Agent 的验收要求
+
+文章先回答“通知里写什么”，再给一个完整模板；时间、地点与联系人全部使用占位符。不要编造青叶记已有功能、用户量或效率数据。标题、说明、标签、封面文字、正文分别输出；保存前核对事实与图片。
+
+下一步：用[制作内容提示词](../prompts/content.md)准备内容。公开发布需要替换所有教学占位，并另行明确目标平台与账号。
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/examples/citation-questions/
+
+# 示例：引用检测问题集与结果记录
+
+以下问题用来学习如何设计真实需求问题；先换成与你的项目有关的问题，再做检测。不要把占位域名或虚构项目当作已经公开的文章。
+
+## 固定问题集
+
+| 问题编号 | 问题原文 | 想观察什么 |
+| --- | --- | --- |
+| Q1 | 第一次组织读书活动，活动通知要包含哪些信息？ | 是否引用了公开的实用步骤 |
+| Q2 | 小型读书社群怎样写一份不容易漏信息的活动报名说明？ | 是否覆盖参与条件与报名流程 |
+| Q3 | 线下读书活动的通知有什么简单模板？ | 是否出现可核验的模板来源 |
+
+问题围绕读者任务，不在每句中塞品牌名。若要单独测品牌认知，另建问题组，避免与非品牌需求结果混在一起。
+
+## 空白记录模板
+
+| 日期时间与时区 | 问题编号/原文 | 平台与通道 | 采集状态 | 是否提及品牌 | 是否引用目标 URL | 原生引用 URL | 待核验项 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 待填写 | Q1 | 待选择 | 未采集 | 未知 | 未知 | 无 | 先确认真实公开文章 |
+
+这是一张空表，不是成功检测证据。记录实际回答与来源后再填写结果；超时与登录失败不能填“未收录”。同题复测保持问题和通道一致，记录内容版本差异，并用有效回答数量作分母。
+
+使用[检测引用提示词](../prompts/citations.md)，按[工作流](../docs/workflow.md)核对原始回答与引用。
+
+
+
+---
+
+Source: https://xxjrq.github.io/aimegeo/tools/
+
+# 通用辅助命令
+
+`aimegeo.mjs` 是本资源仓库的通用下载与提示词助手，不包含产品内部接口或业务实现。仅需 Node.js 20+，运行它不必 `npm install`。
+
+| 命令 | 用途 |
+| --- | --- |
+| `node scripts/aimegeo.mjs info --json` | 列出官网、正式工作台、下载与帮助入口 |
+| `node scripts/aimegeo.mjs downloads --json` | 列出已登记的客户端目标与官方镜像 |
+| `node scripts/aimegeo.mjs doctor --offline` | 只读取操作系统、架构和 Node 版本 |
+| `node scripts/aimegeo.mjs doctor` | 另检查公开官网、下载、帮助页是否可访问 |
+| `node scripts/aimegeo.mjs prompt setup` | 输出安装提示词；另可选 `content`、`publish`、`citations` |
+| `node scripts/aimegeo.mjs download --target macos-arm64 --output ./downloads/aimegeomac.zip` | 下载选定目标，不覆盖已有文件、不运行安装器 |
+| `node scripts/aimegeo.mjs verify ./downloads/aimegeomac.zip --sha256 <可信校验值>` | 比较本地文件与可信 SHA-256 |
+
+`download` 的 `--source` 可选 `official`、`overseas`；只有清单登记了已发布镜像时，`github` 才可用。当前资源包不含安装器，也未登记 GitHub 安装器镜像。不要因为 GitHub 源不可用就猜测地址。
+
+下载会拒绝 HTTP 来源、网页响应、非 ZIP 内容和校验不符的文件，失败后清理临时文件。文件头检查只确认 ZIP 形态，不替代完整解压检查、发布方签名或独立可信校验。
+
+`resources.json` 的固定链接可能指向更新后的版本。未提供发布方校验值时，只输出本地 SHA-256，不声称已完成发布方校验。校验无误后按 [安装指南](../docs/installation.md) 操作。
+
+## 资源维护与检查
+
+```sh
+npm ci
+npm test
+npm run build
+npm run preview
+npm run manifest
+npm run audit:public
+npm run package:review
+```
+
+`npm ci` 仅为维护者安装文档生成器；产品用户无需这一步。`manifest` 会刷新逐文件白名单、大小和校验值；新增文件仍需所有者审阅。`package:review` 只打包白名单内容，不包含 `node_modules`、构建产物、Git 历史或本机文件。脚本不执行 GitHub 创建、推送或发布。
+
+`preview` 仅在本机监听静态文档预览，按命令输出地址打开；使用完按 Ctrl+C 退出。它只提供 `dist/` 的公开文档，不读取产品服务、账号或工作目录中的其他文件。文档站部署需另外明确选择发布位置，本资源没有自动部署任务。

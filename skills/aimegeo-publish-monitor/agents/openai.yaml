@@ -1,0 +1,4 @@
+interface:
+  display_name: "aimeGeo 发布与引用监测"
+  short_description: "核对账号与任务状态，发布后用原始回答检查 AI 引用。"
+  default_prompt: "使用 $aimegeo-publish-monitor 帮我核对内容与账号，按本次授权发布并检查 AI 引用证据。"
