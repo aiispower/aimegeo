@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "resourceVersion": "0.1.0",
-  "checkedAt": "2026-10-17",
+  "checkedAt": "2026-10-18",
   "scope": "仅公开产品使用资源、教程、脱敏截图、Skills、提示词、虚构示例与通用辅助脚本。",
   "selfHashExcluded": "public-manifest.json",
   "fileCountIncludingManifest": 58,
-  "totalPayloadBytes": 1589617,
+  "totalPayloadBytes": 3098901,
   "files": [
     {
       "path": ".github/workflows/validate.yml",
@@ -51,26 +51,26 @@
     },
     {
       "path": "docs/assets/screenshots/03-article-list.png",
-      "bytes": 110293,
-      "sha256": "fbc262c9586cda27926513b03559a57e2c49cd9b9f9baeb5e4165cbcad8418d7",
+      "bytes": 481421,
+      "sha256": "b406f58e438265604763e8c516239be128a5099cac757bc95fc38933ec2ef4d3",
       "purpose": "脱敏基础界面截图"
     },
     {
       "path": "docs/assets/screenshots/04-account-list.png",
-      "bytes": 78732,
-      "sha256": "3dff97a96034a70df8ce66a3215a97b0c8f8830df61bf9b77e4158392c627ce7",
+      "bytes": 444015,
+      "sha256": "337c00e1f41d8c1ab0bea7a545f4f087699f77379ae72ba6f4aca946b12217db",
       "purpose": "脱敏基础界面截图"
     },
     {
       "path": "docs/assets/screenshots/05-publish-list.png",
-      "bytes": 102769,
-      "sha256": "5fbacfcc78fbb4543de441c1532a43145b2c3ce8d9ce2d777503c4a78e4b0def",
+      "bytes": 484177,
+      "sha256": "53529b61eff1bd5b5d30bbfe2fb8dc1b1a7234617a30d81a48998af146ae00c3",
       "purpose": "脱敏基础界面截图"
     },
     {
       "path": "docs/assets/screenshots/06-citation-list.png",
-      "bytes": 70891,
-      "sha256": "e61816b6d383aa89b7c9a2493f15e5e0e248b1b87a1b7bc5ff2d80c605831967",
+      "bytes": 451657,
+      "sha256": "6e55c1b9c0fbe6605151c9d8bb3b2e27ba8f68003944f94604c3d4aef73a4c80",
       "purpose": "脱敏基础界面截图"
     },
     {
@@ -93,14 +93,14 @@
     },
     {
       "path": "docs/platforms-and-models.md",
-      "bytes": 5571,
-      "sha256": "00b12f085bf357f5aeb09980157bb07e6c8c5d16463b9801810d508809f6c1ba",
+      "bytes": 6056,
+      "sha256": "ad41e87c9edcf7b4b6fa7405d1cee8b3229caad3b3271336b15c483a510b1a55",
       "purpose": "使用教程与能力说明"
     },
     {
       "path": "docs/screenshot-index.md",
-      "bytes": 2304,
-      "sha256": "6c6443344ef44cb221446fa961ecc446617d3d1f5ca675a876793e75ea498834",
+      "bytes": 2393,
+      "sha256": "36660f7e668cacf70960c3fa189996f40ba9ca8bba21b461a2208898d61341cd",
       "purpose": "使用教程与能力说明"
     },
     {
@@ -135,8 +135,8 @@
     },
     {
       "path": "llms-full.txt",
-      "bytes": 71054,
-      "sha256": "685db6149aa62d9460f524f27beebccb991895725a1c29d9408f0bececfdefff",
+      "bytes": 76136,
+      "sha256": "1757cb47cb41b077976aa9e0a97a495686007789a14c61f07bb3bbd42bb857a7",
       "purpose": "公开产品事实与资料索引"
     },
     {
@@ -154,13 +154,13 @@
     {
       "path": "package-lock.json",
       "bytes": 759,
-      "sha256": "a95546fc7570ecabe6b0701d9cc14deae6e5d6730ce5d8ef2c1cb3695607ac41",
+      "sha256": "f4ff0a1d447bf3df15c40f02bff7af3936880df35d2b2aa76c9055cba7b8c1ef",
       "purpose": "项目介绍、许可或分发清单"
     },
     {
       "path": "package.json",
       "bytes": 620,
-      "sha256": "f3273ca44b003ecc0e9aee493843bfbf30ec433f6a36090b22312e69e4b2febc",
+      "sha256": "58e9fac213277fa2bc445cffd503dcb96a97de20d7d37a012d0867b0d6999b29",
       "purpose": "项目介绍、许可或分发清单"
     },
     {
@@ -195,14 +195,14 @@
     },
     {
       "path": "PUBLIC-FILES.md",
-      "bytes": 7134,
-      "sha256": "f90f5deb63a032963730cbe503c3a13034f326fd0b3aa458a41281448e740b5e",
+      "bytes": 7137,
+      "sha256": "53e9a5e0714918374f686fe2df573c01347711d9abf8ae102b3113b505b88e0a",
       "purpose": "项目介绍、许可或分发清单"
     },
     {
       "path": "PUBLIC-SCOPE.json",
       "bytes": 2448,
-      "sha256": "388893b2350ab978746f6b00d23f76f4f86ae26eda82288ae0bb322766c541c2",
+      "sha256": "690a46177b1fad895e376e4da86aef20ef800718901a347af4c3bedfceef0ba2",
       "purpose": "项目介绍、许可或分发清单"
     },
     {
@@ -213,8 +213,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7047,
-      "sha256": "89e45bbba9b1a070e926d8dfdc2a9f6d6525529764056fdbb4acc657fb1e1f3e",
+      "bytes": 11555,
+      "sha256": "bd1e2b07ea8b7723fca96afe10531a7c79bed0e0409e2d9064acfab2e849738d",
       "purpose": "项目介绍、许可或分发清单"
     },
     {
@@ -249,8 +249,8 @@
     },
     {
       "path": "scripts/package-review.py",
-      "bytes": 2399,
-      "sha256": "306e7ffd72a4a5aa5ea5777a83a539c838bb868507a8b6b79a9d5a69eac3ec42",
+      "bytes": 2931,
+      "sha256": "08d0d0dcef4f57b9f19074deefb166cd4f4cd2b161b4718beb1f686db528de96",
       "purpose": "通用下载、校验与资源维护脚本"
     },
     {
@@ -268,7 +268,7 @@
     {
       "path": "site.config.json",
       "bytes": 5902,
-      "sha256": "45dc5668575bf1636543eba3652d3932fffdf6981c4b69285d025a71df7c08d3",
+      "sha256": "7353ffa5853a0d70ad21bc7618a3390279ca00c2b1b9f96d3d5566115fa0ab78",
       "purpose": "公开文档站模板与配置"
     },
     {

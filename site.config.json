@@ -2,7 +2,7 @@
   "title": "aimeGeo 使用资源",
   "siteUrl": "https://xxjrq.github.io/aimegeo/",
   "repository": "https://github.com/xxjrq/aimegeo",
-  "updatedAt": "2026-10-17",
+  "updatedAt": "2026-10-18",
   "description": "aimeGeo 的下载安装教程、AI Agent Skills、提示词与真实界面截图，带你从项目资料走到内容制作、多平台发布和 AI 引用检测。",
   "pages": [
     { "source": "README.md", "slug": "overview", "title": "aimeGeo 是什么：内容制作、发布与 GEO 引用检测", "description": "了解 aimeGeo 的三步工作流、下载入口、AI 协作方式、开源资源范围与当前能力。" },

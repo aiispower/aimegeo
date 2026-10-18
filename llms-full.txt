@@ -1,5 +1,5 @@
 # aimeGeo 使用资源
-Updated: 2026-10-17
+Updated: 2026-10-18
 Official product: https://geo.aimmme.com/
 Scope: public usage resources; no private product source or account data.
 
@@ -89,6 +89,32 @@ node scripts/aimegeo.mjs verify ./downloads/aimegeomac.zip --sha256 REPLACE_WITH
 
 下载命令输出的本地 SHA-256 可用于传输一致性比较；只有与可信发布方提供的值相符，才构成独立校验。命令详情见 [辅助脚本说明](scripts/README.md)。
 
+## 平台图标全量展示，支持无限扩展平台
+
+当前非退役平台目录共 **30 个**：国内 21 个、海外 9 个。通过 **Easy WebBridge、自定义指令与浏览器自动化**，持续扩展新的发布平台与工作流。具体内容类型与自动发布能力见[能力表](docs/platforms-and-models.md)，目录数量不等于已打通数量。
+
+### 国内平台
+
+| 平台 | 平台 | 平台 |
+| --- | --- | --- |
+| <img src="https://geo.aimmme.com/img/platforms/csdn.png" alt="CSDN 官方图标" width="40" height="40"><br>CSDN | <img src="https://geo.aimmme.com/img/platforms/douyin.png" alt="抖音 官方图标" width="40" height="40"><br>抖音 | <img src="https://geo.aimmme.com/img/platforms/bilibili.png" alt="B站 官方图标" width="40" height="40"><br>B站 |
+| <img src="https://geo.aimmme.com/img/platforms/toutiao.png" alt="今日头条 官方图标" width="40" height="40"><br>今日头条 | <img src="https://geo.aimmme.com/img/platforms/xiaohongshu.png" alt="小红书 官方图标" width="40" height="40"><br>小红书 | <img src="https://geo.aimmme.com/img/platforms/weibo.png" alt="微博 官方图标" width="40" height="40"><br>微博 |
+| <img src="https://geo.aimmme.com/img/platforms/zhihu.png" alt="知乎 官方图标" width="40" height="40"><br>知乎 | <img src="https://geo.aimmme.com/img/platforms/juejin.png" alt="掘金 官方图标" width="40" height="40"><br>掘金 | <img src="https://geo.aimmme.com/img/platforms/baijiahao.png" alt="百家号 官方图标" width="40" height="40"><br>百家号 |
+| <img src="https://geo.aimmme.com/img/platforms/cnblogs.png" alt="博客园 官方图标" width="40" height="40"><br>博客园 | <img src="https://geo.aimmme.com/img/platforms/51cto.png" alt="51CTO 官方图标" width="40" height="40"><br>51CTO | <img src="https://geo.aimmme.com/img/platforms/jianshu.png" alt="简书 官方图标" width="40" height="40"><br>简书 |
+| <img src="https://geo.aimmme.com/img/platforms/segmentfault.png" alt="思否 官方图标" width="40" height="40"><br>思否 | <img src="https://geo.aimmme.com/img/platforms/oschina.png" alt="开源中国 官方图标" width="40" height="40"><br>开源中国 | <img src="https://geo.aimmme.com/img/platforms/tencent_cloud_dev.png" alt="腾讯云开发者社区 官方图标" width="40" height="40"><br>腾讯云开发者社区 |
+| <img src="https://geo.aimmme.com/img/platforms/aliyun_dev.png" alt="阿里云开发者社区 官方图标" width="40" height="40"><br>阿里云开发者社区 | <img src="https://geo.aimmme.com/img/platforms/qiehao.png" alt="企鹅号 官方图标" width="40" height="40"><br>企鹅号 | <img src="https://geo.aimmme.com/img/platforms/netease.png" alt="网易 官方图标" width="40" height="40"><br>网易 |
+| <img src="https://geo.aimmme.com/img/platforms/sohu.png" alt="搜狐 官方图标" width="40" height="40"><br>搜狐 | <img src="https://geo.aimmme.com/img/platforms/wechat.png" alt="微信公众号 官方图标" width="40" height="40"><br>微信公众号 | <img src="https://geo.aimmme.com/img/platforms/gitee.png" alt="Gitee 官方图标" width="40" height="40"><br>Gitee |
+
+### 海外平台
+
+| 平台 | 平台 | 平台 |
+| --- | --- | --- |
+| <img src="https://geo.aimmme.com/img/platforms/github.png" alt="GitHub 官方图标" width="40" height="40"><br>GitHub | <img src="https://geo.aimmme.com/img/platforms/reddit.png" alt="Reddit 官方图标" width="40" height="40"><br>Reddit | <img src="https://geo.aimmme.com/img/platforms/linkedin.png" alt="LinkedIn 领英 官方图标" width="40" height="40"><br>LinkedIn 领英 |
+| <img src="https://geo.aimmme.com/img/platforms/x.png" alt="X（Twitter） 官方图标" width="40" height="40"><br>X（Twitter） | <img src="https://geo.aimmme.com/img/platforms/threads.png" alt="Threads 官方图标" width="40" height="40"><br>Threads | <img src="https://geo.aimmme.com/img/platforms/discord.png" alt="Discord 官方图标" width="40" height="40"><br>Discord |
+| <img src="https://geo.aimmme.com/img/platforms/facebook.png" alt="Facebook 官方图标" width="40" height="40"><br>Facebook | <img src="https://geo.aimmme.com/img/platforms/tiktok.png" alt="TikTok 官方图标" width="40" height="40"><br>TikTok | <img src="https://geo.aimmme.com/img/platforms/youtube.png" alt="YouTube 官方图标" width="40" height="40"><br>YouTube |
+
+平台扩展需要针对目标页面适配并验证，不承诺任意平台无需配置即可自动发布。闲鱼已退役，不计入上述目录。
+
 ## 能力说明
 
 - Codex、Claude Code、DeepSeek、豆包、ChatGPT、Gemini、Cursor、Trae、WorkBuddy、Kimi、Qwen Code、ZCode、OpenClaw 是宣传与协作工具目录；图标展示不表示每个工具都有内置自动执行驱动。
@@ -104,7 +130,7 @@ node scripts/aimegeo.mjs verify ./downloads/aimegeomac.zip --sha256 REPLACE_WITH
 
 原创教程、提示词和通用脚本采用 [MIT](LICENSE)；产品软件、商标、官方图标与截图适用范围见 [NOTICE.md](NOTICE.md)。提交建议前请读 [CONTRIBUTING.md](CONTRIBUTING.md)。逐文件公开范围见 [PUBLIC-FILES.md](PUBLIC-FILES.md)。
 
-资料核对日期：2026-10-17。产品页面、客户端下载与功能会更新，以官方说明和实际页面为准。
+资料核对日期：2026-10-18。产品页面、客户端下载与功能会更新，以官方说明和实际页面为准。
 
 
 
@@ -378,7 +404,13 @@ Source: https://xxjrq.github.io/aimegeo/docs/platforms-and-models/
 
 # aimeGeo 平台、AI 工具与引用检测能力
 
-本表按 2026-10-17 的产品目录和实现声明整理，帮助你选择第一条可执行流程。具备自动投稿功能不等于每个账号、客户端版本和平台页面都已实测通过；每次真实投稿以任务回执和平台页面为准。
+本表按 2026-10-18 的产品目录和实现声明整理，帮助你选择第一条可执行流程。具备自动投稿功能不等于每个账号、客户端版本和平台页面都已实测通过；每次真实投稿以任务回执和平台页面为准。
+
+## 支持无限扩展平台
+
+当前非退役平台目录为 **30 个**（国内 21 个、海外 9 个），全部名称与官方图标见[项目介绍](../README.md)。利用 Easy WebBridge、自定义指令和浏览器自动化，可持续适配新的平台操作与工作流；新增平台需配置和验证，不等于所有目录条目都已具备自动发布能力。
+
+[官网平台目录](https://geo.aimmme.com/platforms/) · [官网帮助文档](https://geo.aimmme.com/docs/)
 
 ## 国内发布平台
 
@@ -542,7 +574,7 @@ Source: https://xxjrq.github.io/aimegeo/docs/screenshots/
 
 # aimeGeo 基础界面截图
 
-以下为 2026-10-17 的真实产品网页预览截图，只展示产品介绍、公开下载页和四个基础列表。列表通过正式查询筛成空结果，再裁切到内容区；图中的零统计仅表示当前筛选结果，不是产品业务总量。图片没有真实稿件、账号或环境标识，也未执行保存、同步、发布或检测。
+以下包含产品介绍、公开下载页和四个基础列表。四张列表为真实产品组件渲染的虚构演示记录，并标注“演示数据”；用于认识标题、账号、平台、图文/视频类型、任务状态及引用检测字段，不代表真实客户、发布成果或检测业绩。没有向业务库写入演示记录，也没有触发账号同步、投稿或 AI 检测。
 
 ## 产品介绍
 
@@ -560,7 +592,7 @@ Source: https://xxjrq.github.io/aimegeo/docs/screenshots/
 
 查看文章标题、类型、分类、配图和操作入口。首次使用从“添加文章”开始，具体步骤见[新手指南](getting-started.md)。
 
-![aimeGeo 文章列表，演示查询无匹配记录](assets/screenshots/03-article-list.png)
+![aimeGeo 文章列表，虚构演示数据](assets/screenshots/03-article-list.png)
 
 ## 账号授权列表
 
@@ -572,15 +604,15 @@ Source: https://xxjrq.github.io/aimegeo/docs/screenshots/
 
 查看任务来源、目标账号、内容类型、状态与操作入口；这张图只展示界面，不表示任何平台已实发成功。
 
-![aimeGeo 发布任务列表，演示查询无匹配任务](assets/screenshots/05-publish-list.png)
+![aimeGeo 发布任务列表，虚构演示数据](assets/screenshots/05-publish-list.png)
 
 ## AI 引用监测列表
 
 按产品或项目定位检测对象，查看引用任务、问题和检测记录入口。AI 同题复测在引用检测记录中进行；百度/必应搜索收录是另一项监测。
 
-![aimeGeo AI 引用监测列表，演示查询无匹配对象](assets/screenshots/06-citation-list.png)
+![aimeGeo AI 引用监测列表，虚构演示数据](assets/screenshots/06-citation-list.png)
 
-真实业务操作请按[使用流程](workflow.md)执行。界面随版本更新，截图用于认识字段与入口，不代替当前安装版本的实际结果。
+新版站内帮助见 [官网帮助文档](https://geo.aimmme.com/docs/)。真实业务操作请按[使用流程](workflow.md)执行。界面随版本更新，截图用于认识字段与入口，不代替当前安装版本的实际结果。
 
 
 

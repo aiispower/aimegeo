@@ -79,6 +79,32 @@ node scripts/aimegeo.mjs verify ./downloads/aimegeomac.zip --sha256 REPLACE_WITH
 
 下载命令输出的本地 SHA-256 可用于传输一致性比较；只有与可信发布方提供的值相符，才构成独立校验。命令详情见 [辅助脚本说明](scripts/README.md)。
 
+## 平台图标全量展示，支持无限扩展平台
+
+当前非退役平台目录共 **30 个**：国内 21 个、海外 9 个。通过 **Easy WebBridge、自定义指令与浏览器自动化**，持续扩展新的发布平台与工作流。具体内容类型与自动发布能力见[能力表](docs/platforms-and-models.md)，目录数量不等于已打通数量。
+
+### 国内平台
+
+| 平台 | 平台 | 平台 |
+| --- | --- | --- |
+| <img src="https://geo.aimmme.com/img/platforms/csdn.png" alt="CSDN 官方图标" width="40" height="40"><br>CSDN | <img src="https://geo.aimmme.com/img/platforms/douyin.png" alt="抖音 官方图标" width="40" height="40"><br>抖音 | <img src="https://geo.aimmme.com/img/platforms/bilibili.png" alt="B站 官方图标" width="40" height="40"><br>B站 |
+| <img src="https://geo.aimmme.com/img/platforms/toutiao.png" alt="今日头条 官方图标" width="40" height="40"><br>今日头条 | <img src="https://geo.aimmme.com/img/platforms/xiaohongshu.png" alt="小红书 官方图标" width="40" height="40"><br>小红书 | <img src="https://geo.aimmme.com/img/platforms/weibo.png" alt="微博 官方图标" width="40" height="40"><br>微博 |
+| <img src="https://geo.aimmme.com/img/platforms/zhihu.png" alt="知乎 官方图标" width="40" height="40"><br>知乎 | <img src="https://geo.aimmme.com/img/platforms/juejin.png" alt="掘金 官方图标" width="40" height="40"><br>掘金 | <img src="https://geo.aimmme.com/img/platforms/baijiahao.png" alt="百家号 官方图标" width="40" height="40"><br>百家号 |
+| <img src="https://geo.aimmme.com/img/platforms/cnblogs.png" alt="博客园 官方图标" width="40" height="40"><br>博客园 | <img src="https://geo.aimmme.com/img/platforms/51cto.png" alt="51CTO 官方图标" width="40" height="40"><br>51CTO | <img src="https://geo.aimmme.com/img/platforms/jianshu.png" alt="简书 官方图标" width="40" height="40"><br>简书 |
+| <img src="https://geo.aimmme.com/img/platforms/segmentfault.png" alt="思否 官方图标" width="40" height="40"><br>思否 | <img src="https://geo.aimmme.com/img/platforms/oschina.png" alt="开源中国 官方图标" width="40" height="40"><br>开源中国 | <img src="https://geo.aimmme.com/img/platforms/tencent_cloud_dev.png" alt="腾讯云开发者社区 官方图标" width="40" height="40"><br>腾讯云开发者社区 |
+| <img src="https://geo.aimmme.com/img/platforms/aliyun_dev.png" alt="阿里云开发者社区 官方图标" width="40" height="40"><br>阿里云开发者社区 | <img src="https://geo.aimmme.com/img/platforms/qiehao.png" alt="企鹅号 官方图标" width="40" height="40"><br>企鹅号 | <img src="https://geo.aimmme.com/img/platforms/netease.png" alt="网易 官方图标" width="40" height="40"><br>网易 |
+| <img src="https://geo.aimmme.com/img/platforms/sohu.png" alt="搜狐 官方图标" width="40" height="40"><br>搜狐 | <img src="https://geo.aimmme.com/img/platforms/wechat.png" alt="微信公众号 官方图标" width="40" height="40"><br>微信公众号 | <img src="https://geo.aimmme.com/img/platforms/gitee.png" alt="Gitee 官方图标" width="40" height="40"><br>Gitee |
+
+### 海外平台
+
+| 平台 | 平台 | 平台 |
+| --- | --- | --- |
+| <img src="https://geo.aimmme.com/img/platforms/github.png" alt="GitHub 官方图标" width="40" height="40"><br>GitHub | <img src="https://geo.aimmme.com/img/platforms/reddit.png" alt="Reddit 官方图标" width="40" height="40"><br>Reddit | <img src="https://geo.aimmme.com/img/platforms/linkedin.png" alt="LinkedIn 领英 官方图标" width="40" height="40"><br>LinkedIn 领英 |
+| <img src="https://geo.aimmme.com/img/platforms/x.png" alt="X（Twitter） 官方图标" width="40" height="40"><br>X（Twitter） | <img src="https://geo.aimmme.com/img/platforms/threads.png" alt="Threads 官方图标" width="40" height="40"><br>Threads | <img src="https://geo.aimmme.com/img/platforms/discord.png" alt="Discord 官方图标" width="40" height="40"><br>Discord |
+| <img src="https://geo.aimmme.com/img/platforms/facebook.png" alt="Facebook 官方图标" width="40" height="40"><br>Facebook | <img src="https://geo.aimmme.com/img/platforms/tiktok.png" alt="TikTok 官方图标" width="40" height="40"><br>TikTok | <img src="https://geo.aimmme.com/img/platforms/youtube.png" alt="YouTube 官方图标" width="40" height="40"><br>YouTube |
+
+平台扩展需要针对目标页面适配并验证，不承诺任意平台无需配置即可自动发布。闲鱼已退役，不计入上述目录。
+
 ## 能力说明
 
 - Codex、Claude Code、DeepSeek、豆包、ChatGPT、Gemini、Cursor、Trae、WorkBuddy、Kimi、Qwen Code、ZCode、OpenClaw 是宣传与协作工具目录；图标展示不表示每个工具都有内置自动执行驱动。
@@ -94,4 +120,4 @@ node scripts/aimegeo.mjs verify ./downloads/aimegeomac.zip --sha256 REPLACE_WITH
 
 原创教程、提示词和通用脚本采用 [MIT](LICENSE)；产品软件、商标、官方图标与截图适用范围见 [NOTICE.md](NOTICE.md)。提交建议前请读 [CONTRIBUTING.md](CONTRIBUTING.md)。逐文件公开范围见 [PUBLIC-FILES.md](PUBLIC-FILES.md)。
 
-资料核对日期：2026-10-17。产品页面、客户端下载与功能会更新，以官方说明和实际页面为准。
+资料核对日期：2026-10-18。产品页面、客户端下载与功能会更新，以官方说明和实际页面为准。

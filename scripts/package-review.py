@@ -3,9 +3,13 @@
 import hashlib
 import json
 from pathlib import Path
+import re
 import zipfile
 
 root = Path(__file__).resolve().parent.parent
+version = json.loads((root / 'package.json').read_text(encoding='utf-8'))['version']
+if not re.fullmatch(r'\d+\.\d+\.\d+', version):
+    raise SystemExit('Expected a numeric package release version.')
 manifest = json.loads((root / 'public-manifest.json').read_text(encoding='utf-8'))
 scope = json.loads((root / 'PUBLIC-SCOPE.json').read_text(encoding='utf-8'))
 files = []
@@ -34,10 +38,14 @@ def archive(name, selected, prefix):
             package.writestr(info, (root / file).read_bytes())
     print(f'{destination.name}: {destination.stat().st_size} bytes, sha256={hashlib.sha256(destination.read_bytes()).hexdigest()}')
 
-archive('aimegeo-resources-0.1.0-review.zip', files, 'aimegeo-resources-0.1.0/')
+archive(f'aimegeo-resources-{version}-review.zip', files, f'aimegeo-resources-{version}/')
 for slug in ['aimegeo-setup', 'aimegeo-content', 'aimegeo-publish-monitor']:
     selected = [file for file in files if file.startswith(f'skills/{slug}/')]
-    destination = out / f'{slug}-0.1.0-review.zip'
+    skill_manifest = (root / 'skills' / slug / 'manifest.yaml').read_text(encoding='utf-8')
+    versions = re.findall(r'^version:\s*[\'"]?(\d+\.\d+\.\d+)[\'"]?\s*$', skill_manifest, re.MULTILINE)
+    if len(versions) != 1:
+        raise SystemExit(f'Expected one numeric Skill release version: {slug}')
+    destination = out / f'{slug}-{versions[0]}-review.zip'
     with zipfile.ZipFile(destination, 'w', compression=zipfile.ZIP_DEFLATED) as package:
         for file in sorted(selected):
             package.write(root / file, file.removeprefix('skills/'))
