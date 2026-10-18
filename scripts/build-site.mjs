@@ -50,7 +50,7 @@ function render(body, page) {
     const faq = [...home.matchAll(/<details><summary>([\s\S]*?)<\/summary><p>([\s\S]*?)<\/p><\/details>/g)].map(match => ({ '@type': 'Question', name: plain(match[1]), acceptedAnswer: { '@type': 'Answer', text: plain(match[2]) } }));
     if (faq.length) schema.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq });
   }
-  const vars = { LANG: lang, TITLE: escape(page.title), DESCRIPTION: escape(page.description), CANONICAL: escape(canonical), SOCIALIMAGE: escape(new URL('assets/screenshots/01-promotion.png', baseUrl).href), ALTERNATES: alternates, JSONLD: `<script type="application/ld+json">${JSON.stringify(schema).replaceAll('<', '\\u003c')}</script>`, BASE: base, BODY: body };
+  const vars = { LANG: lang, TITLE: escape(page.title), DESCRIPTION: escape(page.description), CANONICAL: escape(canonical), SOCIALIMAGE: escape(new URL('assets/promotion/01-dialogue-geo.png', baseUrl).href), ALTERNATES: alternates, JSONLD: `<script type="application/ld+json">${JSON.stringify(schema).replaceAll('<', '\\u003c')}</script>`, BASE: base, BODY: body };
   return template.replace(/\{\{([A-Z]+)\}\}/g, (match, name) => vars[name] ?? match).replaceAll('{{BASE}}', base);
 }
 
@@ -62,7 +62,7 @@ for (const asset of scope.files.filter(file => file.startsWith('docs/assets/')))
   await writeFile(target, await readPublic(asset));
 }
 await writeFile(path.join(output, 'style.css'), await readPublic('site/style.css'));
-await writeFile(path.join(output, 'index.html'), render(home.replaceAll('{{BASE}}', base), { title: 'aimeGeo 下载、安装与 AI 使用指南 | Skills · GEO 内容工作流', description: config.description }));
+await writeFile(path.join(output, 'index.html'), render(home.replaceAll('{{BASE}}', base), { title: 'aimeGeo 使用资源｜自研免费 GEO 系统 · 下载与 AI 指南', description: config.description }));
 const full = ['# aimeGeo 使用资源', `Updated: ${config.updatedAt}`, `Official product: https://geo.aimmme.com/`, 'Scope: public usage resources; no private product source or account data.'];
 for (const page of config.pages) {
   if (!/^[a-z0-9/-]+$/.test(page.slug) || page.slug.includes('..')) throw new Error('Invalid page slug.');
@@ -74,7 +74,7 @@ for (const page of config.pages) {
   await writeFile(path.join(destination, 'index.html'), render(body, page));
   if (!page.lang) full.push(`\n\n---\n\nSource: ${new URL(`${page.slug}/`, baseUrl).href}\n\n${stripFrontMatter(markdown)}`);
 }
-const llms = `# aimeGeo\n\n> AI 内容制作、多平台发布与 AI 品牌提及和引用检测的公开使用资源。此资料库不包含产品私有源码。\n\n- 官网：https://geo.aimmme.com/\n- 客户端下载：https://geo.aimmme.com/download/\n- 正式工作台：https://geo.aimmme.com/ag01/\n- 官方帮助：https://geo.aimmme.com/docs/\n\n## Guides and Agent resources\n\n${config.pages.map(page => `- [${page.title}](${new URL(`${page.slug}/`, baseUrl).href}): ${page.description}`).join('\n')}\n\n## Machine-readable context\n\n- [Product facts](${new URL('product.json', baseUrl).href})\n- [Download sources](${new URL('resources.json', baseUrl).href})\n- [Full guide text](${new URL('llms-full.txt', baseUrl).href})\n\n## Boundaries\n\n平台目录不等于已验证自动发布。客户端、EasyBR 和 Easy WebBridge 作用不同。发布、公开、搜索收录和 AI 引用分别记录。本文件是可选资料索引，不是排名或引用保证。\n`;
+const llms = `# aimeGeo\n\n> aimeGeo 自研免费 GEO 系统的公开使用资源。做 GEO，也做自媒体：和熟悉的 AI 对话，推进选题、创作、配图和多平台发布，按需检测 AI 引用。此资料库不包含产品私有源码。\n\n- 官网：https://geo.aimmme.com/\n- 客户端下载：https://geo.aimmme.com/download/\n- 正式工作台：https://geo.aimmme.com/ag01/\n- 官方帮助：https://geo.aimmme.com/docs/\n\n## Guides and Agent resources\n\n${config.pages.map(page => `- [${page.title}](${new URL(`${page.slug}/`, baseUrl).href}): ${page.description}`).join('\n')}\n\n## Machine-readable context\n\n- [Product facts](${new URL('product.json', baseUrl).href})\n- [Download sources](${new URL('resources.json', baseUrl).href})\n- [Full guide text](${new URL('llms-full.txt', baseUrl).href})\n\n## Boundaries\n\n30 个平台目录（国内 21、海外 9），13 个工具、9 个模型目录；支持无限扩展平台，目录不等于已验证自动发布或已配置检测。aimeGeo 系统免费，外部模型、图片服务与代理按所用服务计费。产品官网为 geo.aimmme.com，本资源文档站用于教程与资源。客户端、EasyBR 和 Easy WebBridge 作用不同。发布、公开、搜索收录和 AI 引用分别记录。本文件是可选资料索引，不是排名或引用保证。\n`;
 await writeFile(path.join(root, 'llms.txt'), llms);
 await writeFile(path.join(root, 'llms-full.txt'), full.join('\n'));
 for (const file of ['resources.json', 'product.json', 'llms.txt', 'llms-full.txt']) await writeFile(path.join(output, file), await readPublic(file));

@@ -1,123 +1,39 @@
-# aimeGeo：AI 内容制作、多平台发布与 GEO 引用检测
+# aimeGeo｜自研免费 GEO 系统
 
-[English](README.en.md) · [使用文档](https://xxjrq.github.io/aimegeo/) · [资源包与 Skills 下载](https://github.com/xxjrq/aimegeo/releases/latest) · [Gitee 镜像](https://gitee.com/xxjrq/aimegeo)
+[English](README.en.md) · [Gitee 镜像](https://gitee.com/xxjrq/aimegeo)
 
-[官网](https://geo.aimmme.com/) · [客户端下载](https://geo.aimmme.com/download/) · [正式工作台](https://geo.aimmme.com/ag01/) · [官方帮助](https://geo.aimmme.com/docs/)
+![aimeGeo：一句话，完成 GEO；和 Codex、Claude Code、Cursor、Trae 对话推进工作流](docs/assets/promotion/01-dialogue-geo.png)
 
-**把网站、产品或项目交给熟悉的 AI，串起“制作内容 → 自动发布 → 检测引用”。** aimeGeo 是面向内容创作者、独立开发者和品牌团队的 GEO 内容工作台；它将资料、写作、封面、平台账号、发布记录和 AI 引用观测放在一条可回看的工作流里。
+**一句话，完成 GEO。和 AI 对话，让 GEO 跑起来。** 告诉熟悉的 AI 你的网站、产品、项目或内容方向，让 Agent 推进选题、创作、配图与多平台发布；**做 GEO，也做自媒体**，需要观察 AI 可见度时再检测收录与引用。
 
-本仓库开源的是 **使用教程、Agent Skills、提示词、演示资料与通用辅助脚本**。产品客户端从官方下载中心获取；本仓库不包含 aimeGeo 服务端、客户端业务源码或用户数据。
+aimeGeo 系统免费使用；本仓库提供教程、Skills、提示词与通用辅助脚本，产品业务源码与用户数据不在公开范围内。外部模型、图片服务与代理费用按所用服务计算。
 
-![aimeGeo 产品宣传界面：内容制作、自动发布、检测引用三步流程](docs/assets/screenshots/01-promotion.png)
+## 制作 → 发布 → 检测
 
-## 第一次使用，从这里开始
+- **制作内容**：整理资料、选题、写作、改稿与配图，生成标题、标签、封面与正文。
+- **自动发布**：按目标平台、账号及内容类型推进图文或视频任务，保留实际回执。
+- **检测引用**：做 GEO 时按需记录 AI 回答中的品牌提及与来源引用，保留历史并持续复测。
 
-| 你要做什么 | 打开这份资料 |
-| --- | --- |
-| 让 AI 帮我下载、安装 | [AI 安装提示词](prompts/setup.md) · [安装指南](docs/installation.md) |
-| 不看代码，先跑通一个项目 | [新手上手指南](docs/getting-started.md) |
-| 了解三个业务阶段 | [完整使用流程](docs/workflow.md) |
-| 给 Codex / Claude Code / WorkBuddy 使用 | [AI 助手指南](docs/ai-assistant.md) · [Skills](skills/README.md) |
-| 看真实界面 | [截图与操作说明](docs/screenshot-index.md) |
-| 核对平台、模型与当前限制 | [平台和模型能力表](docs/platforms-and-models.md) |
-| 连接或操作遇到问题 | [常见问题](docs/faq.md) |
+EasyBR AI 指纹浏览器辅助管理独立登录环境、代理 IP 与指纹；Easy WebBridge 连接已登录的真实浏览器执行网页操作。环境隔离辅助管理，账号操作与发布频率需遵循平台规则。
 
-### 直接复制给你的 AI
+## 从这里开始
 
-```text
-请按 aimeGeo 的安装与上手指南协助我。
-先识别我的操作系统，从 https://geo.aimmme.com/download/ 选择对应官方资源；
-帮我完成下载、安装和本人账号连接，再以我提供的网站、产品或项目建立一份内容任务。
-先制作并检查一篇图文，再按我指定的账号和平台处理发布，最后查看 AI 提及与引用。
-不要把产品目录中的所有平台当成已经验证的自动发布能力，也不要上传我的账号配置或客户资料。
-```
+[产品官网](https://geo.aimmme.com/) · [免费开始使用](https://geo.aimmme.com/download/) · [安装指南](docs/installation.md) · [官方帮助](https://geo.aimmme.com/docs/) · [资源文档站](https://xxjrq.github.io/aimegeo/) · [资源包下载](https://github.com/xxjrq/aimegeo/releases/latest)
 
-在此仓库下载后，也可让 AI 先读取 [skills/aimegeo-setup/SKILL.md](skills/aimegeo-setup/SKILL.md)。**普通用户手动安装客户端不需要 Node.js。**
+让 AI 阅读[安装提示词](prompts/setup.md)或[安装 Skill](skills/aimegeo-setup/SKILL.md)，再跟着[新手指南](docs/getting-started.md)完成第一个项目。手动安装客户端不需要 Node.js；可选下载与校验命令见[辅助脚本说明](scripts/README.md)。
 
-## 三步完成内容工作流，EasyBR 强力辅助
+**30 个平台生态（国内 21 / 海外 9），支持无限扩展平台。** [完整平台、13 个 AI 工具与 9 个模型目录](docs/platforms-and-models.md)保留官方图标及当前能力说明；目录数量不等于全部自动发布或检测均已打通。
 
-1. **制作内容**：输入网站、产品或项目，整理事实资料和读者需求；让 AI 生成选题、标题、说明、标签、封面方案和正文。支持把自定义指令复制给熟悉的 AI；自动写作需满足产品当前的运行条件。
-2. **自动发布**：准备图文或视频，选择已连接的平台账号，检查素材与平台要求，再执行任务；在发布记录里分清草稿、已提交、审核中和已公开。
-3. **检测引用**：围绕固定问题和公开内容链接观察 AI 品牌提及与原生引用，留存回答、来源和检测历史。发布完成不等于已经收录。
+自媒体任务可先完成创作与发布，不必强制执行引用检测；视频发布使用已有素材与当前可用工作流。
 
-**EasyBR 环境隔离**是多账号辅助：每个账号可以使用独立浏览器环境，并按需设置代理 IP 与浏览器指纹。Easy WebBridge 连接已登录的真实浏览器，承担页面操作；它与 aimeGeo 客户端分别解决不同问题。
+## 看看工作界面
 
-封面方式包括 Image2、豆包 Seedream、Remotion；可按内容选择尺寸和风格。具体可用方式与外部服务配置以当前产品为准。
+以下为产品组件渲染的**虚构演示数据**，用于认识界面，不代表真实账号、发布成果或引用业绩。点击查看大图。
 
-## 下载什么，安装什么
+[![文章列表：标题、类型、配图与状态，虚构演示数据](docs/assets/screenshots/03-article-list.png)](docs/assets/screenshots/03-article-list.png)
 
-- **aimeGeo 客户端**：[官方下载中心](https://geo.aimmme.com/download/)，Windows 与 macOS Apple Silicon 分别选择对应 ZIP。
-- **EasyBR（多账号环境隔离，可选）**：[官网下载](https://www.ebrower.com/down.html)；它不替代 aimeGeo 客户端。
-- **Easy WebBridge**：[公开仓库](https://github.com/xxjrq/easy-webbridge)。使用已集成 Bridge 的 EasyBR 环境时，按该版本帮助操作；使用其他浏览器时按 Bridge 官方说明连接。
-- **本仓库资源**：教程、Skills、提示词与演示文件；不含安装器。当前未核实 Intel Mac / Linux 的 aimeGeo 成品包，先查官方下载页。
+[![发布任务列表：目标平台、账号和任务状态，虚构演示数据](docs/assets/screenshots/05-publish-list.png)](docs/assets/screenshots/05-publish-list.png)
 
-镜像地址和来源记录见 [resources.json](resources.json)。固定下载地址可能更新，不在本仓库猜测客户端版本或承诺所有镜像永远一致。
+[全部界面截图](docs/screenshot-index.md) · [功能展示](docs/promotion-assets.md) · [AI 助手与 Skills](docs/ai-assistant.md) · [常见问题](docs/faq.md)
 
-## 可选命令：让 AI 检查环境、列下载、校验文件
-
-这些命令只需要 Node.js 20+，没有运行时依赖。它们不登录账号、不读取 Cookie、不自动运行安装器。
-
-```sh
-node scripts/aimegeo.mjs info
-node scripts/aimegeo.mjs downloads
-node scripts/aimegeo.mjs doctor --offline
-node scripts/aimegeo.mjs prompt setup
-```
-
-指定目标和保存位置后下载；已有同名文件不会被覆盖：
-
-```sh
-node scripts/aimegeo.mjs download --target macos-arm64 --source official --output ./downloads/aimegeomac.zip
-node scripts/aimegeo.mjs download --target windows-x64 --source official --output ./downloads/aimegeo.zip
-```
-
-文件校验：
-
-```sh
-node scripts/aimegeo.mjs verify ./downloads/aimegeomac.zip --sha256 REPLACE_WITH_TRUSTED_SHA256
-```
-
-下载命令输出的本地 SHA-256 可用于传输一致性比较；只有与可信发布方提供的值相符，才构成独立校验。命令详情见 [辅助脚本说明](scripts/README.md)。
-
-## 平台图标全量展示，支持无限扩展平台
-
-当前非退役平台目录共 **30 个**：国内 21 个、海外 9 个。通过 **Easy WebBridge、自定义指令与浏览器自动化**，持续扩展新的发布平台与工作流。具体内容类型与自动发布能力见[能力表](docs/platforms-and-models.md)，目录数量不等于已打通数量。
-
-### 国内平台
-
-| 平台 | 平台 | 平台 |
-| --- | --- | --- |
-| <img src="https://geo.aimmme.com/img/platforms/csdn.png" alt="CSDN 官方图标" width="40" height="40"><br>CSDN | <img src="https://geo.aimmme.com/img/platforms/douyin.png" alt="抖音 官方图标" width="40" height="40"><br>抖音 | <img src="https://geo.aimmme.com/img/platforms/bilibili.png" alt="B站 官方图标" width="40" height="40"><br>B站 |
-| <img src="https://geo.aimmme.com/img/platforms/toutiao.png" alt="今日头条 官方图标" width="40" height="40"><br>今日头条 | <img src="https://geo.aimmme.com/img/platforms/xiaohongshu.png" alt="小红书 官方图标" width="40" height="40"><br>小红书 | <img src="https://geo.aimmme.com/img/platforms/weibo.png" alt="微博 官方图标" width="40" height="40"><br>微博 |
-| <img src="https://geo.aimmme.com/img/platforms/zhihu.png" alt="知乎 官方图标" width="40" height="40"><br>知乎 | <img src="https://geo.aimmme.com/img/platforms/juejin.png" alt="掘金 官方图标" width="40" height="40"><br>掘金 | <img src="https://geo.aimmme.com/img/platforms/baijiahao.png" alt="百家号 官方图标" width="40" height="40"><br>百家号 |
-| <img src="https://geo.aimmme.com/img/platforms/cnblogs.png" alt="博客园 官方图标" width="40" height="40"><br>博客园 | <img src="https://geo.aimmme.com/img/platforms/51cto.png" alt="51CTO 官方图标" width="40" height="40"><br>51CTO | <img src="https://geo.aimmme.com/img/platforms/jianshu.png" alt="简书 官方图标" width="40" height="40"><br>简书 |
-| <img src="https://geo.aimmme.com/img/platforms/segmentfault.png" alt="思否 官方图标" width="40" height="40"><br>思否 | <img src="https://geo.aimmme.com/img/platforms/oschina.png" alt="开源中国 官方图标" width="40" height="40"><br>开源中国 | <img src="https://geo.aimmme.com/img/platforms/tencent_cloud_dev.png" alt="腾讯云开发者社区 官方图标" width="40" height="40"><br>腾讯云开发者社区 |
-| <img src="https://geo.aimmme.com/img/platforms/aliyun_dev.png" alt="阿里云开发者社区 官方图标" width="40" height="40"><br>阿里云开发者社区 | <img src="https://geo.aimmme.com/img/platforms/qiehao.png" alt="企鹅号 官方图标" width="40" height="40"><br>企鹅号 | <img src="https://geo.aimmme.com/img/platforms/netease.png" alt="网易 官方图标" width="40" height="40"><br>网易 |
-| <img src="https://geo.aimmme.com/img/platforms/sohu.png" alt="搜狐 官方图标" width="40" height="40"><br>搜狐 | <img src="https://geo.aimmme.com/img/platforms/wechat.png" alt="微信公众号 官方图标" width="40" height="40"><br>微信公众号 | <img src="https://geo.aimmme.com/img/platforms/gitee.png" alt="Gitee 官方图标" width="40" height="40"><br>Gitee |
-
-### 海外平台
-
-| 平台 | 平台 | 平台 |
-| --- | --- | --- |
-| <img src="https://geo.aimmme.com/img/platforms/github.png" alt="GitHub 官方图标" width="40" height="40"><br>GitHub | <img src="https://geo.aimmme.com/img/platforms/reddit.png" alt="Reddit 官方图标" width="40" height="40"><br>Reddit | <img src="https://geo.aimmme.com/img/platforms/linkedin.png" alt="LinkedIn 领英 官方图标" width="40" height="40"><br>LinkedIn 领英 |
-| <img src="https://geo.aimmme.com/img/platforms/x.png" alt="X（Twitter） 官方图标" width="40" height="40"><br>X（Twitter） | <img src="https://geo.aimmme.com/img/platforms/threads.png" alt="Threads 官方图标" width="40" height="40"><br>Threads | <img src="https://geo.aimmme.com/img/platforms/discord.png" alt="Discord 官方图标" width="40" height="40"><br>Discord |
-| <img src="https://geo.aimmme.com/img/platforms/facebook.png" alt="Facebook 官方图标" width="40" height="40"><br>Facebook | <img src="https://geo.aimmme.com/img/platforms/tiktok.png" alt="TikTok 官方图标" width="40" height="40"><br>TikTok | <img src="https://geo.aimmme.com/img/platforms/youtube.png" alt="YouTube 官方图标" width="40" height="40"><br>YouTube |
-
-平台扩展需要针对目标页面适配并验证，不承诺任意平台无需配置即可自动发布。闲鱼已退役，不计入上述目录。
-
-## 能力说明
-
-- Codex、Claude Code、DeepSeek、豆包、ChatGPT、Gemini、Cursor、Trae、WorkBuddy、Kimi、Qwen Code、ZCode、OpenClaw 是宣传与协作工具目录；图标展示不表示每个工具都有内置自动执行驱动。
-- 具体发布平台与内容类型，按 [能力表](docs/platforms-and-models.md) 和当前安装版本选择。CSDN 为国内平台，GitHub 为海外平台；目录收录不代表已完成逐平台实发验收。
-- 当前网页引用检测覆盖豆包、DeepSeek、ChatGPT；OpenAI / Perplexity 联网 API 需要配置。
-- 系统按当前宣传免费使用；外部模型、图片生成、代理或第三方工具可能另有费用。
-
-## SEO / GEO 友好的开放资料
-
-本项目提供中英文介绍、问题导向教程、明确的能力边界、来源链接、FAQ，以及 [llms.txt](llms.txt) 和 [product.json](product.json)。文档站构建会生成可抓取 HTML、规范链接、结构化数据和站点地图。它们帮助人和 Agent 理解资料，不代表搜索排名、被推荐或引用效果保证。
-
-## 许可与贡献
-
-原创教程、提示词和通用脚本采用 [MIT](LICENSE)；产品软件、商标、官方图标与截图适用范围见 [NOTICE.md](NOTICE.md)。提交建议前请读 [CONTRIBUTING.md](CONTRIBUTING.md)。逐文件公开范围见 [PUBLIC-FILES.md](PUBLIC-FILES.md)。
-
-资料核对日期：2026-10-18。产品页面、客户端下载与功能会更新，以官方说明和实际页面为准。
+原创使用资源采用 [MIT 许可](LICENSE)，产品软件及第三方素材遵循各自条款，见 [NOTICE](NOTICE.md)。[公开文件清单](PUBLIC-FILES.md)。资料核对：2026-10-18。

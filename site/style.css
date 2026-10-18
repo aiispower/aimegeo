@@ -182,3 +182,18 @@ p { margin: 1em 0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
 }
+
+/* Keep the established palette while reducing the amount shown at once. */
+.campaign-figure { max-width: 840px; margin-left: auto; margin-right: auto; }
+.campaign-figure img { display: block; width: 100%; border: 1px solid var(--line); border-radius: 12px; }
+.demo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.demo-grid figure { margin: 0; padding: 20px; background: var(--canvas); border: 1px solid var(--line); border-radius: 10px; }
+.demo-grid img { display: block; width: 100%; aspect-ratio: 2.4; object-fit: contain; object-position: top; }
+.demo-grid figcaption { margin-top: 14px; font-size: 12px; color: var(--muted); }
+.section-link { margin-top: 24px; font-size: 13px; }
+.overview-tools { display: flex; flex-wrap: wrap; gap: 16px 30px; margin: 26px 0; }
+.overview-tools span { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-size: 14px; }
+.overview-tools img { width: 36px; height: 36px; object-fit: contain; border-radius: 9px; }
+.doc-article td img { display: inline-block; width: 36px; height: 36px; margin: 0; border: 0; border-radius: 8px; object-fit: contain; vertical-align: middle; }
+@media (max-width: 680px) { .demo-grid { grid-template-columns: 1fr; } }
+.overview-tools img[src$="/trae.svg"], .doc-article td img[src$="/trae.svg"] { width: 66px; padding: 7px; background: #14213d; border-radius: 8px; }

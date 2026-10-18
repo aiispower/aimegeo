@@ -1,11 +1,13 @@
 {
   "name": "aimegeo-usage-resources",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "type": "module",
   "description": "aimeGeo 使用指南、Agent Skills、提示词与通用下载辅助工具",
   "license": "MIT",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "test": "node --test scripts/*.test.mjs",
     "build": "node scripts/build-site.mjs",
@@ -14,5 +16,7 @@
     "manifest": "node scripts/audit-public.mjs --write",
     "package:review": "python3 scripts/package-review.py"
   },
-  "devDependencies": { "marked": "17.0.1" }
+  "devDependencies": {
+    "marked": "17.0.1"
+  }
 }

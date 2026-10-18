@@ -33,6 +33,7 @@ const rules = [
 ];
 
 function purpose(file) {
+  if (file.startsWith('docs/assets/promotion/')) return '已审查宣传图，非软件界面截图';
   if (file.startsWith('docs/assets/screenshots/')) return '脱敏基础界面截图';
   if (file.startsWith('docs/assets/')) return '官方产品标识';
   if (file.startsWith('docs/')) return '使用教程与能力说明';
@@ -123,7 +124,7 @@ if (!errors.length && write) {
   await writeFile(path.join(root, 'PUBLIC-FILES.md'), document);
   const bytes = Buffer.from(document);
   entries.push({ path: 'PUBLIC-FILES.md', bytes: bytes.length, sha256: digest(bytes), purpose: purpose('PUBLIC-FILES.md') });
-  await writeFile(path.join(root, 'public-manifest.json'), JSON.stringify({ schemaVersion: 1, resourceVersion: '0.1.0', checkedAt: scope.checkedAt, scope: scope.scope, selfHashExcluded: 'public-manifest.json', fileCountIncludingManifest: entries.length + 1, totalPayloadBytes: entries.reduce((sum, entry) => sum + entry.bytes, 0), files: entries.sort((a, b) => a.path.localeCompare(b.path)) }, null, 2) + '\n');
+  await writeFile(path.join(root, 'public-manifest.json'), JSON.stringify({ schemaVersion: 1, resourceVersion: JSON.parse(await readFile(path.join(root, 'package.json'), 'utf8')).version, checkedAt: scope.checkedAt, scope: scope.scope, selfHashExcluded: 'public-manifest.json', fileCountIncludingManifest: entries.length + 1, totalPayloadBytes: entries.reduce((sum, entry) => sum + entry.bytes, 0), files: entries.sort((a, b) => a.path.localeCompare(b.path)) }, null, 2) + '\n');
 }
 if (!write && !errors.length) {
   const manifest = JSON.parse(await readFile(path.join(root, 'public-manifest.json'), 'utf8'));

@@ -1,6 +1,6 @@
 # aimeGeo
 
-> AI 内容制作、多平台发布与 AI 品牌提及和引用检测的公开使用资源。此资料库不包含产品私有源码。
+> aimeGeo 自研免费 GEO 系统的公开使用资源。做 GEO，也做自媒体：和熟悉的 AI 对话，推进选题、创作、配图和多平台发布，按需检测 AI 引用。此资料库不包含产品私有源码。
 
 - 官网：https://geo.aimmme.com/
 - 客户端下载：https://geo.aimmme.com/download/
@@ -9,8 +9,8 @@
 
 ## Guides and Agent resources
 
-- [aimeGeo 是什么：内容制作、发布与 GEO 引用检测](https://xxjrq.github.io/aimegeo/overview/): 了解 aimeGeo 的三步工作流、下载入口、AI 协作方式、开源资源范围与当前能力。
-- [aimeGeo — AI Content, Publishing and GEO Citation Guides](https://xxjrq.github.io/aimegeo/en/): Official download links, installation help, reusable AI prompts and Agent Skills for the aimeGeo content and citation workflow.
+- [aimeGeo｜自研免费 GEO 系统与使用资源](https://xxjrq.github.io/aimegeo/overview/): 了解 aimeGeo 免费 GEO 与自媒体内容工作流、官方入口、AI 协作方式、公开资源与当前能力。
+- [aimeGeo — Free GEO System and Usage Resources](https://xxjrq.github.io/aimegeo/en/): Free GEO and creator workflows through familiar AI conversations: content creation, multi-platform publishing and optional AI citation checks, with usage guides and Agent Skills.
 - [aimeGeo 下载安装：Windows 与 macOS 使用指南](https://xxjrq.github.io/aimegeo/docs/installation/): 选择 aimeGeo 官方客户端资源，区分使用资源包与安装器，完成安装、登录和浏览器连接。
 - [aimeGeo 怎么用：第一次制作、发布与检测引用](https://xxjrq.github.io/aimegeo/docs/getting-started/): 用一个虚构项目完成 aimeGeo 新手流程：整理资料、AI 起稿、添加文章、连接账号与检查结果。
 - [aimeGeo 工作流：制作内容、自动发布、检测引用](https://xxjrq.github.io/aimegeo/docs/workflow/): 按步骤使用 aimeGeo，区分发布任务、公开状态、搜索收录和 AI 引用，并了解 EasyBR 的辅助作用。
@@ -30,6 +30,7 @@
 - [aimeGeo 内容任务示例](https://xxjrq.github.io/aimegeo/examples/content-task/): 用虚构项目演示如何向 AI 明确一篇内容的目标、结构、素材和交付格式。
 - [aimeGeo 引用检测问题示例](https://xxjrq.github.io/aimegeo/examples/citation-questions/): 围绕虚构项目编写自然问题，区分品牌提及、来源引用与观测记录。
 - [aimeGeo 通用命令：下载、文件校验与提示词](https://xxjrq.github.io/aimegeo/tools/): 使用可选的零运行依赖 Node.js 助手列出资源、下载指定 ZIP、验证 SHA-256 和读取提示词。
+- [aimeGeo 功能展示：AI 对话、多平台发布与独立环境](https://xxjrq.github.io/aimegeo/docs/promotion/): 查看 aimeGeo 的 AI 对话工作流、多平台发布与 EasyBR 独立账号环境。
 
 ## Machine-readable context
 
@@ -39,4 +40,4 @@
 
 ## Boundaries
 
-平台目录不等于已验证自动发布。客户端、EasyBR 和 Easy WebBridge 作用不同。发布、公开、搜索收录和 AI 引用分别记录。本文件是可选资料索引，不是排名或引用保证。
+30 个平台目录（国内 21、海外 9），13 个工具、9 个模型目录；支持无限扩展平台，目录不等于已验证自动发布或已配置检测。aimeGeo 系统免费，外部模型、图片服务与代理按所用服务计费。产品官网为 geo.aimmme.com，本资源文档站用于教程与资源。客户端、EasyBR 和 Easy WebBridge 作用不同。发布、公开、搜索收录和 AI 引用分别记录。本文件是可选资料索引，不是排名或引用保证。

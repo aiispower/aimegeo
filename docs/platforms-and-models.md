@@ -4,7 +4,7 @@
 
 ## 支持无限扩展平台
 
-当前非退役平台目录为 **30 个**（国内 21 个、海外 9 个），全部名称与官方图标见[项目介绍](../README.md)。利用 Easy WebBridge、自定义指令和浏览器自动化，可持续适配新的平台操作与工作流；新增平台需配置和验证，不等于所有目录条目都已具备自动发布能力。
+当前非退役平台目录为 **30 个**（国内 21 个、海外 9 个），全部名称与官方图标见本页下方的完整目录。利用 Easy WebBridge、自定义指令和浏览器自动化，可持续适配新的平台操作与工作流；新增平台需配置和验证，不等于所有目录条目都已具备自动发布能力。
 
 [官网平台目录](https://geo.aimmme.com/platforms/) · [官网帮助文档](https://geo.aimmme.com/docs/)
 
@@ -85,3 +85,79 @@
 EasyBR 管理独立浏览器环境、代理 IP 和指纹；Easy WebBridge 操作环境内已登录的真实网页。配置隔离不构成账号不关联或不受平台限制的保证。
 
 本页是能力说明，不是未来路线图。下载和帮助以[官网](https://geo.aimmme.com/)、[下载中心](https://geo.aimmme.com/download/)与[正式帮助](https://geo.aimmme.com/docs/)最新信息为准。
+
+## 完整目录与官方图标
+
+目录用于识别品牌；实际可执行能力见本页各项说明。图标来源记录见[官网素材来源清单](https://geo.aimmme.com/medias/brand-sources.json)。
+
+### 国内平台（21 个）
+
+| 图标 | 名称 |
+| --- | --- |
+| <img src="https://geo.aimmme.com/img/platforms/csdn.png" alt="CSDN 官方图标" width="36" height="36"> | CSDN |
+| <img src="https://geo.aimmme.com/img/platforms/douyin.png" alt="抖音 官方图标" width="36" height="36"> | 抖音 |
+| <img src="https://geo.aimmme.com/img/platforms/bilibili.png" alt="B站 官方图标" width="36" height="36"> | B站 |
+| <img src="https://geo.aimmme.com/img/platforms/toutiao.png" alt="今日头条 官方图标" width="36" height="36"> | 今日头条 |
+| <img src="https://geo.aimmme.com/img/platforms/xiaohongshu.png" alt="小红书 官方图标" width="36" height="36"> | 小红书 |
+| <img src="https://geo.aimmme.com/img/platforms/weibo.png" alt="微博 官方图标" width="36" height="36"> | 微博 |
+| <img src="https://geo.aimmme.com/img/platforms/zhihu.png" alt="知乎 官方图标" width="36" height="36"> | 知乎 |
+| <img src="https://geo.aimmme.com/img/platforms/juejin.png" alt="掘金 官方图标" width="36" height="36"> | 掘金 |
+| <img src="https://geo.aimmme.com/img/platforms/baijiahao.png" alt="百家号 官方图标" width="36" height="36"> | 百家号 |
+| <img src="https://geo.aimmme.com/img/platforms/cnblogs.png" alt="博客园 官方图标" width="36" height="36"> | 博客园 |
+| <img src="https://geo.aimmme.com/img/platforms/51cto.png" alt="51CTO 官方图标" width="36" height="36"> | 51CTO |
+| <img src="https://geo.aimmme.com/img/platforms/jianshu.png" alt="简书 官方图标" width="36" height="36"> | 简书 |
+| <img src="https://geo.aimmme.com/img/platforms/segmentfault.png" alt="思否 官方图标" width="36" height="36"> | 思否 |
+| <img src="https://geo.aimmme.com/img/platforms/oschina.png" alt="开源中国 官方图标" width="36" height="36"> | 开源中国 |
+| <img src="https://geo.aimmme.com/img/platforms/tencent_cloud_dev.png" alt="腾讯云开发者社区 官方图标" width="36" height="36"> | 腾讯云开发者社区 |
+| <img src="https://geo.aimmme.com/img/platforms/aliyun_dev.png" alt="阿里云开发者社区 官方图标" width="36" height="36"> | 阿里云开发者社区 |
+| <img src="https://geo.aimmme.com/img/platforms/qiehao.png" alt="企鹅号 官方图标" width="36" height="36"> | 企鹅号 |
+| <img src="https://geo.aimmme.com/img/platforms/netease.png" alt="网易 官方图标" width="36" height="36"> | 网易 |
+| <img src="https://geo.aimmme.com/img/platforms/sohu.png" alt="搜狐 官方图标" width="36" height="36"> | 搜狐 |
+| <img src="https://geo.aimmme.com/img/platforms/wechat.png" alt="微信公众号 官方图标" width="36" height="36"> | 微信公众号 |
+| <img src="https://geo.aimmme.com/img/platforms/gitee.png" alt="Gitee 官方图标" width="36" height="36"> | Gitee |
+
+### 海外平台（9 个）
+
+| 图标 | 名称 |
+| --- | --- |
+| <img src="https://geo.aimmme.com/img/platforms/github.png" alt="GitHub 官方图标" width="36" height="36"> | GitHub |
+| <img src="https://geo.aimmme.com/img/platforms/reddit.png" alt="Reddit 官方图标" width="36" height="36"> | Reddit |
+| <img src="https://geo.aimmme.com/img/platforms/linkedin.png" alt="LinkedIn 领英 官方图标" width="36" height="36"> | LinkedIn 领英 |
+| <img src="https://geo.aimmme.com/img/platforms/x.png" alt="X（Twitter） 官方图标" width="36" height="36"> | X（Twitter） |
+| <img src="https://geo.aimmme.com/img/platforms/threads.png" alt="Threads 官方图标" width="36" height="36"> | Threads |
+| <img src="https://geo.aimmme.com/img/platforms/discord.png" alt="Discord 官方图标" width="36" height="36"> | Discord |
+| <img src="https://geo.aimmme.com/img/platforms/facebook.png" alt="Facebook 官方图标" width="36" height="36"> | Facebook |
+| <img src="https://geo.aimmme.com/img/platforms/tiktok.png" alt="TikTok 官方图标" width="36" height="36"> | TikTok |
+| <img src="https://geo.aimmme.com/img/platforms/youtube.png" alt="YouTube 官方图标" width="36" height="36"> | YouTube |
+
+### AI 工具与 Agent（13 个）
+
+| 图标 | 名称 |
+| --- | --- |
+| <img src="https://geo.aimmme.com/img/agents/codex.png" alt="Codex 官方图标" width="36" height="36"> | Codex |
+| <img src="https://geo.aimmme.com/img/agents/claude-code.png" alt="Claude Code 官方图标" width="36" height="36"> | Claude Code |
+| <img src="https://geo.aimmme.com/img/agents/deepseek.png" alt="DeepSeek 官方图标" width="36" height="36"> | DeepSeek |
+| <img src="https://geo.aimmme.com/img/agents/doubao.png" alt="豆包 官方图标" width="36" height="36"> | 豆包 |
+| <img src="https://geo.aimmme.com/img/agents/chatgpt.png" alt="ChatGPT 官方图标" width="36" height="36"> | ChatGPT |
+| <img src="https://geo.aimmme.com/img/agents/gemini.png" alt="Gemini 官方图标" width="36" height="36"> | Gemini |
+| <img src="https://geo.aimmme.com/img/agents/cursor.png" alt="Cursor 官方图标" width="36" height="36"> | Cursor |
+| <img src="https://geo.aimmme.com/img/agents/trae.png" alt="Trae 官方图标" width="36" height="36"> | Trae |
+| <img src="https://geo.aimmme.com/img/agents/workbuddy.png" alt="WorkBuddy 官方图标" width="36" height="36"> | WorkBuddy |
+| <img src="https://geo.aimmme.com/img/agents/kimi.png" alt="Kimi 官方图标" width="36" height="36"> | Kimi |
+| <img src="https://geo.aimmme.com/img/agents/qwen-code.png" alt="Qwen Code 官方图标" width="36" height="36"> | Qwen Code |
+| <img src="https://geo.aimmme.com/img/agents/zcode.png" alt="ZCode 官方图标" width="36" height="36"> | ZCode |
+| <img src="https://geo.aimmme.com/img/agents/openclaw.png" alt="OpenClaw 官方图标" width="36" height="36"> | OpenClaw |
+
+### 大模型与服务目录（9 个）
+
+| 图标 | 名称 |
+| --- | --- |
+| <img src="https://geo.aimmme.com/img/models/doubao.png" alt="豆包 官方图标" width="36" height="36"> | 豆包 |
+| <img src="https://geo.aimmme.com/img/models/deepseek.png" alt="DeepSeek 官方图标" width="36" height="36"> | DeepSeek |
+| <img src="https://geo.aimmme.com/img/models/qianwen.png" alt="通义千问 官方图标" width="36" height="36"> | 通义千问 |
+| <img src="https://geo.aimmme.com/img/models/wenxin.png" alt="文心一言 官方图标" width="36" height="36"> | 文心一言 |
+| <img src="https://geo.aimmme.com/img/models/nami.png" alt="纳米 AI 官方图标" width="36" height="36"> | 纳米 AI |
+| <img src="https://geo.aimmme.com/img/models/kimi.png" alt="Kimi 官方图标" width="36" height="36"> | Kimi |
+| <img src="https://geo.aimmme.com/img/models/zhipu.png" alt="智谱清言 官方图标" width="36" height="36"> | 智谱清言 |
+| <img src="https://geo.aimmme.com/img/models/yuanbao.png" alt="腾讯元宝 官方图标" width="36" height="36"> | 腾讯元宝 |
+| <img src="https://geo.aimmme.com/img/agents/chatgpt.png" alt="ChatGPT 官方图标" width="36" height="36"> | ChatGPT |
