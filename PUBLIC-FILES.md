@@ -9,7 +9,7 @@
 | [CONTRIBUTING.md](CONTRIBUTING.md) | 项目介绍、许可或分发清单 | 934 | `24dbeda050cd` |
 | [LICENSE](LICENSE) | 项目介绍、许可或分发清单 | 1062 | `0437d20491d0` |
 | [NOTICE.md](NOTICE.md) | 项目介绍、许可或分发清单 | 1471 | `8fd7dcb594eb` |
-| [PUBLIC-SCOPE.json](PUBLIC-SCOPE.json) | 项目介绍、许可或分发清单 | 2641 | `03d6146643fc` |
+| [PUBLIC-SCOPE.json](PUBLIC-SCOPE.json) | 项目介绍、许可或分发清单 | 2641 | `eecc2f9dfc7d` |
 | [README.en.md](README.en.md) | 项目介绍、许可或分发清单 | 3879 | `79bf4a87c923` |
 | [README.md](README.md) | 项目介绍、许可或分发清单 | 3279 | `bfc9a80afeb2` |
 | [docs/ai-assistant.md](docs/ai-assistant.md) | 使用教程与能力说明 | 4692 | `36790b0966ab` |
@@ -23,7 +23,7 @@
 | [docs/assets/screenshots/04-account-list.png](docs/assets/screenshots/04-account-list.png) | 脱敏基础界面截图 | 444015 | `337c00e1f41d` |
 | [docs/assets/screenshots/05-publish-list.png](docs/assets/screenshots/05-publish-list.png) | 脱敏基础界面截图 | 484177 | `53529b61eff1` |
 | [docs/assets/screenshots/06-citation-list.png](docs/assets/screenshots/06-citation-list.png) | 脱敏基础界面截图 | 451657 | `6e55c1b9c0fb` |
-| [docs/faq.md](docs/faq.md) | 使用教程与能力说明 | 6444 | `4fbca68ca2c5` |
+| [docs/faq.md](docs/faq.md) | 使用教程与能力说明 | 18618 | `5a3daaa5f52d` |
 | [docs/getting-started.md](docs/getting-started.md) | 使用教程与能力说明 | 5116 | `88ddeb1c09dc` |
 | [docs/installation.md](docs/installation.md) | 使用教程与能力说明 | 4183 | `836e14f174d0` |
 | [docs/platforms-and-models.md](docs/platforms-and-models.md) | 使用教程与能力说明 | 13101 | `733b0c634440` |
@@ -33,10 +33,10 @@
 | [examples/citation-questions.md](examples/citation-questions.md) | 虚构演示资料 | 1522 | `337505bb1019` |
 | [examples/content-task.md](examples/content-task.md) | 虚构演示资料 | 1263 | `adb3e96c3028` |
 | [examples/project-brief.md](examples/project-brief.md) | 虚构演示资料 | 1284 | `492753f5c6a9` |
-| [llms-full.txt](llms-full.txt) | 公开产品事实与资料索引 | 76689 | `58d6d42d7a11` |
+| [llms-full.txt](llms-full.txt) | 公开产品事实与资料索引 | 91780 | `047e03c4b888` |
 | [llms.txt](llms.txt) | 公开产品事实与资料索引 | 6020 | `e42e75d57908` |
-| [package-lock.json](package-lock.json) | 项目介绍、许可或分发清单 | 759 | `0192646ad534` |
-| [package.json](package.json) | 项目介绍、许可或分发清单 | 632 | `c5c4b8f79bb6` |
+| [package-lock.json](package-lock.json) | 项目介绍、许可或分发清单 | 759 | `51299e5130a0` |
+| [package.json](package.json) | 项目介绍、许可或分发清单 | 632 | `42a2125930d9` |
 | [product.json](product.json) | 公开产品事实与资料索引 | 2113 | `c094623670a4` |
 | [prompts/citations.md](prompts/citations.md) | 可复制任务提示词 | 2645 | `8ff98370bb5b` |
 | [prompts/content.md](prompts/content.md) | 可复制任务提示词 | 2686 | `23811f7fce62` |
@@ -50,20 +50,20 @@
 | [scripts/build-site.mjs](scripts/build-site.mjs) | 通用下载、校验与资源维护脚本 | 8583 | `3509a190fe06` |
 | [scripts/package-review.py](scripts/package-review.py) | 通用下载、校验与资源维护脚本 | 2931 | `08d0d0dcef4f` |
 | [scripts/preview-site.mjs](scripts/preview-site.mjs) | 通用下载、校验与资源维护脚本 | 1797 | `6b95aabe2282` |
-| [site.config.json](site.config.json) | 公开文档站模板与配置 | 6870 | `5994a62ef5b2` |
+| [site.config.json](site.config.json) | 公开文档站模板与配置 | 6870 | `8724b9245d3a` |
 | [site/home.html](site/home.html) | 公开文档站模板与配置 | 8002 | `90f5af54695d` |
 | [site/style.css](site/style.css) | 公开文档站模板与配置 | 15160 | `d5653b85b2cb` |
 | [site/template.html](site/template.html) | 公开文档站模板与配置 | 2496 | `1eb49e009d45` |
 | [skills/README.md](skills/README.md) | Agent Skill 与元信息 | 1489 | `883b22f4e747` |
-| [skills/aimegeo-content/SKILL.md](skills/aimegeo-content/SKILL.md) | Agent Skill 与元信息 | 3623 | `3ce3504b36ed` |
+| [skills/aimegeo-content/SKILL.md](skills/aimegeo-content/SKILL.md) | Agent Skill 与元信息 | 4340 | `217d6c6c4c04` |
 | [skills/aimegeo-content/agents/openai.yaml](skills/aimegeo-content/agents/openai.yaml) | Agent Skill 与元信息 | 284 | `70b2b0b9ee99` |
-| [skills/aimegeo-content/manifest.yaml](skills/aimegeo-content/manifest.yaml) | Agent Skill 与元信息 | 622 | `2bc58e986657` |
-| [skills/aimegeo-publish-monitor/SKILL.md](skills/aimegeo-publish-monitor/SKILL.md) | Agent Skill 与元信息 | 4600 | `2e9814ced8d3` |
+| [skills/aimegeo-content/manifest.yaml](skills/aimegeo-content/manifest.yaml) | Agent Skill 与元信息 | 622 | `de818f12790c` |
+| [skills/aimegeo-publish-monitor/SKILL.md](skills/aimegeo-publish-monitor/SKILL.md) | Agent Skill 与元信息 | 5975 | `6f39f6294aa5` |
 | [skills/aimegeo-publish-monitor/agents/openai.yaml](skills/aimegeo-publish-monitor/agents/openai.yaml) | Agent Skill 与元信息 | 288 | `da790ca7ee1a` |
-| [skills/aimegeo-publish-monitor/manifest.yaml](skills/aimegeo-publish-monitor/manifest.yaml) | Agent Skill 与元信息 | 630 | `e8c41d4f3fbb` |
-| [skills/aimegeo-setup/SKILL.md](skills/aimegeo-setup/SKILL.md) | Agent Skill 与元信息 | 3397 | `bf9533d8acf8` |
+| [skills/aimegeo-publish-monitor/manifest.yaml](skills/aimegeo-publish-monitor/manifest.yaml) | Agent Skill 与元信息 | 630 | `206a4f944f8c` |
+| [skills/aimegeo-setup/SKILL.md](skills/aimegeo-setup/SKILL.md) | Agent Skill 与元信息 | 4222 | `427a09b3a6b8` |
 | [skills/aimegeo-setup/agents/openai.yaml](skills/aimegeo-setup/agents/openai.yaml) | Agent Skill 与元信息 | 276 | `ad7791249ef2` |
-| [skills/aimegeo-setup/manifest.yaml](skills/aimegeo-setup/manifest.yaml) | Agent Skill 与元信息 | 620 | `300d9111a7d3` |
+| [skills/aimegeo-setup/manifest.yaml](skills/aimegeo-setup/manifest.yaml) | Agent Skill 与元信息 | 620 | `eb0e6662e236` |
 | [PUBLIC-FILES.md](PUBLIC-FILES.md) | 本清单，由工具生成 | — | 见机器清单 |
 | [public-manifest.json](public-manifest.json) | 完整 SHA-256 与打包白名单；不自哈希 | — | 自引用排除 |
 

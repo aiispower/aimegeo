@@ -1,6 +1,6 @@
 {
   "name": "aimegeo-usage-resources",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": true,
   "type": "module",
   "description": "aimeGeo 使用指南、Agent Skills、提示词与通用下载辅助工具",

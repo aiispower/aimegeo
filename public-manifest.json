@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "resourceVersion": "0.1.2",
-  "checkedAt": "2026-10-18",
+  "resourceVersion": "0.1.3",
+  "checkedAt": "2026-10-19",
   "scope": "仅公开产品使用资源、教程、脱敏截图、Skills、提示词、虚构示例与通用辅助脚本。",
   "selfHashExcluded": "public-manifest.json",
   "fileCountIncludingManifest": 62,
-  "totalPayloadBytes": 7871077,
+  "totalPayloadBytes": 7901260,
   "files": [
     {
       "path": ".github/workflows/validate.yml",
@@ -93,8 +93,8 @@
     },
     {
       "path": "docs/faq.md",
-      "bytes": 6444,
-      "sha256": "4fbca68ca2c5ed471219dfc8d751847bf4bd041ed9aa1d23572039b521070c68",
+      "bytes": 18618,
+      "sha256": "5a3daaa5f52d4e92672e687933815dcea4f749a80ce400a5e0bde6e35d9cb304",
       "purpose": "使用教程与能力说明"
     },
     {
@@ -159,8 +159,8 @@
     },
     {
       "path": "llms-full.txt",
-      "bytes": 76689,
-      "sha256": "58d6d42d7a1138ff0e5b557c026bfbf9ce86198c4c9184fbf10173dab4c69bee",
+      "bytes": 91780,
+      "sha256": "047e03c4b8889ef536b35cac44f7613ef8e368406f94f2e22cb7e552299f559b",
       "purpose": "公开产品事实与资料索引"
     },
     {
@@ -178,13 +178,13 @@
     {
       "path": "package-lock.json",
       "bytes": 759,
-      "sha256": "0192646ad5349c07cf53c6af1c6903e203b1bfbf5a4beee426f6aecdeb7c3373",
+      "sha256": "51299e5130a02a56f6c6e55ee04602cff20cec845c6d4578d67518e2de099cd7",
       "purpose": "项目介绍、许可或分发清单"
     },
     {
       "path": "package.json",
       "bytes": 632,
-      "sha256": "c5c4b8f79bb62989744ca13c22107863f12ef29b180f843d030bba1b54b262f0",
+      "sha256": "42a2125930d97f529bdf0017dc5fe165682de7c6417e7ef8522537421c676ec7",
       "purpose": "项目介绍、许可或分发清单"
     },
     {
@@ -219,14 +219,14 @@
     },
     {
       "path": "PUBLIC-FILES.md",
-      "bytes": 7764,
-      "sha256": "6d98333956924e652a285406c483de56153f8e6b2d039c18b49fc4873bd3dfe9",
+      "bytes": 7765,
+      "sha256": "5d79d547d5170a7256ccf30c2d3d3e1ffbfedcd3cfcca51474289da69ab99ff8",
       "purpose": "项目介绍、许可或分发清单"
     },
     {
       "path": "PUBLIC-SCOPE.json",
       "bytes": 2641,
-      "sha256": "03d6146643fc08b1d83972ee907543733ad4601088d815a9c8e408ee14a37dea",
+      "sha256": "eecc2f9dfc7d482c3a8415ec26ac8116feeec2f31030ad31c179fbdaa9579aa9",
       "purpose": "项目介绍、许可或分发清单"
     },
     {
@@ -292,7 +292,7 @@
     {
       "path": "site.config.json",
       "bytes": 6870,
-      "sha256": "5994a62ef5b2f121633fc80dbaf3c14ce8bca9b293b0b2d38639a0e905128602",
+      "sha256": "8724b9245d3a18931fdb7b7f87817c88149176116243e5611de01b25af48a3ca",
       "purpose": "公开文档站模板与配置"
     },
     {
@@ -322,13 +322,13 @@
     {
       "path": "skills/aimegeo-content/manifest.yaml",
       "bytes": 622,
-      "sha256": "2bc58e9866572ec68f0a7bf65bfcd4d8241c88bc54a438f9876443b331c3fd64",
+      "sha256": "de818f12790ceb569b0df2f8886761d00336f6dbe2856005f98fb76ca81ee4f4",
       "purpose": "Agent Skill 与元信息"
     },
     {
       "path": "skills/aimegeo-content/SKILL.md",
-      "bytes": 3623,
-      "sha256": "3ce3504b36ed9275669cf18e5a41f94a06719389bc8c0da1e9ab0d6a20f2997d",
+      "bytes": 4340,
+      "sha256": "217d6c6c4c04a5a4cf2d96965e81839785a69ce167a6e3aaba02fd72d82bfad7",
       "purpose": "Agent Skill 与元信息"
     },
     {
@@ -340,13 +340,13 @@
     {
       "path": "skills/aimegeo-publish-monitor/manifest.yaml",
       "bytes": 630,
-      "sha256": "e8c41d4f3fbbcac95faf12f878023692e102f26987b8b3ca99fa922533b2bf48",
+      "sha256": "206a4f944f8cea891985c3ecbd4853320f5df9674ee74fa02ea2e2f87e558261",
       "purpose": "Agent Skill 与元信息"
     },
     {
       "path": "skills/aimegeo-publish-monitor/SKILL.md",
-      "bytes": 4600,
-      "sha256": "2e9814ced8d3f29dafe3f4bcbff64f30e57428d36d146630a8ee00bfe1d60999",
+      "bytes": 5975,
+      "sha256": "6f39f6294aa523c6337a46fe470d9ce1965a408185e4774d1016b767da813144",
       "purpose": "Agent Skill 与元信息"
     },
     {
@@ -358,13 +358,13 @@
     {
       "path": "skills/aimegeo-setup/manifest.yaml",
       "bytes": 620,
-      "sha256": "300d9111a7d3e1db94109f19e2e40cfceb09b5ce33037619cb077a0b396771d3",
+      "sha256": "eb0e6662e2363253d5ae4e2592f81f76052bc7d2ee2c31e7735b98be63f34dae",
       "purpose": "Agent Skill 与元信息"
     },
     {
       "path": "skills/aimegeo-setup/SKILL.md",
-      "bytes": 3397,
-      "sha256": "bf9533d8acf87dc5a21af7fbf2bb82920dd82e60a433d106a441a04f96039e5d",
+      "bytes": 4222,
+      "sha256": "427a09b3a6b898d666aefa31f406339d2f7db5b1273e52084a2dd2bedf484c8a",
       "purpose": "Agent Skill 与元信息"
     },
     {
