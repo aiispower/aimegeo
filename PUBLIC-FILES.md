@@ -29,7 +29,7 @@
 | [docs/assets/screenshots/06-citation-list.png](docs/assets/screenshots/06-citation-list.png) | 脱敏基础界面截图 | 451657 | `6e55c1b9c0fb` |
 | [docs/faq.md](docs/faq.md) | 使用教程与能力说明 | 18618 | `5a3daaa5f52d` |
 | [docs/getting-started.md](docs/getting-started.md) | 使用教程与能力说明 | 5116 | `88ddeb1c09dc` |
-| [docs/installation.md](docs/installation.md) | 使用教程与能力说明 | 5033 | `28960db90353` |
+| [docs/installation.md](docs/installation.md) | 使用教程与能力说明 | 5033 | `92c975bd25f8` |
 | [docs/platforms-and-models.md](docs/platforms-and-models.md) | 使用教程与能力说明 | 13101 | `733b0c634440` |
 | [docs/promotion-assets.md](docs/promotion-assets.md) | 使用教程与能力说明 | 1467 | `ba9efe264233` |
 | [docs/promotion/README.md](docs/promotion/README.md) | 使用教程与能力说明 | 1530 | `f017e47f883d` |
@@ -42,7 +42,7 @@
 | [examples/citation-questions.md](examples/citation-questions.md) | 虚构演示资料 | 1522 | `337505bb1019` |
 | [examples/content-task.md](examples/content-task.md) | 虚构演示资料 | 1263 | `adb3e96c3028` |
 | [examples/project-brief.md](examples/project-brief.md) | 虚构演示资料 | 1284 | `492753f5c6a9` |
-| [llms-full.txt](llms-full.txt) | 公开产品事实与资料索引 | 109774 | `ca7016d59a34` |
+| [llms-full.txt](llms-full.txt) | 公开产品事实与资料索引 | 109774 | `511507ce511d` |
 | [llms.txt](llms.txt) | 公开产品事实与资料索引 | 7887 | `89deee4fe08c` |
 | [package-lock.json](package-lock.json) | 项目介绍、许可或分发清单 | 759 | `e85d424dfb10` |
 | [package.json](package.json) | 项目介绍、许可或分发清单 | 632 | `7b94defccf17` |
@@ -51,7 +51,7 @@
 | [prompts/content.md](prompts/content.md) | 可复制任务提示词 | 2686 | `23811f7fce62` |
 | [prompts/publish.md](prompts/publish.md) | 可复制任务提示词 | 2627 | `04f6a134d9d8` |
 | [prompts/setup.md](prompts/setup.md) | 可复制任务提示词 | 2297 | `67d0f18d3b7e` |
-| [resources.json](resources.json) | 公开产品事实与资料索引 | 2187 | `5947259ec128` |
+| [resources.json](resources.json) | 公开产品事实与资料索引 | 2263 | `c55fe5952f1b` |
 | [scripts/README.md](scripts/README.md) | 通用下载、校验与资源维护脚本 | 2838 | `94682aec60c0` |
 | [scripts/aimegeo.mjs](scripts/aimegeo.mjs) | 通用下载、校验与资源维护脚本 | 8984 | `719e36951533` |
 | [scripts/aimegeo.test.mjs](scripts/aimegeo.test.mjs) | 通用下载、校验与资源维护脚本 | 3638 | `6e5e080464f8` |

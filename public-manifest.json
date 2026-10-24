@@ -5,7 +5,7 @@
   "scope": "仅公开产品使用资源、教程、已审宣传文章与图片、脱敏截图、3个集成Skills、用户提示词、虚构示例与通用辅助脚本。",
   "selfHashExcluded": "public-manifest.json",
   "fileCountIncludingManifest": 71,
-  "totalPayloadBytes": 14741683,
+  "totalPayloadBytes": 14741759,
   "files": [
     {
       "path": ".github/workflows/validate.yml",
@@ -130,7 +130,7 @@
     {
       "path": "docs/installation.md",
       "bytes": 5033,
-      "sha256": "28960db90353dd65cc63e91d62c1cbe53f8bc58780bd3752a9e552db896082b6",
+      "sha256": "92c975bd25f8ceb52955ecd95b63e1d5ab7b4cc4814b2bbef28b9d4a533f6abe",
       "purpose": "使用教程与能力说明"
     },
     {
@@ -214,7 +214,7 @@
     {
       "path": "llms-full.txt",
       "bytes": 109774,
-      "sha256": "ca7016d59a34661549635c82decd2bdb9e643850ed4950d93878f524fcf0c52e",
+      "sha256": "511507ce511d04967213d91d7432ec6c3bf82653eb7a66df6af372df5fcbae18",
       "purpose": "公开产品事实与资料索引"
     },
     {
@@ -274,7 +274,7 @@
     {
       "path": "PUBLIC-FILES.md",
       "bytes": 9124,
-      "sha256": "1440f2a25218682586e9a4f2027309f4c29653698089cbe6470ae244b6f20daa",
+      "sha256": "7fb3f673fabae246a0f76760a02acee0551672a3e17d41aa06b6a0357de33b43",
       "purpose": "项目介绍、许可或分发清单"
     },
     {
@@ -297,8 +297,8 @@
     },
     {
       "path": "resources.json",
-      "bytes": 2187,
-      "sha256": "5947259ec128c6818ca4c16729a1df8c44dcd3ea79f7bb698ea7da9711de26ce",
+      "bytes": 2263,
+      "sha256": "c55fe5952f1b023d8be5875cfa4076edbae2d1cf229eedebd1f6ba1e78902586",
       "purpose": "公开产品事实与资料索引"
     },
     {
