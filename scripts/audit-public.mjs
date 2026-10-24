@@ -85,7 +85,7 @@ for (const file of allowed) {
 try {
   await access(path.join(root, 'dist/index.html'));
   const site = JSON.parse(await readFile(path.join(root, 'site.config.json'), 'utf8'));
-  const base = new URL(site.siteUrl).pathname;
+  const base = new URL(site.siteUrl || site.previewBaseUrl).pathname;
   const expected = new Set(['index.html', 'style.css', 'robots.txt', 'sitemap.xml', '.nojekyll', 'product.json', 'resources.json', 'llms.txt', 'llms-full.txt', ...site.pages.map(page => `${page.slug}/index.html`), ...allowed.filter(file => file.startsWith('docs/assets/')).map(file => file.slice('docs/'.length))]);
   async function walkBuilt(folder, prefix = '') {
     for (const entry of await readdir(folder, { withFileTypes: true })) {

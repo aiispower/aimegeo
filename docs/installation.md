@@ -13,6 +13,17 @@
 
 Mac 可在“关于本机”查看芯片；Windows 可在“设置 → 系统 → 系统信息”查看系统与体系结构。不要为匹配示例而下载不适合自己电脑的文件。
 
+## GitHub 平台版本入口
+
+官网与既有下载渠道继续保留；需要从 GitHub 查找对应版本时，按系统打开准确的发行页：
+
+| 系统 | GitHub 版本页 |
+| --- | --- |
+| macOS Apple Silicon | [Mac 1.0.8 · mac-v1.0.8](https://github.com/huakaikanzhe-web/aimegeo/releases/tag/mac-v1.0.8) |
+| Windows | [Windows 1.0.7 · windows-v1.0.7](https://github.com/huakaikanzhe-web/aimegeo/releases/tag/windows-v1.0.7) |
+
+在版本页核对系统、附件和校验清单后下载。两种系统版本分别维护，不使用仓库全局 latest 判断自己应安装哪一版。附件校验值见版本页清单和本仓库 `resources.json` 的 `githubReleasePages`，仅对应列明的附件；也可使用[官方下载中心](https://geo.aimmme.com/download/)或 [Gitee 原发行仓库](https://gitee.com/xxjrq/aimegeo/releases)。
+
 ## 安装并登录
 
 1. 从官方下载中心下载对应 ZIP，记录页面显示的系统、版本和下载日期。

@@ -18,7 +18,7 @@ EasyBR assists with independent signed-in browser environments, proxy IPs and fi
 
 ## Start here
 
-[Product website](https://geo.aimmme.com/) · [Start for free](https://geo.aimmme.com/download/) · [Installation](docs/installation.md) · [Official help](https://geo.aimmme.com/en/docs/) · [Resource documentation](https://xxjrq.github.io/aimegeo/en/) · [Resource downloads](https://github.com/xxjrq/aimegeo/releases/latest)
+[Product website](https://geo.aimmme.com/) · [Start for free](https://geo.aimmme.com/download/) · [Installation](docs/installation.md) · [Official help](https://geo.aimmme.com/en/docs/) · [Resource documentation](https://github.com/huakaikanzhe-web/aimegeo/blob/main/README.en.md) · [GitHub releases](https://github.com/huakaikanzhe-web/aimegeo/releases)
 
 Give your assistant the [setup prompt](prompts/setup.md) or [setup Skill](skills/aimegeo-setup/SKILL.md), then complete the [first project walkthrough](docs/getting-started.md). Manual client installation does not require Node.js. Optional download and verification commands are documented in the [helper guide](scripts/README.md). Detailed resource guides are in Chinese and can be translated by your assistant.
 
@@ -27,6 +27,10 @@ Give your assistant the [setup prompt](prompts/setup.md) or [setup Skill](skills
 ## Can I use it for regular creator work?
 
 Yes. Content planning, writing, editing, illustrations, account environments and publishing use the same workflow. Citation monitoring is optional for GEO goals; creator tasks do not have to run it. Video publishing uses existing materials and the currently available workflow.
+
+## Public articles and promotion materials
+
+The [public articles and promotion materials](docs/promotion/README.md) cover GEO basics, a first article and open-source project promotion. The [three integration Skills](skills/README.md) cover setup, content and publishing with monitoring. Product source and customer results are excluded. GitHub installation releases are linked by platform in the [installation guide](docs/installation.md).
 
 ## A look at the workspace
 
@@ -38,4 +42,4 @@ These product-component previews contain **fictional demo records**, not real ac
 
 [All interface previews](docs/screenshot-index.md) · [Feature gallery](docs/promotion-assets.md) · [AI assistant and Skills](docs/ai-assistant.md) · [FAQ](docs/faq.md)
 
-Original usage resources are [MIT licensed](LICENSE). Product software and third-party assets retain their own terms; see [NOTICE](NOTICE.md) and the [public file inventory](PUBLIC-FILES.md). Information checked: 2026-10-18.
+Original usage resources are [MIT licensed](LICENSE). Product software and third-party assets retain their own terms; see [NOTICE](NOTICE.md) and the [public file inventory](PUBLIC-FILES.md). Information checked: 2026-10-24.

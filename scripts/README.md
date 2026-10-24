@@ -33,3 +33,5 @@ npm run package:review
 `npm ci` 仅为维护者安装文档生成器；产品用户无需这一步。`manifest` 会刷新逐文件白名单、大小和校验值；新增文件仍需所有者审阅。`package:review` 只打包白名单内容，不包含 `node_modules`、构建产物、Git 历史或本机文件。脚本不执行 GitHub 创建、推送或发布。
 
 `preview` 仅在本机监听静态文档预览，按命令输出地址打开；使用完按 Ctrl+C 退出。它只提供 `dist/` 的公开文档，不读取产品服务、账号或工作目录中的其他文件。文档站部署需另外明确选择发布位置，本资源没有自动部署任务。
+
+当前只提供 GitHub 文档入口，未部署独立 Pages 文档站。`npm run build` / `preview` 保留本地预览，`llms.txt` 与正文索引链接指向实际 GitHub 文件；配置中的 example.invalid 仅为本地预览占位，不是访问入口。安装器版本页见[安装指南](../docs/installation.md)。

@@ -30,9 +30,26 @@
       "version": null
     }
   ],
-  "verificationNote": "下载入口从官方公开下载中心核对；国内两个ZIP在核对日返回HTTP 200，海外链接在本轮网络未完成连通验证，可从官方下载页切换镜像。固定链接会更新。本资源库不提供未经核对的包内版本或发布方SHA256，也未托管产品安装器。",
+  "verificationNote": "原固定下载入口来自官方公开下载中心，核对日期见 checkedAt；固定链接会更新。仓库文件树不含安装器，平台 Release 托管原已验包；GitHub 平台版本与特定 ZIP 的大小、SHA256 列于 githubReleasePages，不代表其他来源的文件具有相同哈希。",
   "related": {
     "easybrDownloadCenter": "https://www.ebrower.com/down.html",
     "easyWebBridge": "https://github.com/xxjrq/easy-webbridge"
-  }
+  },
+  "githubReleasePages": {
+    "macos-arm64": {
+      "version": "1.0.8",
+      "url": "https://github.com/huakaikanzhe-web/aimegeo/releases/tag/mac-v1.0.8",
+      "assetName": "aimegeo-mac-1.0.8-arm64-update.zip",
+      "size": 92562572,
+      "sha256": "af27759e9634c02802bd1d2dc09ea3d5a509ee66df7837a41bcb4cd74d94e5e8"
+    },
+    "windows-x64": {
+      "version": "1.0.7",
+      "url": "https://github.com/huakaikanzhe-web/aimegeo/releases/tag/windows-v1.0.7",
+      "assetName": "aimegeo.zip",
+      "size": 70854354,
+      "sha256": "1922c06169eb2b8ec872c0aeb10b12c63a46a1eb8e2e0cec4a7750d8cf30a10e"
+    }
+  },
+  "githubReleaseNote": "Mac 与 Windows 使用各自的平台版本页。校验值仅对应下列 assetName 指定的附件；原下载默认源保持不变。"
 }

@@ -14,7 +14,10 @@ async function readPublic(file, encoding) {
   return readFile(absolute, encoding);
 }
 const config = JSON.parse(await readPublic('site.config.json', 'utf8'));
-const baseUrl = new URL(config.siteUrl);
+const baseUrl = new URL(config.siteUrl || config.previewBaseUrl);
+const publicSourceUrl = file => `${config.repository}/blob/main/${file}`;
+const publicPageUrl = page => config.siteUrl ? new URL(`${page.slug}/`, baseUrl).href : publicSourceUrl(page.source);
+const publicFileUrl = file => config.siteUrl ? new URL(file, baseUrl).href : publicSourceUrl(file);
 const base = baseUrl.pathname.endsWith('/') ? baseUrl.pathname : `${baseUrl.pathname}/`;
 const output = path.join(root, 'dist');
 const template = await readPublic('site/template.html', 'utf8');
@@ -41,9 +44,9 @@ function markdownHtml(markdown, source) {
 }
 
 function render(body, page) {
-  const canonical = new URL(page.slug ? `${page.slug}/` : './', baseUrl).href;
+  const canonical = config.siteUrl ? new URL(page.slug ? `${page.slug}/` : './', baseUrl).href : (page.source ? publicSourceUrl(page.source) : config.repository);
   const lang = page.lang || 'zh-CN';
-  const alternates = !page.slug || page.slug === 'en' ? `<link rel="alternate" hreflang="zh-CN" href="${escape(baseUrl.href)}">\n<link rel="alternate" hreflang="en" href="${escape(new URL('en/', baseUrl).href)}">\n<link rel="alternate" hreflang="x-default" href="${escape(baseUrl.href)}">` : '';
+  const alternates = config.siteUrl && (!page.slug || page.slug === 'en') ? `<link rel="alternate" hreflang="zh-CN" href="${escape(baseUrl.href)}">\n<link rel="alternate" hreflang="en" href="${escape(new URL('en/', baseUrl).href)}">\n<link rel="alternate" hreflang="x-default" href="${escape(baseUrl.href)}">` : '';
   const schema = [{ '@context': 'https://schema.org', '@type': page.slug ? 'TechArticle' : 'WebPage', headline: page.title, description: page.description, url: canonical, inLanguage: lang, dateModified: config.updatedAt, publisher: { '@type': 'Organization', name: 'aimeGeo 使用资源' } }];
   if (!page.slug) {
     schema.push({ '@context': 'https://schema.org', '@type': 'SoftwareSourceCode', name: 'aimeGeo usage resources', description: 'Open usage guides, prompts, Agent Skills and generic helper scripts; not the private product source.', codeRepository: config.repository, license: 'https://spdx.org/licenses/MIT.html', programmingLanguage: 'JavaScript' });
@@ -72,14 +75,14 @@ for (const page of config.pages) {
   await mkdir(destination, { recursive: true });
   const body = `<article class="doc-article"><p class="doc-meta">${page.lang === 'en' ? 'Updated' : '资料核对'} ${config.updatedAt}</p>${markdownHtml(markdown, page.source)}</article>`;
   await writeFile(path.join(destination, 'index.html'), render(body, page));
-  if (!page.lang) full.push(`\n\n---\n\nSource: ${new URL(`${page.slug}/`, baseUrl).href}\n\n${stripFrontMatter(markdown)}`);
+  if (!page.lang) full.push(`\n\n---\n\nSource: ${publicPageUrl(page)}\n\n${stripFrontMatter(markdown)}`);
 }
-const llms = `# aimeGeo\n\n> aimeGeo 自研免费 GEO 系统的公开使用资源。做 GEO，也做自媒体：和熟悉的 AI 对话，推进选题、创作、配图和多平台发布，按需检测 AI 引用。此资料库不包含产品私有源码。\n\n- 官网：https://geo.aimmme.com/\n- 客户端下载：https://geo.aimmme.com/download/\n- 正式工作台：https://geo.aimmme.com/ag01/\n- 官方帮助：https://geo.aimmme.com/docs/\n\n## Guides and Agent resources\n\n${config.pages.map(page => `- [${page.title}](${new URL(`${page.slug}/`, baseUrl).href}): ${page.description}`).join('\n')}\n\n## Machine-readable context\n\n- [Product facts](${new URL('product.json', baseUrl).href})\n- [Download sources](${new URL('resources.json', baseUrl).href})\n- [Full guide text](${new URL('llms-full.txt', baseUrl).href})\n\n## Boundaries\n\n30 个平台目录（国内 21、海外 9），13 个工具、9 个模型目录；支持无限扩展平台，目录不等于已验证自动发布或已配置检测。aimeGeo 系统免费，外部模型、图片服务与代理按所用服务计费。产品官网为 geo.aimmme.com，本资源文档站用于教程与资源。客户端、EasyBR 和 Easy WebBridge 作用不同。发布、公开、搜索收录和 AI 引用分别记录。本文件是可选资料索引，不是排名或引用保证。\n`;
+const llms = `# aimeGeo\n\n> aimeGeo 自研免费 GEO 系统的公开使用资源。做 GEO，也做自媒体：和熟悉的 AI 对话，推进选题、创作、配图和多平台发布，按需检测 AI 引用。此资料库不包含产品私有源码。\n\n- 官网：https://geo.aimmme.com/\n- 客户端下载：https://geo.aimmme.com/download/\n- 正式工作台：https://geo.aimmme.com/ag01/\n- 官方帮助：https://geo.aimmme.com/docs/\n\n## Guides and Agent resources\n\n${config.pages.map(page => `- [${page.title}](${publicPageUrl(page)}): ${page.description}`).join('\n')}\n\n## Machine-readable context\n\n- [Product facts](${publicFileUrl('product.json')})\n- [Download sources](${publicFileUrl('resources.json')})\n- [Full guide text](${publicFileUrl('llms-full.txt')})\n\n## Boundaries\n\n30 个平台目录（国内 21、海外 9），13 个工具、9 个模型目录；支持无限扩展平台，目录不等于已验证自动发布或已配置检测。aimeGeo 系统免费，外部模型、图片服务与代理按所用服务计费。产品官网为 geo.aimmme.com，本仓库提供教程与资源；独立文档站尚未部署，资料入口使用 GitHub 文件地址。客户端、EasyBR 和 Easy WebBridge 作用不同。发布、公开、搜索收录和 AI 引用分别记录。本文件是可选资料索引，不是排名或引用保证。\n`;
 await writeFile(path.join(root, 'llms.txt'), llms);
 await writeFile(path.join(root, 'llms-full.txt'), full.join('\n'));
 for (const file of ['resources.json', 'product.json', 'llms.txt', 'llms-full.txt']) await writeFile(path.join(output, file), await readPublic(file));
-const urls = [baseUrl.href, ...config.pages.map(page => new URL(`${page.slug}/`, baseUrl).href)];
+const urls = [config.siteUrl || config.repository, ...config.pages.map(publicPageUrl)];
 await writeFile(path.join(output, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(url => `<url><loc>${escape(url)}</loc><lastmod>${config.updatedAt}</lastmod></url>`).join('')}</urlset>\n`);
-await writeFile(path.join(output, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${new URL('sitemap.xml', baseUrl).href}\n`);
+await writeFile(path.join(output, 'robots.txt'), config.siteUrl ? `User-agent: *\nAllow: /\nSitemap: ${new URL('sitemap.xml', baseUrl).href}\n` : 'User-agent: *\nDisallow: /\n# Local documentation preview; no public deployment is configured.\n');
 await writeFile(path.join(output, '.nojekyll'), '');
 console.log(`Built ${urls.length} crawlable HTML pages, sitemap, robots and optional agent indexes in dist/.`);

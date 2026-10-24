@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const config = JSON.parse(await readFile(path.join(root, 'site.config.json'), 'utf8'));
-const base = new URL(config.siteUrl).pathname;
+const base = new URL(config.siteUrl || config.previewBaseUrl).pathname;
 const directory = path.join(root, 'dist');
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.png': 'image/png', '.json': 'application/json; charset=utf-8', '.txt': 'text/plain; charset=utf-8', '.xml': 'application/xml; charset=utf-8' };
 const server = createServer(async (request, response) => {

@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "resourceVersion": "0.1.3",
-  "checkedAt": "2026-10-19",
-  "scope": "仅公开产品使用资源、教程、脱敏截图、Skills、提示词、虚构示例与通用辅助脚本。",
+  "resourceVersion": "0.1.4",
+  "checkedAt": "2026-10-24",
+  "scope": "仅公开产品使用资源、教程、已审宣传文章与图片、脱敏截图、3个集成Skills、用户提示词、虚构示例与通用辅助脚本。",
   "selfHashExcluded": "public-manifest.json",
-  "fileCountIncludingManifest": 62,
-  "totalPayloadBytes": 7901260,
+  "fileCountIncludingManifest": 71,
+  "totalPayloadBytes": 14741683,
   "files": [
     {
       "path": ".github/workflows/validate.yml",
@@ -53,6 +53,30 @@
       "path": "docs/assets/promotion/03-easybr-environments.png",
       "bytes": 1588811,
       "sha256": "e18bc3d286ce44d66f2d567d22bdb1c315b4b74d1627f2be4d793315f6aa5695",
+      "purpose": "已审查宣传图，非软件界面截图"
+    },
+    {
+      "path": "docs/assets/promotion/04-citation-monitoring.png",
+      "bytes": 1687835,
+      "sha256": "ff2dd890ad158bc5a21acd7574691ebe7325c91259b0ff48ea90a29dcfce288a",
+      "purpose": "已审查宣传图，非软件界面截图"
+    },
+    {
+      "path": "docs/assets/promotion/06-covers-and-images.png",
+      "bytes": 1720100,
+      "sha256": "448072c35e2120ee036a2ffc9e3917b348b39f0ed6a9f9c223cc19bdb0fce569",
+      "purpose": "已审查宣传图，非软件界面截图"
+    },
+    {
+      "path": "docs/assets/promotion/article-creation.png",
+      "bytes": 1698980,
+      "sha256": "db2b8b8b9b7f8cd616cc159626a8c13acaa99f4766334714db668ae88a3b2da0",
+      "purpose": "已审查宣传图，非软件界面截图"
+    },
+    {
+      "path": "docs/assets/promotion/article-overview.png",
+      "bytes": 1691113,
+      "sha256": "3476f08d324fe5f33e638a3655e92207c8405b6370add06d02d3d2bc1c8f35a3",
       "purpose": "已审查宣传图，非软件界面截图"
     },
     {
@@ -105,8 +129,8 @@
     },
     {
       "path": "docs/installation.md",
-      "bytes": 4183,
-      "sha256": "836e14f174d02b611591c85d24c777ec306ba73114801e3c95bf2c28b4d41bd9",
+      "bytes": 5033,
+      "sha256": "28960db90353dd65cc63e91d62c1cbe53f8bc58780bd3752a9e552db896082b6",
       "purpose": "使用教程与能力说明"
     },
     {
@@ -117,8 +141,38 @@
     },
     {
       "path": "docs/promotion-assets.md",
-      "bytes": 761,
-      "sha256": "4cfe4947bd20c7b24f3bba4aa961580c48b49c3e9eb6819ea4a17b56baabbab4",
+      "bytes": 1467,
+      "sha256": "ba9efe264233a985240adebda7423bb165e2cd8c4724d1d130b9655eda85be43",
+      "purpose": "使用教程与能力说明"
+    },
+    {
+      "path": "docs/promotion/articles/01-GEO入门.md",
+      "bytes": 3375,
+      "sha256": "a280a9bbe404ad3ba222d6915d97ba7a44bd79878095caa420ee482a4afa82b7",
+      "purpose": "使用教程与能力说明"
+    },
+    {
+      "path": "docs/promotion/articles/07-第一篇GEO文章.md",
+      "bytes": 2431,
+      "sha256": "9340bf43ac0021d5bfcfc0018759dcc21caf49b00e9c3617a83ab9d76a5f518f",
+      "purpose": "使用教程与能力说明"
+    },
+    {
+      "path": "docs/promotion/articles/09-开源项目推广.md",
+      "bytes": 2715,
+      "sha256": "7bb7871f7cee9881c3879a46625cac64ee6f002db7955ca88736308d30ba8131",
+      "purpose": "使用教程与能力说明"
+    },
+    {
+      "path": "docs/promotion/copy.md",
+      "bytes": 4652,
+      "sha256": "4efc5bf692f48a41811011f1f759b142d5eb201c7d8cfbe755759c208f8f1470",
+      "purpose": "使用教程与能力说明"
+    },
+    {
+      "path": "docs/promotion/README.md",
+      "bytes": 1530,
+      "sha256": "f017e47f883d5ca364d59f9db50f95a7fa7648d73d599b11e34c25e68fb73ba8",
       "purpose": "使用教程与能力说明"
     },
     {
@@ -159,38 +213,38 @@
     },
     {
       "path": "llms-full.txt",
-      "bytes": 91780,
-      "sha256": "047e03c4b8889ef536b35cac44f7613ef8e368406f94f2e22cb7e552299f559b",
+      "bytes": 109774,
+      "sha256": "ca7016d59a34661549635c82decd2bdb9e643850ed4950d93878f524fcf0c52e",
       "purpose": "公开产品事实与资料索引"
     },
     {
       "path": "llms.txt",
-      "bytes": 6020,
-      "sha256": "e42e75d579082a9d70bd4da148d2f262a936d184f8533c64761e1e7592a00118",
+      "bytes": 7887,
+      "sha256": "89deee4fe08c634e92426917277198c9dc5440e8fff1d1a2a2f9f42a29b8c5c9",
       "purpose": "公开产品事实与资料索引"
     },
     {
       "path": "NOTICE.md",
-      "bytes": 1471,
-      "sha256": "8fd7dcb594ebe7ad2fd00d8955887e999f18ede3f0dc74b7c6aef7ed6d9ad3cd",
+      "bytes": 1769,
+      "sha256": "19f80ed687e246194683485d5ec5e41da006ec0f1ddc95588c43261e68463599",
       "purpose": "项目介绍、许可或分发清单"
     },
     {
       "path": "package-lock.json",
       "bytes": 759,
-      "sha256": "51299e5130a02a56f6c6e55ee04602cff20cec845c6d4578d67518e2de099cd7",
+      "sha256": "e85d424dfb10aba96d98669b7685a9752e92f85de44776876b7f7c779f837e31",
       "purpose": "项目介绍、许可或分发清单"
     },
     {
       "path": "package.json",
       "bytes": 632,
-      "sha256": "42a2125930d97f529bdf0017dc5fe165682de7c6417e7ef8522537421c676ec7",
+      "sha256": "7b94defccf17fbf77f8762806c72276ac61bf3edb8a84574e5dda8e20f6471ee",
       "purpose": "项目介绍、许可或分发清单"
     },
     {
       "path": "product.json",
-      "bytes": 2113,
-      "sha256": "c094623670a488eb7558b2d06af4e122aeff6093e337da0461b09ed1e6688413",
+      "bytes": 2184,
+      "sha256": "5f8a56d9895a7963deeee68014a5dfda8e072e5aff62bc50c485d0d5884995e5",
       "purpose": "公开产品事实与资料索引"
     },
     {
@@ -219,32 +273,32 @@
     },
     {
       "path": "PUBLIC-FILES.md",
-      "bytes": 7765,
-      "sha256": "5d79d547d5170a7256ccf30c2d3d3e1ffbfedcd3cfcca51474289da69ab99ff8",
+      "bytes": 9124,
+      "sha256": "1440f2a25218682586e9a4f2027309f4c29653698089cbe6470ae244b6f20daa",
       "purpose": "项目介绍、许可或分发清单"
     },
     {
       "path": "PUBLIC-SCOPE.json",
-      "bytes": 2641,
-      "sha256": "eecc2f9dfc7d482c3a8415ec26ac8116feeec2f31030ad31c179fbdaa9579aa9",
+      "bytes": 3118,
+      "sha256": "5548e29d39a953a051adf293862f9a732308158d8d34fe0fab4204a8427f076c",
       "purpose": "项目介绍、许可或分发清单"
     },
     {
       "path": "README.en.md",
-      "bytes": 3879,
-      "sha256": "79bf4a87c923ab6cb5402b1167255a76b67c405e214318b254c41e99f0a53456",
+      "bytes": 4352,
+      "sha256": "d24ed44d009adcfec5b854b72db3bc8e10824e709ca91b2d0b38e3e856ce09d2",
       "purpose": "项目介绍、许可或分发清单"
     },
     {
       "path": "README.md",
-      "bytes": 3279,
-      "sha256": "bfc9a80afeb25767ac754836c882ce9b28897e00165741be23be84f727c7ff62",
+      "bytes": 3601,
+      "sha256": "5e3ac6751186a420e9b2d3740ce40e139c7194a881a09412c913ba4e1d196238",
       "purpose": "项目介绍、许可或分发清单"
     },
     {
       "path": "resources.json",
-      "bytes": 1406,
-      "sha256": "d0da57b7cc02a33d4e336374d04d0c629d466effa9c733c5e8eedf8e37a375ff",
+      "bytes": 2187,
+      "sha256": "5947259ec128c6818ca4c16729a1df8c44dcd3ea79f7bb698ea7da9711de26ce",
       "purpose": "公开产品事实与资料索引"
     },
     {
@@ -261,14 +315,14 @@
     },
     {
       "path": "scripts/audit-public.mjs",
-      "bytes": 10285,
-      "sha256": "31e46ee836fa7c6a1281192a561daff81e6104a47a3b34eaae6d537bb7ade2d3",
+      "bytes": 10308,
+      "sha256": "38fdafce7be4a49a2973b726e1806b34e1c6d0e4a7c92fecabc843be61d14954",
       "purpose": "通用下载、校验与资源维护脚本"
     },
     {
       "path": "scripts/build-site.mjs",
-      "bytes": 8583,
-      "sha256": "3509a190fe061bce6b7bc6e1ec448ffd6ddaa2395ae9482206c9933743210de1",
+      "bytes": 9112,
+      "sha256": "47aa9f5cba47f335730527806328e3ae46f2b3927f0cdf5312a8af3450a8285b",
       "purpose": "通用下载、校验与资源维护脚本"
     },
     {
@@ -279,26 +333,26 @@
     },
     {
       "path": "scripts/preview-site.mjs",
-      "bytes": 1797,
-      "sha256": "6b95aabe2282da8a0e29ad98a598c1f43e6f65fe28e6cbdcf2787f479aab2cc7",
+      "bytes": 1822,
+      "sha256": "02bf71cb76ab7554bb22587fce609b16cf2d3810881848ac5ce9fe066e4e5fac",
       "purpose": "通用下载、校验与资源维护脚本"
     },
     {
       "path": "scripts/README.md",
-      "bytes": 2514,
-      "sha256": "7ea6417c7864c88b9e65339e7eac2f6c1e09d08c665e8b84fc9115b5d94f1e5b",
+      "bytes": 2838,
+      "sha256": "94682aec60c029c85726caa237f30f4a28641e18b3d213a53979594dab92856a",
       "purpose": "通用下载、校验与资源维护脚本"
     },
     {
       "path": "site.config.json",
-      "bytes": 6870,
-      "sha256": "8724b9245d3a18931fdb7b7f87817c88149176116243e5611de01b25af48a3ca",
+      "bytes": 8458,
+      "sha256": "18c805bd744dd7a087c5317b12dbd3213a23279ab690ef0ec0e02a1922ab0694",
       "purpose": "公开文档站模板与配置"
     },
     {
       "path": "site/home.html",
-      "bytes": 8002,
-      "sha256": "90f5af54695dc4f8afa84c7717afec6fff9f2f9821711310772135ffb9db6201",
+      "bytes": 8007,
+      "sha256": "3fd21abd83c9397b2e36331096b9b332f7e317ce105a14e702740da673fd17b4",
       "purpose": "公开文档站模板与配置"
     },
     {

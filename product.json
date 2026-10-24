@@ -48,5 +48,6 @@
   },
   "agentCatalogCount": 13,
   "modelCatalogCount": 9,
-  "creatorWorkflow": "选题、写作/改稿、封面配图、多账号与图文/视频发布；自媒体任务不强制执行 AI 引用检测，视频发布使用已有素材与当前可用工作流。"
+  "creatorWorkflow": "选题、写作/改稿、封面配图、多账号与图文/视频发布；自媒体任务不强制执行 AI 引用检测，视频发布使用已有素材与当前可用工作流。",
+  "resourceRepository": "https://github.com/huakaikanzhe-web/aimegeo"
 }
