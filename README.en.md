@@ -18,7 +18,7 @@ EasyBR assists with independent signed-in browser environments, proxy IPs and fi
 
 ## Start here
 
-[Product website](https://geo.aimmme.com/) · [Start for free](https://geo.aimmme.com/download/) · [Installation](docs/installation.md) · [Official help](https://geo.aimmme.com/en/docs/) · [Resource documentation](https://github.com/huakaikanzhe-web/aimegeo/blob/main/README.en.md) · [GitHub releases](https://github.com/huakaikanzhe-web/aimegeo/releases)
+[Product website](https://geo.aimmme.com/) · [Start for free](https://geo.aimmme.com/download/) · [Installation](docs/installation.md) · [Official help](https://geo.aimmme.com/en/docs/) · [Resource documentation](https://github.com/aiispower/aimegeo/blob/main/README.en.md) · [GitHub releases](https://github.com/aiispower/aimegeo/releases)
 
 Give your assistant the [setup prompt](prompts/setup.md) or [setup Skill](skills/aimegeo-setup/SKILL.md), then complete the [first project walkthrough](docs/getting-started.md). Manual client installation does not require Node.js. Optional download and verification commands are documented in the [helper guide](scripts/README.md). Detailed resource guides are in Chinese and can be translated by your assistant.
 

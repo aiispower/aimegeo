@@ -12,4 +12,4 @@
 
 - `docs/promotion/`：复用项目方已审公开文章与产品介绍，只迁移资料入口和图片路径；不包含内部策划指令、生成记录或发布回执。
 
-公开资料原始仓库：https://github.com/huakaikanzhe-web/aimegeo 。
+公开资料原始仓库：https://github.com/aiispower/aimegeo 。

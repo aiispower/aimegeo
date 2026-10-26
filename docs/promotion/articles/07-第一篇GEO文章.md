@@ -61,4 +61,4 @@ Q：工具怎么开始用？ A：……
 
 ## 资料来源
 
-- aimeGeo GitHub 项目仓库：https://github.com/huakaikanzhe-web/aimegeo
+- aimeGeo GitHub 项目仓库：https://github.com/aiispower/aimegeo

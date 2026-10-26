@@ -72,4 +72,4 @@ aimeGeo，自研免费的 GEO 系统。
 - 产品免费与第三方服务费用分别说明。不要把免费系统宣传成所有外部模型与代理资源都免费。
 
 
-公开资料：[GitHub](https://github.com/huakaikanzhe-web/aimegeo) · [Gitee](https://gitee.com/xxjrq/aimegeo)。图中为功能示意，不是真实客户成果。
+公开资料：[GitHub](https://github.com/aiispower/aimegeo) · [Gitee](https://gitee.com/xxjrq/aimegeo)。图中为功能示意，不是真实客户成果。

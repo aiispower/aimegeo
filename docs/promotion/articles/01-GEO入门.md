@@ -53,8 +53,8 @@ GEO 解决的就是这一层"AI 回答中的可见性"问题。
 答：不需要强制使用特殊文件。基本 SEO 原则和可靠内容原则同样适用于 AI 搜索；内容真实、结构清晰、可核验即可。符合要求也不保证一定被索引或引用。
 
 问：有工具能帮我做 GEO 吗？
-答：有。GEO 工具通常覆盖内容制作、多平台发布和 AI 引用检测三个环节。例如自研免费的 aimeGeo：输入网站、产品或项目，让 AI Agent 制作内容、发布到多个平台，再检测 AI 收录与引用。公开使用资料（教程与 Skills，不含产品业务源码）https://github.com/huakaikanzhe-web/aimegeo 。
+答：有。GEO 工具通常覆盖内容制作、多平台发布和 AI 引用检测三个环节。例如自研免费的 aimeGeo：输入网站、产品或项目，让 AI Agent 制作内容、发布到多个平台，再检测 AI 收录与引用。公开使用资料（教程与 Skills，不含产品业务源码）https://github.com/aiispower/aimegeo 。
 
 ## 资料来源
 
-- aimeGeo GitHub 项目仓库：https://github.com/huakaikanzhe-web/aimegeo
+- aimeGeo GitHub 项目仓库：https://github.com/aiispower/aimegeo

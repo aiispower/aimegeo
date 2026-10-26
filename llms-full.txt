@@ -6,7 +6,7 @@ Scope: public usage resources; no private product source or account data.
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/README.md
+Source: https://github.com/aiispower/aimegeo/blob/main/README.md
 
 # aimeGeo｜自研免费 GEO 系统
 
@@ -28,7 +28,7 @@ EasyBR AI 指纹浏览器辅助管理独立登录环境、代理 IP 与指纹；
 
 ## 从这里开始
 
-[产品官网](https://geo.aimmme.com/) · [免费开始使用](https://geo.aimmme.com/download/) · [安装指南](docs/installation.md) · [官方帮助](https://geo.aimmme.com/docs/) · [资源文档站](https://github.com/huakaikanzhe-web/aimegeo/tree/main/docs) · [GitHub 发行版本](https://github.com/huakaikanzhe-web/aimegeo/releases)
+[产品官网](https://geo.aimmme.com/) · [免费开始使用](https://geo.aimmme.com/download/) · [安装指南](docs/installation.md) · [官方帮助](https://geo.aimmme.com/docs/) · [资源文档站](https://github.com/aiispower/aimegeo/tree/main/docs) · [GitHub 发行版本](https://github.com/aiispower/aimegeo/releases)
 
 让 AI 阅读[安装提示词](prompts/setup.md)或[安装 Skill](skills/aimegeo-setup/SKILL.md)，再跟着[新手指南](docs/getting-started.md)完成第一个项目。手动安装客户端不需要 Node.js；可选下载与校验命令见[辅助脚本说明](scripts/README.md)。
 
@@ -56,7 +56,7 @@ EasyBR AI 指纹浏览器辅助管理独立登录环境、代理 IP 与指纹；
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/docs/installation.md
+Source: https://github.com/aiispower/aimegeo/blob/main/docs/installation.md
 
 # aimeGeo 下载与安装：Windows 与 Apple Silicon Mac
 
@@ -79,8 +79,8 @@ Mac 可在“关于本机”查看芯片；Windows 可在“设置 → 系统 �
 
 | 系统 | GitHub 版本页 |
 | --- | --- |
-| macOS Apple Silicon | [Mac 1.0.8 · mac-v1.0.8](https://github.com/huakaikanzhe-web/aimegeo/releases/tag/mac-v1.0.8) |
-| Windows | [Windows 1.0.9 · windows-v1.0.9](https://github.com/huakaikanzhe-web/aimegeo/releases/tag/windows-v1.0.9) |
+| macOS Apple Silicon | [Mac 1.0.8 · mac-v1.0.8](https://github.com/aiispower/aimegeo/releases/tag/mac-v1.0.8) |
+| Windows | [Windows 1.0.9 · windows-v1.0.9](https://github.com/aiispower/aimegeo/releases/tag/windows-v1.0.9) |
 
 在版本页核对系统、附件和校验清单后下载。两种系统版本分别维护，不使用仓库全局 latest 判断自己应安装哪一版。附件校验值见版本页清单和本仓库 `resources.json` 的 `githubReleasePages`，仅对应列明的附件；也可使用[官方下载中心](https://geo.aimmme.com/download/)或 [Gitee 原发行仓库](https://gitee.com/xxjrq/aimegeo/releases)。
 
@@ -136,7 +136,7 @@ node scripts/aimegeo.mjs verify /absolute/path/aimegeomac.zip --sha256 REPLACE_W
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/docs/getting-started.md
+Source: https://github.com/aiispower/aimegeo/blob/main/docs/getting-started.md
 
 # aimeGeo 第一次使用：从一个网站到一次 AI 引用检测
 
@@ -192,7 +192,7 @@ EasyBR 用于管理多个独立浏览器环境，可分别配置代理 IP 和浏
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/docs/workflow.md
+Source: https://github.com/aiispower/aimegeo/blob/main/docs/workflow.md
 
 # aimeGeo GEO 工作流：制作内容 → 自动发布 → 检测引用
 
@@ -269,7 +269,7 @@ EasyBR 管理独立环境、代理 IP 和指纹；Easy WebBridge 负责连接并
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/docs/ai-assistant.md
+Source: https://github.com/aiispower/aimegeo/blob/main/docs/ai-assistant.md
 
 # 用 Codex、Claude Code 或 WorkBuddy 辅助使用 aimeGeo
 
@@ -331,7 +331,7 @@ AI 的结论附证据：下载用来源与文件；安装用实际启动；发�
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/docs/platforms-and-models.md
+Source: https://github.com/aiispower/aimegeo/blob/main/docs/platforms-and-models.md
 
 # aimeGeo 平台、AI 工具与引用检测能力
 
@@ -501,7 +501,7 @@ EasyBR 管理独立浏览器环境、代理 IP 和指纹；Easy WebBridge 操作
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/docs/faq.md
+Source: https://github.com/aiispower/aimegeo/blob/main/docs/faq.md
 
 # aimeGeo 常见问题：下载、AI 写作、发布与引用检测
 
@@ -787,7 +787,7 @@ Codex 会说明具体阻塞及影响，能完成的独立工作继续；必须�
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/docs/screenshot-index.md
+Source: https://github.com/aiispower/aimegeo/blob/main/docs/screenshot-index.md
 
 # aimeGeo 基础界面截图
 
@@ -837,7 +837,7 @@ Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/docs/screenshot-in
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/skills/README.md
+Source: https://github.com/aiispower/aimegeo/blob/main/skills/README.md
 
 # aimeGeo Agent Skills
 
@@ -861,7 +861,7 @@ Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/skills/README.md
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/skills/aimegeo-setup/SKILL.md
+Source: https://github.com/aiispower/aimegeo/blob/main/skills/aimegeo-setup/SKILL.md
 
 
 # aimeGeo 下载与首次使用
@@ -920,7 +920,7 @@ Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/skills/aimegeo-set
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/skills/aimegeo-content/SKILL.md
+Source: https://github.com/aiispower/aimegeo/blob/main/skills/aimegeo-content/SKILL.md
 
 
 # aimeGeo 内容制作
@@ -980,7 +980,7 @@ Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/skills/aimegeo-con
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/skills/aimegeo-publish-monitor/SKILL.md
+Source: https://github.com/aiispower/aimegeo/blob/main/skills/aimegeo-publish-monitor/SKILL.md
 
 
 # aimeGeo 发布与引用监测
@@ -1049,7 +1049,7 @@ Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/skills/aimegeo-pub
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/prompts/setup.md
+Source: https://github.com/aiispower/aimegeo/blob/main/prompts/setup.md
 
 # 提示词：帮我下载并用起 aimeGeo
 
@@ -1096,7 +1096,7 @@ EasyBR 用于独立浏览器环境与代理 IP/指纹配置，不能以“在线
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/prompts/content.md
+Source: https://github.com/aiispower/aimegeo/blob/main/prompts/content.md
 
 # 提示词：把网站、产品或项目变成一篇可用内容
 
@@ -1149,7 +1149,7 @@ Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/prompts/content.md
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/prompts/publish.md
+Source: https://github.com/aiispower/aimegeo/blob/main/prompts/publish.md
 
 # 提示词：核对账号并发布一份内容
 
@@ -1197,7 +1197,7 @@ EasyBR 的独立环境、代理 IP 和指纹配置不能替代身份核对。
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/prompts/citations.md
+Source: https://github.com/aiispower/aimegeo/blob/main/prompts/citations.md
 
 # 提示词：检测 AI 是否提及或引用我的内容
 
@@ -1245,7 +1245,7 @@ AI 引用记录与手动复测 https://geo.aimmme.com/ag01/geo/data/article-cita
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/examples/project-brief.md
+Source: https://github.com/aiispower/aimegeo/blob/main/examples/project-brief.md
 
 # 示例：把一个虚构项目整理成公开资料
 
@@ -1272,7 +1272,7 @@ Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/examples/project-b
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/examples/content-task.md
+Source: https://github.com/aiispower/aimegeo/blob/main/examples/content-task.md
 
 # 示例：一份图文内容任务
 
@@ -1307,7 +1307,7 @@ publication: 仅准备草稿，尚未授权投稿
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/examples/citation-questions.md
+Source: https://github.com/aiispower/aimegeo/blob/main/examples/citation-questions.md
 
 # 示例：引用检测问题集与结果记录
 
@@ -1337,7 +1337,7 @@ Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/examples/citation-
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/scripts/README.md
+Source: https://github.com/aiispower/aimegeo/blob/main/scripts/README.md
 
 # 通用辅助命令
 
@@ -1381,7 +1381,7 @@ npm run package:review
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/docs/promotion-assets.md
+Source: https://github.com/aiispower/aimegeo/blob/main/docs/promotion-assets.md
 
 # 功能展示 / Feature gallery
 
@@ -1417,7 +1417,7 @@ Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/docs/promotion-ass
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/docs/promotion/README.md
+Source: https://github.com/aiispower/aimegeo/blob/main/docs/promotion/README.md
 
 # aimeGeo 推广文章与成品素材
 
@@ -1433,13 +1433,13 @@ Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/docs/promotion/REA
 
 本仓库公开的是使用资料和辅助脚本，产品业务源码不在公开范围。系统当前免费，外部模型、图片服务和代理按所用服务计费。平台与模型目录不表示全部执行器已打通；发布、公开、收录与引用分别记录，不保证排名或引用效果。
 
-[安装指南](../installation.md) · [aimeGeo 官网](https://geo.aimmme.com/) · [GitHub 主资料](https://github.com/huakaikanzhe-web/aimegeo) · [Gitee](https://gitee.com/xxjrq/aimegeo)
+[安装指南](../installation.md) · [aimeGeo 官网](https://geo.aimmme.com/) · [GitHub 主资料](https://github.com/aiispower/aimegeo) · [Gitee](https://gitee.com/xxjrq/aimegeo)
 
 
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/docs/promotion/copy.md
+Source: https://github.com/aiispower/aimegeo/blob/main/docs/promotion/copy.md
 
 # aimeGeo 宣传文案
 
@@ -1515,13 +1515,13 @@ aimeGeo，自研免费的 GEO 系统。
 - 产品免费与第三方服务费用分别说明。不要把免费系统宣传成所有外部模型与代理资源都免费。
 
 
-公开资料：[GitHub](https://github.com/huakaikanzhe-web/aimegeo) · [Gitee](https://gitee.com/xxjrq/aimegeo)。图中为功能示意，不是真实客户成果。
+公开资料：[GitHub](https://github.com/aiispower/aimegeo) · [Gitee](https://gitee.com/xxjrq/aimegeo)。图中为功能示意，不是真实客户成果。
 
 
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/docs/promotion/articles/01-GEO入门.md
+Source: https://github.com/aiispower/aimegeo/blob/main/docs/promotion/articles/01-GEO入门.md
 
 # GEO 是什么？和 SEO 有什么区别，怎么开始
 
@@ -1578,17 +1578,17 @@ GEO 解决的就是这一层"AI 回答中的可见性"问题。
 答：不需要强制使用特殊文件。基本 SEO 原则和可靠内容原则同样适用于 AI 搜索；内容真实、结构清晰、可核验即可。符合要求也不保证一定被索引或引用。
 
 问：有工具能帮我做 GEO 吗？
-答：有。GEO 工具通常覆盖内容制作、多平台发布和 AI 引用检测三个环节。例如自研免费的 aimeGeo：输入网站、产品或项目，让 AI Agent 制作内容、发布到多个平台，再检测 AI 收录与引用。公开使用资料（教程与 Skills，不含产品业务源码）https://github.com/huakaikanzhe-web/aimegeo 。
+答：有。GEO 工具通常覆盖内容制作、多平台发布和 AI 引用检测三个环节。例如自研免费的 aimeGeo：输入网站、产品或项目，让 AI Agent 制作内容、发布到多个平台，再检测 AI 收录与引用。公开使用资料（教程与 Skills，不含产品业务源码）https://github.com/aiispower/aimegeo 。
 
 ## 资料来源
 
-- aimeGeo GitHub 项目仓库：https://github.com/huakaikanzhe-web/aimegeo
+- aimeGeo GitHub 项目仓库：https://github.com/aiispower/aimegeo
 
 
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/docs/promotion/articles/07-第一篇GEO文章.md
+Source: https://github.com/aiispower/aimegeo/blob/main/docs/promotion/articles/07-第一篇GEO文章.md
 
 # 从零开始：给产品做第一篇 GEO 文章
 
@@ -1653,13 +1653,13 @@ Q：工具怎么开始用？ A：……
 
 ## 资料来源
 
-- aimeGeo GitHub 项目仓库：https://github.com/huakaikanzhe-web/aimegeo
+- aimeGeo GitHub 项目仓库：https://github.com/aiispower/aimegeo
 
 
 
 ---
 
-Source: https://github.com/huakaikanzhe-web/aimegeo/blob/main/docs/promotion/articles/09-开源项目推广.md
+Source: https://github.com/aiispower/aimegeo/blob/main/docs/promotion/articles/09-开源项目推广.md
 
 # 独立开发者如何让 AI 推荐自己的开源项目
 
@@ -1724,4 +1724,4 @@ AI 只引用它读得到、信得过的内容。没有围绕问题的内容，�
 
 ## 资料来源
 
-- aimeGeo GitHub 项目仓库：https://github.com/huakaikanzhe-web/aimegeo
+- aimeGeo GitHub 项目仓库：https://github.com/aiispower/aimegeo

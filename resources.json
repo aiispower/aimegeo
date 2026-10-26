@@ -13,7 +13,7 @@
       "filename": "aimegeomac.zip",
       "sources": {
         "official": "https://11.haory.cn/x/x30/aimegeo/aimegeomac.zip",
-        "overseas": "https://github.com/huakaikanzhe-web/aimegeo/releases/download/mac-v1.0.8/aimegeo-mac-1.0.8-arm64-update.zip"
+        "overseas": "https://github.com/aiispower/aimegeo/releases/download/mac-v1.0.8/aimegeo-mac-1.0.8-arm64-update.zip"
       },
       "sha256": null,
       "version": null
@@ -24,7 +24,7 @@
       "filename": "aimegeo.zip",
       "sources": {
         "official": "https://11.haory.cn/x/x30/aimegeo/aimegeo.zip",
-        "overseas": "https://github.com/huakaikanzhe-web/aimegeo/releases/download/windows-v1.0.9/aimegeo.zip"
+        "overseas": "https://github.com/aiispower/aimegeo/releases/download/windows-v1.0.9/aimegeo.zip"
       },
       "sha256": null,
       "version": null
@@ -38,14 +38,14 @@
   "githubReleasePages": {
     "macos-arm64": {
       "version": "1.0.8",
-      "url": "https://github.com/huakaikanzhe-web/aimegeo/releases/tag/mac-v1.0.8",
+      "url": "https://github.com/aiispower/aimegeo/releases/tag/mac-v1.0.8",
       "assetName": "aimegeo-mac-1.0.8-arm64-update.zip",
       "size": 92562572,
       "sha256": "af27759e9634c02802bd1d2dc09ea3d5a509ee66df7837a41bcb4cd74d94e5e8"
     },
     "windows-x64": {
       "version": "1.0.9",
-      "url": "https://github.com/huakaikanzhe-web/aimegeo/releases/tag/windows-v1.0.9",
+      "url": "https://github.com/aiispower/aimegeo/releases/tag/windows-v1.0.9",
       "assetName": "aimegeo.zip",
       "size": 71035575,
       "sha256": "aac4675e94bf1962a2593308848630548e7dc1713c3105c0a3f1871db1dc93b7"

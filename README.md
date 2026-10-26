@@ -18,7 +18,7 @@ EasyBR AI 指纹浏览器辅助管理独立登录环境、代理 IP 与指纹；
 
 ## 从这里开始
 
-[产品官网](https://geo.aimmme.com/) · [免费开始使用](https://geo.aimmme.com/download/) · [安装指南](docs/installation.md) · [官方帮助](https://geo.aimmme.com/docs/) · [资源文档站](https://github.com/huakaikanzhe-web/aimegeo/tree/main/docs) · [GitHub 发行版本](https://github.com/huakaikanzhe-web/aimegeo/releases)
+[产品官网](https://geo.aimmme.com/) · [免费开始使用](https://geo.aimmme.com/download/) · [安装指南](docs/installation.md) · [官方帮助](https://geo.aimmme.com/docs/) · [资源文档站](https://github.com/aiispower/aimegeo/tree/main/docs) · [GitHub 发行版本](https://github.com/aiispower/aimegeo/releases)
 
 让 AI 阅读[安装提示词](prompts/setup.md)或[安装 Skill](skills/aimegeo-setup/SKILL.md)，再跟着[新手指南](docs/getting-started.md)完成第一个项目。手动安装客户端不需要 Node.js；可选下载与校验命令见[辅助脚本说明](scripts/README.md)。
 

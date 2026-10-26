@@ -12,4 +12,4 @@
 
 本仓库公开的是使用资料和辅助脚本，产品业务源码不在公开范围。系统当前免费，外部模型、图片服务和代理按所用服务计费。平台与模型目录不表示全部执行器已打通；发布、公开、收录与引用分别记录，不保证排名或引用效果。
 
-[安装指南](../installation.md) · [aimeGeo 官网](https://geo.aimmme.com/) · [GitHub 主资料](https://github.com/huakaikanzhe-web/aimegeo) · [Gitee](https://gitee.com/xxjrq/aimegeo)
+[安装指南](../installation.md) · [aimeGeo 官网](https://geo.aimmme.com/) · [GitHub 主资料](https://github.com/aiispower/aimegeo) · [Gitee](https://gitee.com/xxjrq/aimegeo)
